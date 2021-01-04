@@ -1,0 +1,10 @@
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\bin\Debug\Zootopia.exe.config
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\bin\Debug\Zootopia.exe
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\bin\Debug\Zootopia.pdb
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\obj\Debug\Zootopia.csprojAssemblyReference.cache
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\obj\Debug\Zootopia.Properties.Resources.resources
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\obj\Debug\Zootopia.csproj.GenerateResource.cache
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\obj\Debug\Zootopia.csproj.CoreCompileInputs.cache
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\obj\Debug\Zootopia.exe
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\obj\Debug\Zootopia.pdb
+D:\Uni\Junior\Semester 5\Database\Project\Zootopia\Zootopia\Zootopia\obj\Debug\Zootopia.Welcome.resources
