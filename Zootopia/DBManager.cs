@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ using System.Configuration;
 
 
 namespace Zootopia
-{
+{  //kh
     public class DBManager
     {
         //TODO: Make Sure to change Connection String to your Database 
