@@ -37,11 +37,11 @@ namespace Zootopia
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.LogInButton = new System.Windows.Forms.Button();
             this.SignUpButtom = new System.Windows.Forms.Button();
             this.AdminLogInButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -123,16 +123,6 @@ namespace Zootopia
             this.label3.TabIndex = 1;
             this.label3.Text = "Password";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Rockwell Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(203, 137);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(120, 26);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Create Account";
-            // 
             // LogInButton
             // 
             this.LogInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -176,6 +166,16 @@ namespace Zootopia
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(180, 26);
             this.textBox1.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Rockwell Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(203, 137);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(120, 26);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Create Account";
             // 
             // Welcome
             // 
