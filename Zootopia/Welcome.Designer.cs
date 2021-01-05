@@ -45,7 +45,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(766, 86);
+            this.panel1.Size = new System.Drawing.Size(803, 86);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -72,15 +72,12 @@
             // 
             // label2
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Mistral", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Monotype Corsiva", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(9, 238);
+            this.label2.Location = new System.Drawing.Point(12, 255);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(779, 184);
+            this.label2.Size = new System.Drawing.Size(752, 164);
             this.label2.TabIndex = 3;
             this.label2.Text = "If you\'re intersted with pet\'s staff, then this application \r\nis definitly here f" +
     "or you \r\n\r\n\r\n";
@@ -106,7 +103,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
-            this.ClientSize = new System.Drawing.Size(766, 488);
+            this.ClientSize = new System.Drawing.Size(803, 488);
             this.Controls.Add(this.buttonContinue);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
