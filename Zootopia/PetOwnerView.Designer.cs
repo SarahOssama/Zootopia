@@ -45,7 +45,7 @@
             // panelLeft
             // 
             this.panelLeft.AutoScroll = true;
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
+            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
             this.panelLeft.Controls.Add(this.panelPetDetailsSubMenu);
             this.panelLeft.Controls.Add(this.buttonPetDetail);
             this.panelLeft.Controls.Add(this.panelLogo);

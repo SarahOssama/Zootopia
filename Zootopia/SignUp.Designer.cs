@@ -232,7 +232,7 @@ namespace Zootopia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(452, 476);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton1);
