@@ -22,20 +22,16 @@ namespace Zootopia
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void buttonInsert_Click(object sender, EventArgs e)
         {
+            SignUp S = new SignUp();
+            S.Show();
 
-        }
-
-        private void LogInButton_Click(object sender, EventArgs e)
-        {
-            PetOwnerView V = new PetOwnerView();
-            V.Show();
         }
     }
 }

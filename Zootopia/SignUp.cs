@@ -34,8 +34,21 @@ namespace Zootopia
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            PetOwnerView V = new PetOwnerView();
-            V.Show();
+            if (radioButtonPetOwner.Checked == true)
+            {
+                PetOwnerView V = new PetOwnerView();
+                V.Show();
+            }
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

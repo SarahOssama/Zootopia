@@ -30,10 +30,7 @@ namespace Zootopia
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUp));
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -42,43 +39,14 @@ namespace Zootopia
             this.AdminLogInButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.label5 = new System.Windows.Forms.Label();
+            this.radioButtonPetOwner = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Mistral", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(46, 7);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(355, 56);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome to Zootopia";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(452, 70);
-            this.panel1.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(148, 84);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(167, 114);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // tableLayoutPanel1
             // 
@@ -88,21 +56,22 @@ namespace Zootopia
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.LogInButton, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.SignUpButtom, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.AdminLogInButton, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.label4, 1, 3);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 215);
+            this.tableLayoutPanel1.Controls.Add(this.label4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.LogInButton, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.SignUpButtom, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.AdminLogInButton, 1, 4);
+            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 29);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.05732F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.74522F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.6051F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.37931F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.37931F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(452, 232);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.3829F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.12639F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.35688F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.7658F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.53598F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(452, 257);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -120,7 +89,7 @@ namespace Zootopia
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 29);
+            this.label3.Location = new System.Drawing.Point(3, 34);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 29);
             this.label3.TabIndex = 1;
@@ -133,7 +102,7 @@ namespace Zootopia
             this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogInButton.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogInButton.ForeColor = System.Drawing.Color.White;
-            this.LogInButton.Location = new System.Drawing.Point(347, 76);
+            this.LogInButton.Location = new System.Drawing.Point(347, 72);
             this.LogInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogInButton.Name = "LogInButton";
             this.LogInButton.Size = new System.Drawing.Size(102, 30);
@@ -149,7 +118,7 @@ namespace Zootopia
             this.SignUpButtom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpButtom.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButtom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SignUpButtom.Location = new System.Drawing.Point(344, 109);
+            this.SignUpButtom.Location = new System.Drawing.Point(179, 112);
             this.SignUpButtom.Margin = new System.Windows.Forms.Padding(0);
             this.SignUpButtom.Name = "SignUpButtom";
             this.SignUpButtom.Size = new System.Drawing.Size(106, 39);
@@ -164,17 +133,17 @@ namespace Zootopia
             this.AdminLogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdminLogInButton.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminLogInButton.ForeColor = System.Drawing.Color.White;
-            this.AdminLogInButton.Location = new System.Drawing.Point(347, 160);
+            this.AdminLogInButton.Location = new System.Drawing.Point(182, 183);
             this.AdminLogInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminLogInButton.Name = "AdminLogInButton";
-            this.AdminLogInButton.Size = new System.Drawing.Size(102, 69);
+            this.AdminLogInButton.Size = new System.Drawing.Size(114, 48);
             this.AdminLogInButton.TabIndex = 5;
             this.AdminLogInButton.Text = "Admin Login";
             this.AdminLogInButton.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 31);
+            this.textBox1.Location = new System.Drawing.Point(182, 36);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(159, 22);
@@ -184,11 +153,80 @@ namespace Zootopia
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(182, 109);
+            this.label4.Location = new System.Drawing.Point(3, 112);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 22);
             this.label4.TabIndex = 2;
             this.label4.Text = "Create Account";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label5.Location = new System.Drawing.Point(4, 288);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 27);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Who are you?";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // radioButtonPetOwner
+            // 
+            this.radioButtonPetOwner.AutoSize = true;
+            this.radioButtonPetOwner.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.radioButtonPetOwner.Location = new System.Drawing.Point(12, 318);
+            this.radioButtonPetOwner.Name = "radioButtonPetOwner";
+            this.radioButtonPetOwner.Size = new System.Drawing.Size(127, 31);
+            this.radioButtonPetOwner.TabIndex = 5;
+            this.radioButtonPetOwner.TabStop = true;
+            this.radioButtonPetOwner.Text = "Pet Owner";
+            this.radioButtonPetOwner.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.radioButton2.Location = new System.Drawing.Point(12, 345);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(149, 31);
+            this.radioButton2.TabIndex = 6;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Hotel Owner";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(182, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(159, 22);
+            this.textBox2.TabIndex = 7;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.radioButton1.Location = new System.Drawing.Point(12, 372);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(173, 31);
+            this.radioButton1.TabIndex = 7;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "PetShop Owner";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.radioButton3.Location = new System.Drawing.Point(12, 399);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(68, 31);
+            this.radioButton3.TabIndex = 8;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Vet ";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // SignUp
             // 
@@ -196,29 +234,26 @@ namespace Zootopia
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(161)))), ((int)(((byte)(171)))));
             this.ClientSize = new System.Drawing.Size(452, 476);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButtonPetOwner);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SignUp";
             this.Text = "Sign Up";
             this.Load += new System.EventHandler(this.Welcome_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label2;
@@ -228,5 +263,11 @@ namespace Zootopia
         private System.Windows.Forms.Button SignUpButtom;
         private System.Windows.Forms.Button AdminLogInButton;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.RadioButton radioButtonPetOwner;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
