@@ -21,5 +21,10 @@ namespace Zootopia
         {
             this.Close();
         }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
