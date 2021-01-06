@@ -131,7 +131,30 @@ namespace Zootopia
             //code
             hideSubMenu();
         }
-        # endregion
+        #endregion
 
+        private void buttonMatting_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MattingPet());
+            //code
+            hideSubMenu();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelPetShopServices);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Utilities ());
+            //code
+            hideSubMenu();
+        }
+
+        private void panelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

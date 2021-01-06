@@ -84,9 +84,9 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(42, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(252, 27);
+            this.label2.Size = new System.Drawing.Size(280, 27);
             this.label2.TabIndex = 5;
-            this.label2.Text = "What you want to update ?";
+            this.label2.Text = "What do you want to update ?";
             // 
             // comboBox1
             // 

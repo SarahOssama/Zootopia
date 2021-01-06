@@ -34,16 +34,16 @@ namespace Zootopia
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.LogInButton = new System.Windows.Forms.Button();
             this.SignUpButtom = new System.Windows.Forms.Button();
             this.AdminLogInButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.radioButtonPetOwner = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonPetShopOwner = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -95,6 +95,24 @@ namespace Zootopia
             this.label3.TabIndex = 1;
             this.label3.Text = "Password";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(182, 36);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(159, 22);
+            this.textBox1.TabIndex = 6;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Rockwell Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(3, 112);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 22);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Create Account";
+            // 
             // LogInButton
             // 
             this.LogInButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -141,23 +159,13 @@ namespace Zootopia
             this.AdminLogInButton.Text = "Admin Login";
             this.AdminLogInButton.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // textBox2
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 36);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
-            this.textBox1.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Rockwell Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 112);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 22);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Create Account";
+            this.textBox2.Location = new System.Drawing.Point(182, 2);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(159, 22);
+            this.textBox2.TabIndex = 7;
             // 
             // label5
             // 
@@ -196,25 +204,17 @@ namespace Zootopia
             this.radioButton2.Text = "Hotel Owner";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // radioButtonPetShopOwner
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 2);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 22);
-            this.textBox2.TabIndex = 7;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.radioButton1.Location = new System.Drawing.Point(12, 372);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(173, 31);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "PetShop Owner";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonPetShopOwner.AutoSize = true;
+            this.radioButtonPetShopOwner.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.radioButtonPetShopOwner.Location = new System.Drawing.Point(12, 372);
+            this.radioButtonPetShopOwner.Name = "radioButtonPetShopOwner";
+            this.radioButtonPetShopOwner.Size = new System.Drawing.Size(173, 31);
+            this.radioButtonPetShopOwner.TabIndex = 7;
+            this.radioButtonPetShopOwner.TabStop = true;
+            this.radioButtonPetShopOwner.Text = "PetShop Owner";
+            this.radioButtonPetShopOwner.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
@@ -235,7 +235,7 @@ namespace Zootopia
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
             this.ClientSize = new System.Drawing.Size(452, 476);
             this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonPetShopOwner);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButtonPetOwner);
             this.Controls.Add(this.label5);
@@ -267,7 +267,7 @@ namespace Zootopia
         private System.Windows.Forms.RadioButton radioButtonPetOwner;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonPetShopOwner;
         private System.Windows.Forms.RadioButton radioButton3;
     }
 }
