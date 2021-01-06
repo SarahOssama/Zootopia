@@ -21,6 +21,12 @@ namespace Zootopia
         {
             if (panelPetDetailsSubMenu.Visible == true)
                 panelPetDetailsSubMenu.Visible = false;
+
+            if (panelSearchSubMenu.Visible == true)
+                panelSearchSubMenu.Visible = false;
+
+            if (panelHotelServicesSubMenu.Visible == true)
+                panelHotelServicesSubMenu.Visible = false;
         }
 
         private void ShowSubMenu(Panel SubMenu )
@@ -81,6 +87,51 @@ namespace Zootopia
             childForm.Show();
 
         }
+        #region SearchSubMenu
+        private void ButtonSearch_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelSearchSubMenu);
+        }
+
+        private void ButtonHotelSearch_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new HotelSearch());
+            //code
+            hideSubMenu();
+        }
+
+        private void ButtonPetShopSearch_Click(object sender, EventArgs e)
+        {
+            //code
+            hideSubMenu();
+        }
+
+        private void ButtonVetSearch_Click(object sender, EventArgs e)
+        {
+            //code
+            hideSubMenu();
+        }
+        #endregion
+
+        #region HotelServicesSubMenu
+
+        private void ButtonHotelServices_Click(object sender, EventArgs e)
+        {
+            ShowSubMenu(panelHotelServicesSubMenu);
+        }
+
+        private void ButtonTrainer_Click(object sender, EventArgs e)
+        {
+            //code
+            hideSubMenu();
+        }
+
+        private void ButtonReserve_Click(object sender, EventArgs e)
+        {
+            //code
+            hideSubMenu();
+        }
+        # endregion
 
     }
 }
