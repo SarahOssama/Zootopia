@@ -68,6 +68,18 @@
     <Compile Include="AddUtility.Designer.cs">
       <DependentUpon>AddUtility.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminControls.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminControls.Designer.cs">
+      <DependentUpon>AdminControls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminView.Designer.cs">
+      <DependentUpon>AdminView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
     <Compile Include="DeletePet.cs">
@@ -141,6 +153,12 @@
     </Compile>
     <EmbeddedResource Include="AddUtility.resx">
       <DependentUpon>AddUtility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminControls.resx">
+      <DependentUpon>AdminControls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminView.resx">
+      <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DeletePet.resx">
       <DependentUpon>DeletePet.cs</DependentUpon>

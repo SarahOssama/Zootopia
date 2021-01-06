@@ -52,8 +52,8 @@ namespace Zootopia
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 165F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 108F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 186F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.textBox1, 1, 1);
@@ -62,7 +62,7 @@ namespace Zootopia
             this.tableLayoutPanel1.Controls.Add(this.SignUpButtom, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.AdminLogInButton, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 29);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(2, 36);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 5;
@@ -71,7 +71,7 @@ namespace Zootopia
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.35688F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.7658F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.53598F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(452, 257);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(508, 321);
             this.tableLayoutPanel1.TabIndex = 2;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -81,7 +81,7 @@ namespace Zootopia
             this.label2.Font = new System.Drawing.Font("Rockwell Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 29);
+            this.label2.Size = new System.Drawing.Size(102, 33);
             this.label2.TabIndex = 0;
             this.label2.Text = "Username";
             // 
@@ -89,27 +89,27 @@ namespace Zootopia
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Rockwell Condensed", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 34);
+            this.label3.Location = new System.Drawing.Point(3, 43);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 29);
+            this.label3.Size = new System.Drawing.Size(101, 33);
             this.label3.TabIndex = 1;
             this.label3.Text = "Password";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 36);
+            this.textBox1.Location = new System.Drawing.Point(203, 45);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
+            this.textBox1.Size = new System.Drawing.Size(178, 26);
             this.textBox1.TabIndex = 6;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Rockwell Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 112);
+            this.label4.Location = new System.Drawing.Point(3, 140);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(104, 22);
+            this.label4.Size = new System.Drawing.Size(120, 26);
             this.label4.TabIndex = 2;
             this.label4.Text = "Create Account";
             // 
@@ -120,10 +120,10 @@ namespace Zootopia
             this.LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LogInButton.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LogInButton.ForeColor = System.Drawing.Color.White;
-            this.LogInButton.Location = new System.Drawing.Point(347, 72);
+            this.LogInButton.Location = new System.Drawing.Point(389, 90);
             this.LogInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.LogInButton.Name = "LogInButton";
-            this.LogInButton.Size = new System.Drawing.Size(102, 30);
+            this.LogInButton.Size = new System.Drawing.Size(115, 38);
             this.LogInButton.TabIndex = 3;
             this.LogInButton.Text = "LogIn";
             this.LogInButton.UseVisualStyleBackColor = false;
@@ -136,10 +136,10 @@ namespace Zootopia
             this.SignUpButtom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SignUpButtom.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SignUpButtom.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.SignUpButtom.Location = new System.Drawing.Point(179, 112);
+            this.SignUpButtom.Location = new System.Drawing.Point(200, 140);
             this.SignUpButtom.Margin = new System.Windows.Forms.Padding(0);
             this.SignUpButtom.Name = "SignUpButtom";
-            this.SignUpButtom.Size = new System.Drawing.Size(106, 39);
+            this.SignUpButtom.Size = new System.Drawing.Size(119, 49);
             this.SignUpButtom.TabIndex = 4;
             this.SignUpButtom.Text = "SignUp";
             this.SignUpButtom.UseVisualStyleBackColor = false;
@@ -151,20 +151,21 @@ namespace Zootopia
             this.AdminLogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AdminLogInButton.Font = new System.Drawing.Font("Mongolian Baiti", 10F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminLogInButton.ForeColor = System.Drawing.Color.White;
-            this.AdminLogInButton.Location = new System.Drawing.Point(182, 183);
+            this.AdminLogInButton.Location = new System.Drawing.Point(203, 228);
             this.AdminLogInButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.AdminLogInButton.Name = "AdminLogInButton";
-            this.AdminLogInButton.Size = new System.Drawing.Size(114, 48);
+            this.AdminLogInButton.Size = new System.Drawing.Size(128, 60);
             this.AdminLogInButton.TabIndex = 5;
             this.AdminLogInButton.Text = "Admin Login";
             this.AdminLogInButton.UseVisualStyleBackColor = false;
+            this.AdminLogInButton.Click += new System.EventHandler(this.AdminLogInButton_Click);
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 2);
+            this.textBox2.Location = new System.Drawing.Point(203, 2);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 22);
+            this.textBox2.Size = new System.Drawing.Size(178, 26);
             this.textBox2.TabIndex = 7;
             // 
             // label5
@@ -173,9 +174,9 @@ namespace Zootopia
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(4, 288);
+            this.label5.Location = new System.Drawing.Point(4, 360);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 27);
+            this.label5.Size = new System.Drawing.Size(160, 32);
             this.label5.TabIndex = 4;
             this.label5.Text = "Who are you?";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -184,9 +185,10 @@ namespace Zootopia
             // 
             this.radioButtonPetOwner.AutoSize = true;
             this.radioButtonPetOwner.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.radioButtonPetOwner.Location = new System.Drawing.Point(12, 318);
+            this.radioButtonPetOwner.Location = new System.Drawing.Point(14, 398);
+            this.radioButtonPetOwner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonPetOwner.Name = "radioButtonPetOwner";
-            this.radioButtonPetOwner.Size = new System.Drawing.Size(127, 31);
+            this.radioButtonPetOwner.Size = new System.Drawing.Size(153, 36);
             this.radioButtonPetOwner.TabIndex = 5;
             this.radioButtonPetOwner.TabStop = true;
             this.radioButtonPetOwner.Text = "Pet Owner";
@@ -196,9 +198,10 @@ namespace Zootopia
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.radioButton2.Location = new System.Drawing.Point(12, 345);
+            this.radioButton2.Location = new System.Drawing.Point(14, 431);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(149, 31);
+            this.radioButton2.Size = new System.Drawing.Size(178, 36);
             this.radioButton2.TabIndex = 6;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Hotel Owner";
@@ -208,9 +211,10 @@ namespace Zootopia
             // 
             this.radioButtonPetShopOwner.AutoSize = true;
             this.radioButtonPetShopOwner.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.radioButtonPetShopOwner.Location = new System.Drawing.Point(12, 372);
+            this.radioButtonPetShopOwner.Location = new System.Drawing.Point(14, 465);
+            this.radioButtonPetShopOwner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButtonPetShopOwner.Name = "radioButtonPetShopOwner";
-            this.radioButtonPetShopOwner.Size = new System.Drawing.Size(173, 31);
+            this.radioButtonPetShopOwner.Size = new System.Drawing.Size(207, 36);
             this.radioButtonPetShopOwner.TabIndex = 7;
             this.radioButtonPetShopOwner.TabStop = true;
             this.radioButtonPetShopOwner.Text = "PetShop Owner";
@@ -220,9 +224,10 @@ namespace Zootopia
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.radioButton3.Location = new System.Drawing.Point(12, 399);
+            this.radioButton3.Location = new System.Drawing.Point(14, 499);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(68, 31);
+            this.radioButton3.Size = new System.Drawing.Size(81, 36);
             this.radioButton3.TabIndex = 8;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Vet ";
@@ -230,10 +235,10 @@ namespace Zootopia
             // 
             // SignUp
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
-            this.ClientSize = new System.Drawing.Size(452, 476);
+            this.ClientSize = new System.Drawing.Size(508, 595);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButtonPetShopOwner);
             this.Controls.Add(this.radioButton2);

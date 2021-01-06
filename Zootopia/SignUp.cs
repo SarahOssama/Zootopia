@@ -55,5 +55,11 @@ namespace Zootopia
         {
 
         }
+
+        private void AdminLogInButton_Click(object sender, EventArgs e)
+        {
+            AdminView A = new AdminView();
+            A.Show();
+        }
     }
 }
