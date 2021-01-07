@@ -44,6 +44,11 @@ namespace Zootopia
                 PetShopOwnerView V = new PetShopOwnerView();
                 V.Show();
             }
+            if (radioButtonHotelOwner.Checked == true)
+            {
+                HotelOwnerView V = new HotelOwnerView ();
+                V.Show();
+            }
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

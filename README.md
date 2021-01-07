@@ -17,7 +17,7 @@
 -LogIN			Khadija, Habiba
 -Admin view		Khadija, Habiba
 -Owner view		Sara,Sandy
--Hotel View		Sara,Sandy
--Pet shop view		Sara,Sandy
+-Hotel View		Sara,
+-Pet shop view		Sandy
 -vet view		Khadija, Habiba
 -stastical report	

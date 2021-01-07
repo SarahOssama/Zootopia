@@ -10,26 +10,26 @@ using System.Windows.Forms;
 
 namespace Zootopia
 {
-    public partial class HotelSearch : Form
+    public partial class ReserveRoom : Form
     {
-        public HotelSearch()
+        public ReserveRoom()
         {
             InitializeComponent();
         }
 
-        private void buttonCloseUpdate_Click(object sender, EventArgs e)
+        private void ReserveRoom_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReserveRoomButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonSearchForHotel_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

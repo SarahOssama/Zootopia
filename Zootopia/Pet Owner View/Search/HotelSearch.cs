@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace Zootopia
 {
-    public partial class MattingPet : Form
+    public partial class HotelSearch : Form
     {
-        public MattingPet()
+        public HotelSearch()
         {
             InitializeComponent();
         }
 
-        private void MattingPet_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonCloseInsert_Click(object sender, EventArgs e)
+        private void buttonCloseUpdate_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -37,12 +27,12 @@ namespace Zootopia
 
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void buttonSearchForHotel_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void buttonSearchForPetToMate_Click(object sender, EventArgs e)
+        private void HotelSearch_Load(object sender, EventArgs e)
         {
 
         }

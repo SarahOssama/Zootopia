@@ -62,74 +62,110 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddUtility.cs">
+    <Compile Include="Hotel View\DeleteTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddUtility.Designer.cs">
+    <Compile Include="Hotel View\DeleteTrainer.Designer.cs">
+      <DependentUpon>DeleteTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel View\AddTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel View\AddTrainer.Designer.cs">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PetShop View\AddUtility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PetShop View\AddUtility.Designer.cs">
       <DependentUpon>AddUtility.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminControls.cs">
+    <Compile Include="Admin View\AdminControls.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminControls.Designer.cs">
+    <Compile Include="Admin View\AdminControls.Designer.cs">
       <DependentUpon>AdminControls.cs</DependentUpon>
     </Compile>
-    <Compile Include="AdminView.cs">
+    <Compile Include="Admin View\AdminView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminView.Designer.cs">
+    <Compile Include="Admin View\AdminView.Designer.cs">
       <DependentUpon>AdminView.cs</DependentUpon>
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
-    <Compile Include="DeletePet.cs">
+    <Compile Include="Pet Owner View\Pet Details\DeletePet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeletePet.Designer.cs">
+    <Compile Include="Pet Owner View\Pet Details\DeletePet.Designer.cs">
       <DependentUpon>DeletePet.cs</DependentUpon>
     </Compile>
-    <Compile Include="HotelSearch.cs">
+    <Compile Include="Hotel View\HotelOwnerView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HotelSearch.Designer.cs">
+    <Compile Include="Hotel View\HotelOwnerView.Designer.cs">
+      <DependentUpon>HotelOwnerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet Owner View\Search\HotelSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pet Owner View\Search\HotelSearch.Designer.cs">
       <DependentUpon>HotelSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="InsertPet.cs">
+    <Compile Include="Pet Owner View\Pet Details\InsertPet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InsertPet.Designer.cs">
+    <Compile Include="Pet Owner View\Pet Details\InsertPet.Designer.cs">
       <DependentUpon>InsertPet.cs</DependentUpon>
     </Compile>
-    <Compile Include="MattingPet.cs">
+    <Compile Include="Pet Owner View\Mating\MatingPet.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MattingPet.Designer.cs">
-      <DependentUpon>MattingPet.cs</DependentUpon>
+    <Compile Include="Pet Owner View\Mating\MatingPet.Designer.cs">
+      <DependentUpon>MatingPet.cs</DependentUpon>
     </Compile>
-    <Compile Include="PetOwnerView.cs">
+    <Compile Include="Pet Owner View\PetOwnerView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PetOwnerView.Designer.cs">
+    <Compile Include="Pet Owner View\PetOwnerView.Designer.cs">
       <DependentUpon>PetOwnerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="PetShopOwnerView.cs">
+    <Compile Include="PetShop View\PetShopOwnerView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PetShopOwnerView.Designer.cs">
+    <Compile Include="PetShop View\PetShopOwnerView.Designer.cs">
       <DependentUpon>PetShopOwnerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet Owner View\Search\PetShopSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pet Owner View\Search\PetShopSearch.Designer.cs">
+      <DependentUpon>PetShopSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdatePet.cs">
+    <Compile Include="Pet Owner View\Hotel Services\ReserveRoom.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdatePet.Designer.cs">
+    <Compile Include="Pet Owner View\Hotel Services\ReserveRoom.Designer.cs">
+      <DependentUpon>ReserveRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet Owner View\Hotel Services\ReserveTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pet Owner View\Hotel Services\ReserveTrainer.Designer.cs">
+      <DependentUpon>ReserveTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet Owner View\Pet Details\UpdatePet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pet Owner View\Pet Details\UpdatePet.Designer.cs">
       <DependentUpon>UpdatePet.cs</DependentUpon>
     </Compile>
-    <Compile Include="Utilities.cs">
+    <Compile Include="Pet Owner View\PetShop Services\Utilities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utilities.Designer.cs">
+    <Compile Include="Pet Owner View\PetShop Services\Utilities.Designer.cs">
       <DependentUpon>Utilities.cs</DependentUpon>
     </Compile>
     <Compile Include="ValidationClass.cs" />
@@ -139,11 +175,29 @@
     <Compile Include="SignUp.Designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewUtilities.cs">
+    <Compile Include="PetShop View\ViewUtilities.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ViewUtilities.Designer.cs">
+    <Compile Include="PetShop View\ViewUtilities.Designer.cs">
       <DependentUpon>ViewUtilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pet Owner View\Search\VetSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pet Owner View\Search\VetSearch.Designer.cs">
+      <DependentUpon>VetSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel View\ViewTrainers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel View\ViewTrainers.Designer.cs">
+      <DependentUpon>ViewTrainers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hotel View\ViewRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hotel View\ViewRooms.Designer.cs">
+      <DependentUpon>ViewRooms.cs</DependentUpon>
     </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
@@ -151,32 +205,44 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddUtility.resx">
+    <EmbeddedResource Include="Hotel View\DeleteTrainer.resx">
+      <DependentUpon>DeleteTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel View\AddTrainer.resx">
+      <DependentUpon>AddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PetShop View\AddUtility.resx">
       <DependentUpon>AddUtility.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminControls.resx">
+    <EmbeddedResource Include="Admin View\AdminControls.resx">
       <DependentUpon>AdminControls.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AdminView.resx">
+    <EmbeddedResource Include="Admin View\AdminView.resx">
       <DependentUpon>AdminView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeletePet.resx">
+    <EmbeddedResource Include="Pet Owner View\Pet Details\DeletePet.resx">
       <DependentUpon>DeletePet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HotelSearch.resx">
+    <EmbeddedResource Include="Hotel View\HotelOwnerView.resx">
+      <DependentUpon>HotelOwnerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pet Owner View\Search\HotelSearch.resx">
       <DependentUpon>HotelSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InsertPet.resx">
+    <EmbeddedResource Include="Pet Owner View\Pet Details\InsertPet.resx">
       <DependentUpon>InsertPet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MattingPet.resx">
-      <DependentUpon>MattingPet.cs</DependentUpon>
+    <EmbeddedResource Include="Pet Owner View\Mating\MatingPet.resx">
+      <DependentUpon>MatingPet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PetOwnerView.resx">
+    <EmbeddedResource Include="Pet Owner View\PetOwnerView.resx">
       <DependentUpon>PetOwnerView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PetShopOwnerView.resx">
+    <EmbeddedResource Include="PetShop View\PetShopOwnerView.resx">
       <DependentUpon>PetShopOwnerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pet Owner View\Search\PetShopSearch.resx">
+      <DependentUpon>PetShopSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -187,17 +253,32 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="UpdatePet.resx">
+    <EmbeddedResource Include="Pet Owner View\Hotel Services\ReserveRoom.resx">
+      <DependentUpon>ReserveRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pet Owner View\Hotel Services\ReserveTrainer.resx">
+      <DependentUpon>ReserveTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pet Owner View\Pet Details\UpdatePet.resx">
       <DependentUpon>UpdatePet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Utilities.resx">
+    <EmbeddedResource Include="Pet Owner View\PetShop Services\Utilities.resx">
       <DependentUpon>Utilities.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewUtilities.resx">
+    <EmbeddedResource Include="PetShop View\ViewUtilities.resx">
       <DependentUpon>ViewUtilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pet Owner View\Search\VetSearch.resx">
+      <DependentUpon>VetSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel View\ViewTrainers.resx">
+      <DependentUpon>ViewTrainers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hotel View\ViewRooms.resx">
+      <DependentUpon>ViewRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

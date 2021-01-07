@@ -42,7 +42,7 @@ namespace Zootopia
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.radioButtonPetOwner = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButtonHotelOwner = new System.Windows.Forms.RadioButton();
             this.radioButtonPetShopOwner = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.tableLayoutPanel1.SuspendLayout();
@@ -194,18 +194,18 @@ namespace Zootopia
             this.radioButtonPetOwner.Text = "Pet Owner";
             this.radioButtonPetOwner.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButtonHotelOwner
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Palatino Linotype", 12F);
-            this.radioButton2.Location = new System.Drawing.Point(14, 431);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(178, 36);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Hotel Owner";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonHotelOwner.AutoSize = true;
+            this.radioButtonHotelOwner.Font = new System.Drawing.Font("Palatino Linotype", 12F);
+            this.radioButtonHotelOwner.Location = new System.Drawing.Point(14, 431);
+            this.radioButtonHotelOwner.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.radioButtonHotelOwner.Name = "radioButtonHotelOwner";
+            this.radioButtonHotelOwner.Size = new System.Drawing.Size(178, 36);
+            this.radioButtonHotelOwner.TabIndex = 6;
+            this.radioButtonHotelOwner.TabStop = true;
+            this.radioButtonHotelOwner.Text = "Hotel Owner";
+            this.radioButtonHotelOwner.UseVisualStyleBackColor = true;
             // 
             // radioButtonPetShopOwner
             // 
@@ -241,7 +241,7 @@ namespace Zootopia
             this.ClientSize = new System.Drawing.Size(508, 595);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButtonPetShopOwner);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButtonHotelOwner);
             this.Controls.Add(this.radioButtonPetOwner);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -270,7 +270,7 @@ namespace Zootopia
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RadioButton radioButtonPetOwner;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButtonHotelOwner;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.RadioButton radioButtonPetShopOwner;
         private System.Windows.Forms.RadioButton radioButton3;
