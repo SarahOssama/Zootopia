@@ -53,7 +53,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(936, 108);
+            this.panel1.Size = new System.Drawing.Size(832, 86);
             this.panel1.TabIndex = 1;
             // 
             // label1
@@ -61,9 +61,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Mistral", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(198, 11);
+            this.label1.Location = new System.Drawing.Point(176, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(522, 86);
+            this.label1.Size = new System.Drawing.Size(441, 71);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welcome to Zootopia";
             // 
@@ -76,9 +76,8 @@
             this.buttonContinue.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonContinue.ForeColor = System.Drawing.Color.MintCream;
             this.buttonContinue.Location = new System.Drawing.Point(0, 0);
-            this.buttonContinue.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonContinue.Name = "buttonContinue";
-            this.buttonContinue.Size = new System.Drawing.Size(200, 100);
+            this.buttonContinue.Size = new System.Drawing.Size(178, 80);
             this.buttonContinue.TabIndex = 4;
             this.buttonContinue.Text = "Continue";
             this.buttonContinue.UseVisualStyleBackColor = false;
@@ -92,7 +91,7 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
             this.label2.Location = new System.Drawing.Point(0, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(886, 196);
+            this.label2.Size = new System.Drawing.Size(737, 160);
             this.label2.TabIndex = 3;
             this.label2.Text = "If you\'re intersted with pet\'s staff, then this application \r\nis definitly here f" +
     "or you \r\n\r\n\r\n";
@@ -103,45 +102,48 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 320);
+            this.panel2.Location = new System.Drawing.Point(0, 256);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(936, 286);
+            this.panel2.Size = new System.Drawing.Size(832, 229);
             this.panel2.TabIndex = 6;
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 186);
+            this.panel3.Location = new System.Drawing.Point(0, 149);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(936, 100);
+            this.panel3.Size = new System.Drawing.Size(832, 80);
             this.panel3.TabIndex = 4;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.buttonContinue);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(736, 0);
+            this.panel4.Location = new System.Drawing.Point(654, 0);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(200, 100);
+            this.panel4.Size = new System.Drawing.Size(178, 80);
             this.panel4.TabIndex = 0;
             // 
             // panel5
             // 
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(0, 108);
+            this.panel5.Location = new System.Drawing.Point(0, 86);
+            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(936, 206);
+            this.panel5.Size = new System.Drawing.Size(832, 165);
             this.panel5.TabIndex = 7;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(309, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(275, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(314, 202);
+            this.pictureBox1.Size = new System.Drawing.Size(279, 162);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -149,14 +151,13 @@
             // 
             // Welcome
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
-            this.ClientSize = new System.Drawing.Size(936, 606);
+            this.ClientSize = new System.Drawing.Size(832, 485);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Welcome";
             this.Text = "Welcome";
             this.Load += new System.EventHandler(this.Welcome_Load);
