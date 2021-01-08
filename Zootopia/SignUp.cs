@@ -34,6 +34,7 @@ namespace Zootopia
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
+            this.Close();
             if (radioButtonPetOwner.Checked == true)
             {
                 PetOwnerView V = new PetOwnerView();
@@ -49,6 +50,12 @@ namespace Zootopia
                 HotelOwnerView V = new HotelOwnerView ();
                 V.Show();
             }
+            if(VetRadioButton.Checked==true)
+            {
+                VetView vet = new VetView();
+                vet.Show();
+            }
+            
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,8 +70,17 @@ namespace Zootopia
 
         private void AdminLogInButton_Click(object sender, EventArgs e)
         {
+            this.Close();
             AdminView A = new AdminView();
             A.Show();
+        }
+
+        private void SignUpButtom_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            CreateAccount a = new CreateAccount();
+            a.Show();
+
         }
     }
 }

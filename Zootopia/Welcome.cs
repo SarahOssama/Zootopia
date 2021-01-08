@@ -29,9 +29,10 @@ namespace Zootopia
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
+           
             SignUp S = new SignUp();
             S.Show();
-
+           
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

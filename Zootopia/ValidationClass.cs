@@ -17,7 +17,7 @@ namespace Zootopia
             Object returnData = null;
             try
             {
-                int x = Convert.ToInt32(input);
+                int x = int.Parse(input);
                 if (x < 0 )
                 {
                     err.Append( "Input " + input + " is a negative number");
@@ -33,6 +33,29 @@ namespace Zootopia
             }
             return returnData;
         }
+
+        public static Object isPositiveFloat(String input, StringBuilder err)
+        {
+            Object returnData = null;
+            try
+            {
+                float x = float.Parse(input);
+                if (x < 0)
+                {
+                    err.Append("Input " + input + " is a negative number");
+                }
+                else
+                {
+                    returnData = x;
+                }
+            }
+            catch
+            {
+                err.Append("Input " + input + " is not a valid float");
+            }
+            return returnData;
+        }
+
 
     }
 }
