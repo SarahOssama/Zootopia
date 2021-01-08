@@ -62,6 +62,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin View\AddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View\AddAdmin.Designer.cs">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View\RemoveAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View\RemoveAdmin.Designer.cs">
+      <DependentUpon>RemoveAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View\UpdateAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View\UpdateAdmin.Designer.cs">
+      <DependentUpon>UpdateAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View\ViewHotelRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View\ViewHotelRates.Designer.cs">
+      <DependentUpon>ViewHotelRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View\ViewPetShopsRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View\ViewPetShopsRates.Designer.cs">
+      <DependentUpon>ViewPetShopsRates.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin View\ViewVetsRates.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin View\ViewVetsRates.Designer.cs">
+      <DependentUpon>ViewVetsRates.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hotel View\DeleteTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -205,6 +241,24 @@
     <Compile Include="Welcome.Designer.cs">
       <DependentUpon>Welcome.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin View\AddAdmin.resx">
+      <DependentUpon>AddAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View\RemoveAdmin.resx">
+      <DependentUpon>RemoveAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View\UpdateAdmin.resx">
+      <DependentUpon>UpdateAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View\ViewHotelRates.resx">
+      <DependentUpon>ViewHotelRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View\ViewPetShopsRates.resx">
+      <DependentUpon>ViewPetShopsRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin View\ViewVetsRates.resx">
+      <DependentUpon>ViewVetsRates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hotel View\DeleteTrainer.resx">
       <DependentUpon>DeleteTrainer.cs</DependentUpon>
     </EmbeddedResource>
