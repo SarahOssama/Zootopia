@@ -48,7 +48,7 @@ namespace Zootopia
             // 
             // buttonDeleteTrainer
             // 
-            this.buttonDeleteTrainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonDeleteTrainer.BackColor = System.Drawing.Color.MediumVioletRed;
             this.buttonDeleteTrainer.FlatAppearance.BorderSize = 0;
             this.buttonDeleteTrainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteTrainer.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -89,14 +89,13 @@ namespace Zootopia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(836, 800);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(884, 536);
             this.Controls.Add(this.DeleteTrainerNameComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonDeleteTrainer);
             this.Controls.Add(this.buttonCloseDeleteTrainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(836, 800);
             this.Name = "DeleteTrainer";
             this.Text = "DeleteTrainer";
             this.ResumeLayout(false);
