@@ -22,9 +22,9 @@ namespace Zootopia
         {
             dbMan.CloseConnection();
         }
-        public DataTable SelectAllEmp()
+        public DataTable SelectAllTrainers()
         {
-            string query = "SELECT * FROM Employee;";
+            string query = "SELECT * FROM TRAINER;";
             return dbMan.ExecuteReader(query);
         }
 
@@ -36,14 +36,14 @@ namespace Zootopia
             return dbMan.ExecuteNonQuery(query);
         }
 
-        public DataTable SelectDepNum()
+        public DataTable SelectLocations()
         {
-            string query= "SELECT Dnumber, Dname FROM Department;";
+            string query= "Select Location_Name From LOCATION;";
             return dbMan.ExecuteReader(query);
         }
-        public DataTable SelectDepLoc()
+        public DataTable SelectAllHotelName()
         {
-            string query = "SELECT DISTINCT Dlocation FROM Dept_Locations;";
+            string query = "Select HName from HOTEL;";
             return dbMan.ExecuteReader(query);
         }
 
@@ -55,38 +55,69 @@ namespace Zootopia
             return dbMan.ExecuteReader(query);
         }
 
-        //TODO:
-        //Get SSN and address for all employees with salary less than 40000.
-        //FunctionName "returnType" SelectAllEmployeesWithSalaryLessThan(?)
-        //Make Sure to show only SSN and Address Not all columns
+        public DataTable SelectTrainerInHotel(string HName, int TPriceUp, int TPriceDown, int TRateUp, int TRateDown)
+        {
+            string query = "Select FName ,LName, T_TotalRate , TPrice from TRAINER, HOTEL  "
+             + " Where TRAINER.Hotel_ID=HOTEL.Hotel_ID and HOTEL.HName='" + HName + "' and TPrice>=" + TPriceDown + " and TPrice<=" + TPriceUp + " and T_TotalRate>=" + TRateDown + " and T_TotalRate<=" + TRateUp + ";";
 
-        //TODO:
-        //Get all female employees who work in "Administration" department
-        //FunctionName "returnType" GetAllGenderWorkingInDepartment(?,?)
-        //Make sure to get their Names and maybe SSN only
+            return dbMan.ExecuteReader(query);
+        }
 
-        //TODO:
-        //Get departments names for all departments located at "Houston" (1 mark)
-        //FunctionName: "returnType" GetDepartmentNamesAtLocation(?)
-        //Just Get the Names
+        #region OwnerSearch
+        public DataTable SearchHotel(string HLocation, int HPriceUp, int HPriceDown, int HRateUp, int HRateDown)
+        {
+
+            string StoredProcedureName = StoredProcedures.SearchHotelProc;
+            Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            Parameters.Add("@Hlocation", HLocation);
+            Parameters.Add("@HPriceUp", HPriceUp);
+            Parameters.Add("@HPriceDown", HPriceDown);
+            Parameters.Add("@HRateUp", HRateUp);
+            Parameters.Add("@HRateDown", HRateDown);
+            return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+
+            //string query = "Select HName, HotelPhoneNum,HPrice from HOTEL, LOCATION "
+            // + " where Hotel.Location_ID=LOCATION.Location_ID and LOCATION.Location_Name='"+ HLocation + "' and HPrice>=" + HPriceDown + " and HPrice<=" + HPriceUp + " and H_TotalRate>=" + HRateDown + " and H_TotalRate<=" + HRateUp + ";";
+
+            //return dbMan.ExecuteReader(query);
+        }
 
 
-        //TODO:
-        //Insert a new department. (1 mark)
-        //Make sure all the required fields are given and if any important Field missing, give the user appropriate message
+        public DataTable SearchPetShop(string PSLocation)
+        {
 
+            //string StoredProcedureName = StoredProcedures.SearchPetShopProc;
+            //Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            //Parameters.Add("@PSLocation", PSLocation);
+            //Parameters.Add("@PSPriceUp", PSPriceUp);
+            //Parameters.Add("@PSPriceDown", PSPriceDown);
+            //Parameters.Add("@PSRateUp", PSRateUp);
+            //Parameters.Add("@PSRateDown", PSRateDown);
+            //return dbMan.ExecuteReader(StoredProcedureName, Parameters);
 
-        //(To be delivered next lab)
-        //
-        //TODO:
-        //5-Get employees names and salaries for all employees 
-        //who work in a project located at "Stafford" or in "Houston" 
-        //and work less than 35 hours. (1 marks)
+            string query = "Select Pshop_Name, PShopPhoneNum from PETSHOP, LOCATION "
+             + " where PETSHOP.Location_ID=LOCATION.Location_ID and LOCATION.Location_Name='" + PSLocation+ "';";
 
-        //6- Allow user to update salary of an employee of a certain SSN. (1 mark)
-        //7-Get the last names of department managers and their salaries. (1 mark)
-        //8-Get Name and SSN for all employees working in "Research" department or working on projects controlled by "Research" department. (2 marks)
-        //9-Get maximum, minimum and average salary for employees(1 mark)
+            return dbMan.ExecuteReader(query);
+        }
 
+        public DataTable SearchVet(string VLocation, int VPriceUp, int VPriceDown, int VRateUp, int VRateDown)
+        {
+
+            //string StoredProcedureName = StoredProcedures.SearchHotelProc;
+            //Dictionary<string, object> Parameters = new Dictionary<string, object>();
+            //Parameters.Add("@Hlocation", VLocation);
+            //Parameters.Add("@HPriceUp", VPriceUp);
+            //Parameters.Add("@HPriceDown", VPriceDown);
+            //Parameters.Add("@HRateUp", VRateUp);
+            //Parameters.Add("@HRateDown", VRateDown);
+            //return dbMan.ExecuteReader(StoredProcedureName, Parameters);
+
+            string query = "Select Vet_Name, VetPhoneNum,Vet_Price from VET, LOCATION  "
+             + " where VET.Location_ID=LOCATION.Location_ID and LOCATION.Location_Name='" + VLocation + "' and Vet_Price>=" + VPriceDown + " and Vet_Price<=" + VPriceUp + " and V_TotalRate>=" + VRateDown + " and V_TotalRate<=" + VRateUp + ";";
+
+            return dbMan.ExecuteReader(query);
+        }
+        #endregion
     }
 }
