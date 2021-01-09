@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetOwnerView));
             this.panelLeft = new System.Windows.Forms.Panel();
             this.panelPetShopServices = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -48,12 +49,12 @@
             this.buttonDeletePet = new System.Windows.Forms.Button();
             this.buttonUpdatePet = new System.Windows.Forms.Button();
             this.buttonInsertPet = new System.Windows.Forms.Button();
-            this.buttonPetDetail = new System.Windows.Forms.Button();
-            this.panelLogo = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSubChildDown = new System.Windows.Forms.Panel();
             this.panelSubChildUP = new System.Windows.Forms.Panel();
+            this.buttonPetDetail = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelLogo = new System.Windows.Forms.Panel();
             this.panelLeft.SuspendLayout();
             this.panelPetShopServices.SuspendLayout();
             this.panelHotelServicesSubMenu.SuspendLayout();
@@ -61,14 +62,14 @@
             this.panelSearchSubMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelPetDetailsSubMenu.SuspendLayout();
-            this.panelLogo.SuspendLayout();
             this.panelChildForm.SuspendLayout();
+            this.panelLogo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
             // 
             this.panelLeft.AutoScroll = true;
-            this.panelLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
+            this.panelLeft.BackColor = System.Drawing.Color.MediumVioletRed;
             this.panelLeft.Controls.Add(this.panelPetShopServices);
             this.panelLeft.Controls.Add(this.button1);
             this.panelLeft.Controls.Add(this.buttonMating);
@@ -84,7 +85,7 @@
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
             this.panelLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(260, 801);
+            this.panelLeft.Size = new System.Drawing.Size(260, 855);
             this.panelLeft.TabIndex = 0;
             // 
             // panelPetShopServices
@@ -119,11 +120,12 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.MediumVioletRed;
             this.button1.Dock = System.Windows.Forms.DockStyle.Top;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
+            this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 769);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
@@ -132,16 +134,17 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Pet Shop Services";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // buttonMating
             // 
+            this.buttonMating.BackColor = System.Drawing.Color.MediumVioletRed;
             this.buttonMating.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonMating.FlatAppearance.BorderSize = 0;
             this.buttonMating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMating.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonMating.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonMating.ForeColor = System.Drawing.Color.White;
             this.buttonMating.Location = new System.Drawing.Point(0, 713);
             this.buttonMating.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonMating.Name = "buttonMating";
@@ -150,12 +153,12 @@
             this.buttonMating.TabIndex = 7;
             this.buttonMating.Text = "Mating";
             this.buttonMating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonMating.UseVisualStyleBackColor = true;
+            this.buttonMating.UseVisualStyleBackColor = false;
             this.buttonMating.Click += new System.EventHandler(this.buttonMatting_Click);
             // 
             // panelHotelServicesSubMenu
             // 
-            this.panelHotelServicesSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelHotelServicesSubMenu.BackColor = System.Drawing.Color.FloralWhite;
             this.panelHotelServicesSubMenu.Controls.Add(this.ButtonReserve);
             this.panelHotelServicesSubMenu.Controls.Add(this.ButtonTrainer);
             this.panelHotelServicesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -214,11 +217,12 @@
             // 
             // ButtonHotelServices
             // 
+            this.ButtonHotelServices.BackColor = System.Drawing.Color.MediumVioletRed;
             this.ButtonHotelServices.Dock = System.Windows.Forms.DockStyle.Top;
             this.ButtonHotelServices.FlatAppearance.BorderSize = 0;
             this.ButtonHotelServices.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonHotelServices.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonHotelServices.ForeColor = System.Drawing.Color.DimGray;
+            this.ButtonHotelServices.ForeColor = System.Drawing.Color.White;
             this.ButtonHotelServices.Location = new System.Drawing.Point(0, 0);
             this.ButtonHotelServices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonHotelServices.Name = "ButtonHotelServices";
@@ -227,12 +231,12 @@
             this.ButtonHotelServices.TabIndex = 2;
             this.ButtonHotelServices.Text = "Hotel Services";
             this.ButtonHotelServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonHotelServices.UseVisualStyleBackColor = true;
+            this.ButtonHotelServices.UseVisualStyleBackColor = false;
             this.ButtonHotelServices.Click += new System.EventHandler(this.ButtonHotelServices_Click);
             // 
             // panelSearchSubMenu
             // 
-            this.panelSearchSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelSearchSubMenu.BackColor = System.Drawing.Color.FloralWhite;
             this.panelSearchSubMenu.Controls.Add(this.ButtonVetSearch);
             this.panelSearchSubMenu.Controls.Add(this.ButtonPetShopSearch);
             this.panelSearchSubMenu.Controls.Add(this.ButtonHotelSearch);
@@ -310,11 +314,12 @@
             // 
             // ButtonSearch
             // 
+            this.ButtonSearch.BackColor = System.Drawing.Color.MediumVioletRed;
             this.ButtonSearch.Dock = System.Windows.Forms.DockStyle.Top;
             this.ButtonSearch.FlatAppearance.BorderSize = 0;
             this.ButtonSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSearch.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonSearch.ForeColor = System.Drawing.Color.DimGray;
+            this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Location = new System.Drawing.Point(0, 0);
             this.ButtonSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonSearch.Name = "ButtonSearch";
@@ -323,12 +328,12 @@
             this.ButtonSearch.TabIndex = 2;
             this.ButtonSearch.Text = "Search";
             this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtonSearch.UseVisualStyleBackColor = true;
+            this.ButtonSearch.UseVisualStyleBackColor = false;
             this.ButtonSearch.Click += new System.EventHandler(this.ButtonSearch_Click);
             // 
             // panelPetDetailsSubMenu
             // 
-            this.panelPetDetailsSubMenu.BackColor = System.Drawing.Color.White;
+            this.panelPetDetailsSubMenu.BackColor = System.Drawing.Color.FloralWhite;
             this.panelPetDetailsSubMenu.Controls.Add(this.buttonDeletePet);
             this.panelPetDetailsSubMenu.Controls.Add(this.buttonUpdatePet);
             this.panelPetDetailsSubMenu.Controls.Add(this.buttonInsertPet);
@@ -394,13 +399,47 @@
             this.buttonInsertPet.UseVisualStyleBackColor = true;
             this.buttonInsertPet.Click += new System.EventHandler(this.buttonInsertPet_Click);
             // 
+            // panelChildForm
+            // 
+            this.panelChildForm.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelChildForm.Controls.Add(this.panelSubChildDown);
+            this.panelChildForm.Controls.Add(this.panelSubChildUP);
+            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelChildForm.Location = new System.Drawing.Point(260, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelChildForm.MinimumSize = new System.Drawing.Size(836, 801);
+            this.panelChildForm.Name = "panelChildForm";
+            this.panelChildForm.Size = new System.Drawing.Size(947, 855);
+            this.panelChildForm.TabIndex = 1;
+            // 
+            // panelSubChildDown
+            // 
+            this.panelSubChildDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelSubChildDown.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelSubChildDown.Location = new System.Drawing.Point(0, 424);
+            this.panelSubChildDown.Name = "panelSubChildDown";
+            this.panelSubChildDown.Size = new System.Drawing.Size(947, 431);
+            this.panelSubChildDown.TabIndex = 1;
+            // 
+            // panelSubChildUP
+            // 
+            this.panelSubChildUP.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelSubChildUP.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubChildUP.Location = new System.Drawing.Point(0, 0);
+            this.panelSubChildUP.Name = "panelSubChildUP";
+            this.panelSubChildUP.Size = new System.Drawing.Size(947, 424);
+            this.panelSubChildUP.TabIndex = 0;
+            // 
             // buttonPetDetail
             // 
+            this.buttonPetDetail.BackColor = System.Drawing.Color.MediumVioletRed;
             this.buttonPetDetail.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonPetDetail.FlatAppearance.BorderSize = 0;
             this.buttonPetDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPetDetail.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPetDetail.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonPetDetail.ForeColor = System.Drawing.Color.White;
             this.buttonPetDetail.Location = new System.Drawing.Point(0, 91);
             this.buttonPetDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonPetDetail.Name = "buttonPetDetail";
@@ -409,19 +448,8 @@
             this.buttonPetDetail.TabIndex = 1;
             this.buttonPetDetail.Text = "Pet Details";
             this.buttonPetDetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonPetDetail.UseVisualStyleBackColor = true;
+            this.buttonPetDetail.UseVisualStyleBackColor = false;
             this.buttonPetDetail.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panelLogo
-            // 
-            this.panelLogo.Controls.Add(this.label1);
-            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLogo.Location = new System.Drawing.Point(0, 0);
-            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(234, 91);
-            this.panelLogo.TabIndex = 0;
-            this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // label1
             // 
@@ -436,44 +464,26 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panelChildForm
+            // panelLogo
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.LightGray;
-            this.panelChildForm.Controls.Add(this.panelSubChildDown);
-            this.panelChildForm.Controls.Add(this.panelSubChildUP);
-            this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(260, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panelChildForm.MinimumSize = new System.Drawing.Size(836, 801);
-            this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(836, 801);
-            this.panelChildForm.TabIndex = 1;
-            // 
-            // panelSubChildDown
-            // 
-            this.panelSubChildDown.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelSubChildDown.Location = new System.Drawing.Point(0, 399);
-            this.panelSubChildDown.Name = "panelSubChildDown";
-            this.panelSubChildDown.Size = new System.Drawing.Size(836, 402);
-            this.panelSubChildDown.TabIndex = 1;
-            // 
-            // panelSubChildUP
-            // 
-            this.panelSubChildUP.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubChildUP.Location = new System.Drawing.Point(0, 0);
-            this.panelSubChildUP.Name = "panelSubChildUP";
-            this.panelSubChildUP.Size = new System.Drawing.Size(836, 400);
-            this.panelSubChildUP.TabIndex = 0;
+            this.panelLogo.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panelLogo.Controls.Add(this.label1);
+            this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelLogo.Name = "panelLogo";
+            this.panelLogo.Size = new System.Drawing.Size(234, 91);
+            this.panelLogo.TabIndex = 0;
+            this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
             // PetOwnerView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1096, 801);
+            this.ClientSize = new System.Drawing.Size(1207, 855);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelLeft);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(1118, 857);
             this.Name = "PetOwnerView";
@@ -485,9 +495,9 @@
             this.panelSearchSubMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panelPetDetailsSubMenu.ResumeLayout(false);
+            this.panelChildForm.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            this.panelChildForm.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -495,13 +505,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelLeft;
-        private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelPetDetailsSubMenu;
         private System.Windows.Forms.Button buttonDeletePet;
         private System.Windows.Forms.Button buttonUpdatePet;
         private System.Windows.Forms.Button buttonInsertPet;
-        private System.Windows.Forms.Button buttonPetDetail;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Panel panelSearchSubMenu;
         private System.Windows.Forms.Button ButtonVetSearch;
@@ -520,5 +527,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panelSubChildDown;
         private System.Windows.Forms.Panel panelSubChildUP;
+        private System.Windows.Forms.Button buttonPetDetail;
+        private System.Windows.Forms.Panel panelLogo;
+        private System.Windows.Forms.Label label1;
     }
 }

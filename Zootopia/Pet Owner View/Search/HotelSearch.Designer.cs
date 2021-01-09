@@ -29,20 +29,27 @@ namespace Zootopia
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.buttonCloseUpdate = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.buttonSearchForHotel = new System.Windows.Forms.Button();
             this.HotelSearchDataGrid = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.HRateSearchComboBox = new System.Windows.Forms.ComboBox();
-            this.HPriceSearchComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.HLocationSearchComboBox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelPriceRange = new System.Windows.Forms.Label();
+            this.HPriceSearchComboBox = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelRateRange = new System.Windows.Forms.Label();
+            this.HRateSearchComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.HotelSearchDataGrid)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonCloseUpdate
@@ -89,7 +96,7 @@ namespace Zootopia
             // 
             this.buttonSearchForHotel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearchForHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonSearchForHotel.BackColor = System.Drawing.Color.MediumVioletRed;
             this.buttonSearchForHotel.FlatAppearance.BorderSize = 0;
             this.buttonSearchForHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchForHotel.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -105,9 +112,22 @@ namespace Zootopia
             // 
             // HotelSearchDataGrid
             // 
+            this.HotelSearchDataGrid.AllowUserToAddRows = false;
+            this.HotelSearchDataGrid.AllowUserToDeleteRows = false;
+            this.HotelSearchDataGrid.BackgroundColor = System.Drawing.Color.LavenderBlush;
+            this.HotelSearchDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FloralWhite;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.HotelSearchDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.HotelSearchDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.HotelSearchDataGrid.Location = new System.Drawing.Point(75, 466);
             this.HotelSearchDataGrid.Name = "HotelSearchDataGrid";
+            this.HotelSearchDataGrid.ReadOnly = true;
             this.HotelSearchDataGrid.RowHeadersWidth = 62;
             this.HotelSearchDataGrid.RowTemplate.Height = 28;
             this.HotelSearchDataGrid.Size = new System.Drawing.Size(654, 220);
@@ -120,40 +140,21 @@ namespace Zootopia
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.HRateSearchComboBox, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.HPriceSearchComboBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.HLocationSearchComboBox, 1, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(75, 127);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(704, 231);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // HRateSearchComboBox
-            // 
-            this.HRateSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.HRateSearchComboBox.FormattingEnabled = true;
-            this.HRateSearchComboBox.Location = new System.Drawing.Point(355, 157);
-            this.HRateSearchComboBox.Name = "HRateSearchComboBox";
-            this.HRateSearchComboBox.Size = new System.Drawing.Size(346, 28);
-            this.HRateSearchComboBox.TabIndex = 6;
-            // 
-            // HPriceSearchComboBox
-            // 
-            this.HPriceSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.HPriceSearchComboBox.FormattingEnabled = true;
-            this.HPriceSearchComboBox.Location = new System.Drawing.Point(355, 80);
-            this.HPriceSearchComboBox.Name = "HPriceSearchComboBox";
-            this.HPriceSearchComboBox.Size = new System.Drawing.Size(346, 28);
-            this.HPriceSearchComboBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -198,11 +199,87 @@ namespace Zootopia
             this.HLocationSearchComboBox.Size = new System.Drawing.Size(346, 28);
             this.HLocationSearchComboBox.TabIndex = 4;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.labelPriceRange);
+            this.panel1.Controls.Add(this.HPriceSearchComboBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(355, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(346, 71);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // labelPriceRange
+            // 
+            this.labelPriceRange.AutoSize = true;
+            this.labelPriceRange.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelPriceRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPriceRange.ForeColor = System.Drawing.Color.Red;
+            this.labelPriceRange.Location = new System.Drawing.Point(0, 28);
+            this.labelPriceRange.Name = "labelPriceRange";
+            this.labelPriceRange.Size = new System.Drawing.Size(179, 19);
+            this.labelPriceRange.TabIndex = 50;
+            this.labelPriceRange.Text = "Please choose a price range";
+            // 
+            // HPriceSearchComboBox
+            // 
+            this.HPriceSearchComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HPriceSearchComboBox.FormattingEnabled = true;
+            this.HPriceSearchComboBox.Items.AddRange(new object[] {
+            "500-1000",
+            "1000-1500",
+            "1500-2000",
+            "2000-2500"});
+            this.HPriceSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.HPriceSearchComboBox.Name = "HPriceSearchComboBox";
+            this.HPriceSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.HPriceSearchComboBox.TabIndex = 5;
+            this.HPriceSearchComboBox.TextChanged += new System.EventHandler(this.HPriceSearchComboBox_TextChange);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.labelRateRange);
+            this.panel2.Controls.Add(this.HRateSearchComboBox);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(355, 157);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(346, 71);
+            this.panel2.TabIndex = 8;
+            // 
+            // labelRateRange
+            // 
+            this.labelRateRange.AutoSize = true;
+            this.labelRateRange.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelRateRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRateRange.ForeColor = System.Drawing.Color.Red;
+            this.labelRateRange.Location = new System.Drawing.Point(0, 28);
+            this.labelRateRange.Name = "labelRateRange";
+            this.labelRateRange.Size = new System.Drawing.Size(173, 19);
+            this.labelRateRange.TabIndex = 51;
+            this.labelRateRange.Text = "Please choose a rate range";
+            // 
+            // HRateSearchComboBox
+            // 
+            this.HRateSearchComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.HRateSearchComboBox.FormattingEnabled = true;
+            this.HRateSearchComboBox.Items.AddRange(new object[] {
+            "1-2",
+            "2-3",
+            "3-4",
+            "4-5"});
+            this.HRateSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.HRateSearchComboBox.Name = "HRateSearchComboBox";
+            this.HRateSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.HRateSearchComboBox.TabIndex = 6;
+            this.HRateSearchComboBox.TextChanged += new System.EventHandler(this.HRateSearchComboBox_TextChanged);
+            this.HRateSearchComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RateRangeComboBox_Click);
+            // 
             // HotelSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(836, 800);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.HotelSearchDataGrid);
@@ -214,10 +291,13 @@ namespace Zootopia
             this.MinimumSize = new System.Drawing.Size(836, 800);
             this.Name = "HotelSearch";
             this.Text = "HotelSearch";
-            this.Load += new System.EventHandler(this.HotelSearch_Load);
             ((System.ComponentModel.ISupportInitialize)(this.HotelSearchDataGrid)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +317,9 @@ namespace Zootopia
         private System.Windows.Forms.ComboBox HLocationSearchComboBox;
         private System.Windows.Forms.ComboBox HRateSearchComboBox;
         private System.Windows.Forms.ComboBox HPriceSearchComboBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label labelPriceRange;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelRateRange;
     }
 }

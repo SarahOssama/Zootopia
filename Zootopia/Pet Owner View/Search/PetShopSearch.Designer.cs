@@ -30,6 +30,9 @@ namespace Zootopia
         private void InitializeComponent()
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.PSRateSearchComboBox = new System.Windows.Forms.ComboBox();
+            this.PSPriceSearchComboBox = new System.Windows.Forms.ComboBox();
+            this.PSLocationSearchComboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -38,11 +41,14 @@ namespace Zootopia
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.buttonCloseUpdate = new System.Windows.Forms.Button();
-            this.PSLocationSearchComboBox = new System.Windows.Forms.ComboBox();
-            this.PSPriceSearchComboBox = new System.Windows.Forms.ComboBox();
-            this.PSRateSearchComboBox = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.labelPriceRange = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.labelRateRange = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PetshopSearchDataGrid)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -52,8 +58,8 @@ namespace Zootopia
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.PSRateSearchComboBox, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.PSPriceSearchComboBox, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.PSLocationSearchComboBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -67,6 +73,34 @@ namespace Zootopia
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(704, 231);
             this.tableLayoutPanel1.TabIndex = 15;
+            // 
+            // PSRateSearchComboBox
+            // 
+            this.PSRateSearchComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PSRateSearchComboBox.FormattingEnabled = true;
+            this.PSRateSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.PSRateSearchComboBox.Name = "PSRateSearchComboBox";
+            this.PSRateSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.PSRateSearchComboBox.TabIndex = 7;
+            // 
+            // PSPriceSearchComboBox
+            // 
+            this.PSPriceSearchComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PSPriceSearchComboBox.FormattingEnabled = true;
+            this.PSPriceSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.PSPriceSearchComboBox.Name = "PSPriceSearchComboBox";
+            this.PSPriceSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.PSPriceSearchComboBox.TabIndex = 6;
+            // 
+            // PSLocationSearchComboBox
+            // 
+            this.PSLocationSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PSLocationSearchComboBox.FormattingEnabled = true;
+            this.PSLocationSearchComboBox.Location = new System.Drawing.Point(355, 3);
+            this.PSLocationSearchComboBox.Name = "PSLocationSearchComboBox";
+            this.PSLocationSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.PSLocationSearchComboBox.TabIndex = 5;
             // 
             // label4
             // 
@@ -103,6 +137,7 @@ namespace Zootopia
             // 
             // PetshopSearchDataGrid
             // 
+            this.PetshopSearchDataGrid.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.PetshopSearchDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.PetshopSearchDataGrid.Location = new System.Drawing.Point(75, 465);
             this.PetshopSearchDataGrid.Name = "PetshopSearchDataGrid";
@@ -115,7 +150,7 @@ namespace Zootopia
             // 
             this.buttonSearchForPetShop.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearchForPetShop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonSearchForPetShop.BackColor = System.Drawing.Color.MediumVioletRed;
             this.buttonSearchForPetShop.FlatAppearance.BorderSize = 0;
             this.buttonSearchForPetShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchForPetShop.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,41 +204,55 @@ namespace Zootopia
             this.buttonCloseUpdate.UseVisualStyleBackColor = false;
             this.buttonCloseUpdate.Click += new System.EventHandler(this.buttonCloseUpdate_Click);
             // 
-            // PSLocationSearchComboBox
+            // panel1
             // 
-            this.PSLocationSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PSLocationSearchComboBox.FormattingEnabled = true;
-            this.PSLocationSearchComboBox.Location = new System.Drawing.Point(355, 3);
-            this.PSLocationSearchComboBox.Name = "PSLocationSearchComboBox";
-            this.PSLocationSearchComboBox.Size = new System.Drawing.Size(346, 28);
-            this.PSLocationSearchComboBox.TabIndex = 5;
+            this.panel1.Controls.Add(this.labelPriceRange);
+            this.panel1.Controls.Add(this.PSPriceSearchComboBox);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(355, 80);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(346, 71);
+            this.panel1.TabIndex = 17;
             // 
-            // PSPriceSearchComboBox
+            // labelPriceRange
             // 
-            this.PSPriceSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PSPriceSearchComboBox.FormattingEnabled = true;
-            this.PSPriceSearchComboBox.Location = new System.Drawing.Point(355, 80);
-            this.PSPriceSearchComboBox.Name = "PSPriceSearchComboBox";
-            this.PSPriceSearchComboBox.Size = new System.Drawing.Size(346, 28);
-            this.PSPriceSearchComboBox.TabIndex = 6;
+            this.labelPriceRange.AutoSize = true;
+            this.labelPriceRange.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelPriceRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPriceRange.ForeColor = System.Drawing.Color.Red;
+            this.labelPriceRange.Location = new System.Drawing.Point(0, 28);
+            this.labelPriceRange.Name = "labelPriceRange";
+            this.labelPriceRange.Size = new System.Drawing.Size(179, 19);
+            this.labelPriceRange.TabIndex = 51;
+            this.labelPriceRange.Text = "Please choose a price range";
             // 
-            // PSRateSearchComboBox
+            // panel2
             // 
-            this.PSRateSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PSRateSearchComboBox.FormattingEnabled = true;
-            this.PSRateSearchComboBox.Location = new System.Drawing.Point(355, 157);
-            this.PSRateSearchComboBox.Name = "PSRateSearchComboBox";
-            this.PSRateSearchComboBox.Size = new System.Drawing.Size(346, 28);
-            this.PSRateSearchComboBox.TabIndex = 7;
+            this.panel2.Controls.Add(this.labelRateRange);
+            this.panel2.Controls.Add(this.PSRateSearchComboBox);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(355, 157);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(346, 71);
+            this.panel2.TabIndex = 17;
+            // 
+            // labelRateRange
+            // 
+            this.labelRateRange.AutoSize = true;
+            this.labelRateRange.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelRateRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRateRange.ForeColor = System.Drawing.Color.Red;
+            this.labelRateRange.Location = new System.Drawing.Point(0, 28);
+            this.labelRateRange.Name = "labelRateRange";
+            this.labelRateRange.Size = new System.Drawing.Size(173, 19);
+            this.labelRateRange.TabIndex = 52;
+            this.labelRateRange.Text = "Please choose a rate range";
             // 
             // PetShopSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(836, 800);
             this.Controls.Add(this.buttonCloseUpdate);
             this.Controls.Add(this.tableLayoutPanel1);
@@ -219,6 +268,10 @@ namespace Zootopia
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PetshopSearchDataGrid)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -238,5 +291,9 @@ namespace Zootopia
         private System.Windows.Forms.ComboBox PSRateSearchComboBox;
         private System.Windows.Forms.ComboBox PSPriceSearchComboBox;
         private System.Windows.Forms.ComboBox PSLocationSearchComboBox;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label labelPriceRange;
+        private System.Windows.Forms.Label labelRateRange;
     }
 }

@@ -12,9 +12,14 @@ namespace Zootopia
 {
     public partial class ReserveRoom : Form
     {
+        Controller controllerObj;
         public ReserveRoom()
         {
             InitializeComponent();
+            controllerObj = new Controller();
+            DataTable dt = controllerObj.SelectAllHotelName();
+            ReserveRoomHotelNameComboBox.DataSource = dt;
+            ReserveRoomHotelNameComboBox.DisplayMember = "HName";
         }
 
         private void ReserveRoom_Load(object sender, EventArgs e)
@@ -30,6 +35,11 @@ namespace Zootopia
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void ReserveRoomHotelNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
