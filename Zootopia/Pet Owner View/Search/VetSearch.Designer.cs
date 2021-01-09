@@ -41,14 +41,8 @@ namespace Zootopia
             this.buttonSearchForVet = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.labelPriceRange = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.labelRateRange = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VetSearchDataGrid)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -58,8 +52,8 @@ namespace Zootopia
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.VRateSearchComboBox, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.VPriceSearchComboBox, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.VLocationSearchComboBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
@@ -76,35 +70,23 @@ namespace Zootopia
             // 
             // VRateSearchComboBox
             // 
-            this.VRateSearchComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.VRateSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.VRateSearchComboBox.FormattingEnabled = true;
-            this.VRateSearchComboBox.Items.AddRange(new object[] {
-            "1-2",
-            "2-3",
-            "3-4",
-            "4-5"});
-            this.VRateSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.VRateSearchComboBox.Location = new System.Drawing.Point(355, 157);
             this.VRateSearchComboBox.Name = "VRateSearchComboBox";
             this.VRateSearchComboBox.Size = new System.Drawing.Size(346, 28);
             this.VRateSearchComboBox.TabIndex = 7;
-            this.VRateSearchComboBox.SelectedIndexChanged += new System.EventHandler(this.VRateSearchComboBox_TextChange);
-            this.VRateSearchComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RateRangeComboBox_Click);
             // 
             // VPriceSearchComboBox
             // 
-            this.VPriceSearchComboBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.VPriceSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.VPriceSearchComboBox.FormattingEnabled = true;
-            this.VPriceSearchComboBox.Items.AddRange(new object[] {
-            "100-200",
-            "200-300",
-            "300-400",
-            "400-500"});
-            this.VPriceSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.VPriceSearchComboBox.Location = new System.Drawing.Point(355, 80);
             this.VPriceSearchComboBox.Name = "VPriceSearchComboBox";
             this.VPriceSearchComboBox.Size = new System.Drawing.Size(346, 28);
             this.VPriceSearchComboBox.TabIndex = 6;
-            this.VPriceSearchComboBox.SelectedIndexChanged += new System.EventHandler(this.VPriceSearchComboBox_TextChange);
-            this.VPriceSearchComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.PriceRangeComboBox_Click);
             // 
             // VLocationSearchComboBox
             // 
@@ -167,7 +149,6 @@ namespace Zootopia
             // 
             // VetSearchDataGrid
             // 
-            this.VetSearchDataGrid.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.VetSearchDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.VetSearchDataGrid.Location = new System.Drawing.Point(75, 466);
             this.VetSearchDataGrid.Name = "VetSearchDataGrid";
@@ -180,7 +161,7 @@ namespace Zootopia
             // 
             this.buttonSearchForVet.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearchForVet.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.buttonSearchForVet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonSearchForVet.FlatAppearance.BorderSize = 0;
             this.buttonSearchForVet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchForVet.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -192,7 +173,6 @@ namespace Zootopia
             this.buttonSearchForVet.TabIndex = 19;
             this.buttonSearchForVet.Text = "Search";
             this.buttonSearchForVet.UseVisualStyleBackColor = false;
-            this.buttonSearchForVet.Click += new System.EventHandler(this.buttonSearchForVet_Click);
             // 
             // label1
             // 
@@ -218,55 +198,11 @@ namespace Zootopia
             this.label5.TabIndex = 17;
             this.label5.Text = "Filter";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.labelPriceRange);
-            this.panel1.Controls.Add(this.VPriceSearchComboBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(355, 80);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 71);
-            this.panel1.TabIndex = 23;
-            // 
-            // labelPriceRange
-            // 
-            this.labelPriceRange.AutoSize = true;
-            this.labelPriceRange.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelPriceRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPriceRange.ForeColor = System.Drawing.Color.Red;
-            this.labelPriceRange.Location = new System.Drawing.Point(0, 28);
-            this.labelPriceRange.Name = "labelPriceRange";
-            this.labelPriceRange.Size = new System.Drawing.Size(179, 19);
-            this.labelPriceRange.TabIndex = 51;
-            this.labelPriceRange.Text = "Please choose a price range";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.labelRateRange);
-            this.panel2.Controls.Add(this.VRateSearchComboBox);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(355, 157);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(346, 71);
-            this.panel2.TabIndex = 23;
-            // 
-            // labelRateRange
-            // 
-            this.labelRateRange.AutoSize = true;
-            this.labelRateRange.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelRateRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRateRange.ForeColor = System.Drawing.Color.Red;
-            this.labelRateRange.Location = new System.Drawing.Point(0, 28);
-            this.labelRateRange.Name = "labelRateRange";
-            this.labelRateRange.Size = new System.Drawing.Size(179, 19);
-            this.labelRateRange.TabIndex = 52;
-            this.labelRateRange.Text = "Please choose a price range";
-            // 
             // VetSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(836, 800);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonCloseVetSearch);
@@ -281,10 +217,6 @@ namespace Zootopia
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.VetSearchDataGrid)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -304,9 +236,5 @@ namespace Zootopia
         private System.Windows.Forms.Button buttonSearchForVet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label labelPriceRange;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label labelRateRange;
     }
 }

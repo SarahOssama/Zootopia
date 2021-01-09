@@ -37,7 +37,7 @@ namespace Zootopia
             // 
             // ButtonViewTrainer
             // 
-            this.ButtonViewTrainer.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.ButtonViewTrainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ButtonViewTrainer.FlatAppearance.BorderSize = 0;
             this.ButtonViewTrainer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonViewTrainer.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -49,20 +49,18 @@ namespace Zootopia
             this.ButtonViewTrainer.TabIndex = 14;
             this.ButtonViewTrainer.Text = "View";
             this.ButtonViewTrainer.UseVisualStyleBackColor = false;
-            this.ButtonViewTrainer.Click += new System.EventHandler(this.ButtonViewTrainer_Click);
             // 
             // ViewTrainersDataGrid
             // 
             this.ViewTrainersDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ViewTrainersDataGrid.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.ViewTrainersDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ViewTrainersDataGrid.Location = new System.Drawing.Point(59, 71);
             this.ViewTrainersDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ViewTrainersDataGrid.Name = "ViewTrainersDataGrid";
             this.ViewTrainersDataGrid.RowHeadersWidth = 62;
             this.ViewTrainersDataGrid.RowTemplate.Height = 28;
-            this.ViewTrainersDataGrid.Size = new System.Drawing.Size(855, 352);
+            this.ViewTrainersDataGrid.Size = new System.Drawing.Size(532, 358);
             this.ViewTrainersDataGrid.TabIndex = 13;
             // 
             // buttonCloseViewTrainers
@@ -84,12 +82,13 @@ namespace Zootopia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(988, 589);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(836, 800);
             this.Controls.Add(this.ButtonViewTrainer);
             this.Controls.Add(this.ViewTrainersDataGrid);
             this.Controls.Add(this.buttonCloseViewTrainers);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MinimumSize = new System.Drawing.Size(836, 800);
             this.Name = "ViewTrainers";
             this.Text = "ViewTrainers";
             ((System.ComponentModel.ISupportInitialize)(this.ViewTrainersDataGrid)).EndInit();

@@ -49,5 +49,15 @@ namespace Zootopia
         {
             OpenChildForm(new ViewUtilities());
         }
+
+        private void buttonDeleteUtility_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new DeleteUtility());
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new UpdateUtility());
+        }
     }
 }

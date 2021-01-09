@@ -143,7 +143,6 @@
             // 
             // dataGridView1
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(76, 492);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -156,7 +155,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic)
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label5.Location = new System.Drawing.Point(71, 440);
@@ -168,9 +167,9 @@
             // 
             // buttonSearchForPetToMate
             // 
-            this.buttonSearchForPetToMate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.buttonSearchForPetToMate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonSearchForPetToMate.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.buttonSearchForPetToMate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.buttonSearchForPetToMate.FlatAppearance.BorderSize = 0;
             this.buttonSearchForPetToMate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchForPetToMate.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,11 +183,11 @@
             this.buttonSearchForPetToMate.UseVisualStyleBackColor = false;
             this.buttonSearchForPetToMate.Click += new System.EventHandler(this.buttonSearchForPetToMate_Click);
             // 
-            // MatingPet
+            // MattingPet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(836, 800);
             this.Controls.Add(this.buttonSearchForPetToMate);
             this.Controls.Add(this.label5);
@@ -198,7 +197,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MinimumSize = new System.Drawing.Size(836, 800);
-            this.Name = "MatingPet";
+            this.Name = "MattingPet";
             this.Text = "MattingPet";
             this.Load += new System.EventHandler(this.MattingPet_Load);
             this.tableLayoutPanel1.ResumeLayout(false);

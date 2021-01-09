@@ -43,7 +43,7 @@ namespace Zootopia
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
             this.panel1.Controls.Add(this.ViewRoomButton);
             this.panel1.Controls.Add(this.DeleteTrainerButton);
             this.panel1.Controls.Add(this.ViewTrainerButton);
@@ -63,7 +63,7 @@ namespace Zootopia
             this.ViewRoomButton.FlatAppearance.BorderSize = 0;
             this.ViewRoomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewRoomButton.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewRoomButton.ForeColor = System.Drawing.Color.White;
+            this.ViewRoomButton.ForeColor = System.Drawing.Color.DimGray;
             this.ViewRoomButton.Location = new System.Drawing.Point(0, 357);
             this.ViewRoomButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ViewRoomButton.Name = "ViewRoomButton";
@@ -81,7 +81,7 @@ namespace Zootopia
             this.DeleteTrainerButton.FlatAppearance.BorderSize = 0;
             this.DeleteTrainerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteTrainerButton.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteTrainerButton.ForeColor = System.Drawing.Color.White;
+            this.DeleteTrainerButton.ForeColor = System.Drawing.Color.DimGray;
             this.DeleteTrainerButton.Location = new System.Drawing.Point(0, 285);
             this.DeleteTrainerButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.DeleteTrainerButton.Name = "DeleteTrainerButton";
@@ -99,7 +99,7 @@ namespace Zootopia
             this.ViewTrainerButton.FlatAppearance.BorderSize = 0;
             this.ViewTrainerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ViewTrainerButton.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ViewTrainerButton.ForeColor = System.Drawing.Color.White;
+            this.ViewTrainerButton.ForeColor = System.Drawing.Color.DimGray;
             this.ViewTrainerButton.Location = new System.Drawing.Point(0, 173);
             this.ViewTrainerButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ViewTrainerButton.Name = "ViewTrainerButton";
@@ -117,7 +117,7 @@ namespace Zootopia
             this.AddTrainerButton.FlatAppearance.BorderSize = 0;
             this.AddTrainerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.AddTrainerButton.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddTrainerButton.ForeColor = System.Drawing.Color.Transparent;
+            this.AddTrainerButton.ForeColor = System.Drawing.Color.DimGray;
             this.AddTrainerButton.Location = new System.Drawing.Point(0, 101);
             this.AddTrainerButton.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.AddTrainerButton.Name = "AddTrainerButton";
@@ -153,7 +153,7 @@ namespace Zootopia
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelChildForm.BackColor = System.Drawing.Color.LightGray;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(238, 0);
             this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

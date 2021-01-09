@@ -98,6 +98,12 @@
     <Compile Include="Admin View\ViewVetsRates.Designer.cs">
       <DependentUpon>ViewVetsRates.cs</DependentUpon>
     </Compile>
+    <Compile Include="PetShop View\DeleteUtility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PetShop View\DeleteUtility.Designer.cs">
+      <DependentUpon>DeleteUtility.cs</DependentUpon>
+    </Compile>
     <Compile Include="Hotel View\DeleteTrainer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -234,7 +240,6 @@
     <Compile Include="Pet Owner View\PetShop Services\Utilities.Designer.cs">
       <DependentUpon>Utilities.cs</DependentUpon>
     </Compile>
-    <Compile Include="StoredProcedures.cs" />
     <Compile Include="ValidationClass.cs" />
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
@@ -332,6 +337,9 @@
     <EmbeddedResource Include="Admin View\ViewVetsRates.resx">
       <DependentUpon>ViewVetsRates.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PetShop View\DeleteUtility.resx">
+      <DependentUpon>DeleteUtility.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Hotel View\DeleteTrainer.resx">
       <DependentUpon>DeleteTrainer.cs</DependentUpon>
     </EmbeddedResource>
@@ -421,27 +429,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hotel View\ViewRooms.resx">
       <DependentUpon>ViewRooms.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vet View\UpdateVetLocation.resx">
-      <DependentUpon>UpdateVetLocation.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vet View\UpdateVetName.resx">
-      <DependentUpon>UpdateVetName.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vet View\UpdateVetPassword.resx">
-      <DependentUpon>UpdateVetPassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vet View\UpdateVetPhone.resx">
-      <DependentUpon>UpdateVetPhone.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vet View\VetView.resx">
-      <DependentUpon>VetView.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vet View\ViewPetList.resx">
-      <DependentUpon>ViewPetList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vet View\ViewVaccinationAlert.resx">
-      <DependentUpon>ViewVaccinationAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

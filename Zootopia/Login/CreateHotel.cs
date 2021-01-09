@@ -91,5 +91,10 @@ namespace Zootopia
                 textBoxNewLocation.Visible = true;
             }
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

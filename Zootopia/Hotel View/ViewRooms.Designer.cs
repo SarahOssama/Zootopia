@@ -37,7 +37,7 @@ namespace Zootopia
             // 
             // ButtonViewRooms
             // 
-            this.ButtonViewRooms.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.ButtonViewRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ButtonViewRooms.FlatAppearance.BorderSize = 0;
             this.ButtonViewRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonViewRooms.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -54,7 +54,6 @@ namespace Zootopia
             // 
             this.ViewRoomsDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ViewRoomsDataGrid.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.ViewRoomsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ViewRoomsDataGrid.Location = new System.Drawing.Point(59, 71);
             this.ViewRoomsDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -62,7 +61,7 @@ namespace Zootopia
             this.ViewRoomsDataGrid.Name = "ViewRoomsDataGrid";
             this.ViewRoomsDataGrid.RowHeadersWidth = 62;
             this.ViewRoomsDataGrid.RowTemplate.Height = 28;
-            this.ViewRoomsDataGrid.Size = new System.Drawing.Size(855, 358);
+            this.ViewRoomsDataGrid.Size = new System.Drawing.Size(562, 358);
             this.ViewRoomsDataGrid.TabIndex = 16;
             // 
             // buttonCloseViewRoom
@@ -84,8 +83,8 @@ namespace Zootopia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(988, 589);
+            this.BackColor = System.Drawing.Color.LightGray;
+            this.ClientSize = new System.Drawing.Size(836, 800);
             this.Controls.Add(this.ButtonViewRooms);
             this.Controls.Add(this.ViewRoomsDataGrid);
             this.Controls.Add(this.buttonCloseViewRoom);
