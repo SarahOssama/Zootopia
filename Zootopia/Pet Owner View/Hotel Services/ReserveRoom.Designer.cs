@@ -47,7 +47,7 @@ namespace Zootopia
             // 
             this.ReserveRoomButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ReserveRoomButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ReserveRoomButton.BackColor = System.Drawing.Color.MediumVioletRed;
             this.ReserveRoomButton.FlatAppearance.BorderSize = 0;
             this.ReserveRoomButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ReserveRoomButton.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -96,6 +96,7 @@ namespace Zootopia
             this.ReserveRoomHotelNameComboBox.Name = "ReserveRoomHotelNameComboBox";
             this.ReserveRoomHotelNameComboBox.Size = new System.Drawing.Size(422, 28);
             this.ReserveRoomHotelNameComboBox.TabIndex = 18;
+            this.ReserveRoomHotelNameComboBox.SelectedIndexChanged += new System.EventHandler(this.ReserveRoomHotelNameComboBox_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -191,7 +192,7 @@ namespace Zootopia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
+            this.BackColor = System.Drawing.Color.FloralWhite;
             this.ClientSize = new System.Drawing.Size(899, 414);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.ReserveRoomButton);

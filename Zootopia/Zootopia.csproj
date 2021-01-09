@@ -110,6 +110,36 @@
     <Compile Include="Hotel View\AddTrainer.Designer.cs">
       <DependentUpon>AddTrainer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\CreateAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\CreateAccount.Designer.cs">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\CreateHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\CreateHotel.Designer.cs">
+      <DependentUpon>CreateHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\CreatePetOwner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\CreatePetOwner.Designer.cs">
+      <DependentUpon>CreatePetOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\CreatePetShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\CreatePetShop.Designer.cs">
+      <DependentUpon>CreatePetShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\CreateVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\CreateVet.Designer.cs">
+      <DependentUpon>CreateVet.cs</DependentUpon>
+    </Compile>
     <Compile Include="PetShop View\AddUtility.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +234,7 @@
     <Compile Include="Pet Owner View\PetShop Services\Utilities.Designer.cs">
       <DependentUpon>Utilities.cs</DependentUpon>
     </Compile>
+    <Compile Include="StoredProcedures.cs" />
     <Compile Include="ValidationClass.cs" />
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
@@ -235,6 +266,48 @@
     <Compile Include="Hotel View\ViewRooms.Designer.cs">
       <DependentUpon>ViewRooms.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vet View\UpdateVetLocation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetLocation.Designer.cs">
+      <DependentUpon>UpdateVetLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetName.Designer.cs">
+      <DependentUpon>UpdateVetName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetPassword.Designer.cs">
+      <DependentUpon>UpdateVetPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetPhone.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetPhone.Designer.cs">
+      <DependentUpon>UpdateVetPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet View\VetView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\VetView.Designer.cs">
+      <DependentUpon>VetView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet View\ViewPetList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\ViewPetList.Designer.cs">
+      <DependentUpon>ViewPetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet View\ViewVaccinationAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\ViewVaccinationAlert.Designer.cs">
+      <DependentUpon>ViewVaccinationAlert.cs</DependentUpon>
+    </Compile>
     <Compile Include="Welcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +337,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hotel View\AddTrainer.resx">
       <DependentUpon>AddTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\CreateAccount.resx">
+      <DependentUpon>CreateAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\CreateHotel.resx">
+      <DependentUpon>CreateHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\CreatePetOwner.resx">
+      <DependentUpon>CreatePetOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\CreatePetShop.resx">
+      <DependentUpon>CreatePetShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\CreateVet.resx">
+      <DependentUpon>CreateVet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PetShop View\AddUtility.resx">
       <DependentUpon>AddUtility.cs</DependentUpon>
@@ -333,6 +421,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hotel View\ViewRooms.resx">
       <DependentUpon>ViewRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\UpdateVetLocation.resx">
+      <DependentUpon>UpdateVetLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\UpdateVetName.resx">
+      <DependentUpon>UpdateVetName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\UpdateVetPassword.resx">
+      <DependentUpon>UpdateVetPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\UpdateVetPhone.resx">
+      <DependentUpon>UpdateVetPhone.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\VetView.resx">
+      <DependentUpon>VetView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\ViewPetList.resx">
+      <DependentUpon>ViewPetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\ViewVaccinationAlert.resx">
+      <DependentUpon>ViewVaccinationAlert.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

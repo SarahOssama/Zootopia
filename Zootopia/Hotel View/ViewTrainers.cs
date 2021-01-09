@@ -12,9 +12,18 @@ namespace Zootopia
 {
     public partial class ViewTrainers : Form
     {
+        Controller controllerObj;
         public ViewTrainers()
         {
             InitializeComponent();
+            controllerObj = new Controller();
+        }
+
+        private void ButtonViewTrainer_Click(object sender, EventArgs e)
+        {
+            DataTable dt = controllerObj.SelectAllTrainers();
+            ViewTrainersDataGrid.DataSource = dt;
+            ViewTrainersDataGrid.Refresh();
         }
     }
 }
