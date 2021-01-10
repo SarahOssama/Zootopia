@@ -164,5 +164,10 @@ namespace Zootopia
         {
 
         }
+
+        private void panelPetShopServices_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

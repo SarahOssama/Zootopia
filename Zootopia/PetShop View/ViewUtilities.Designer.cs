@@ -41,10 +41,9 @@
             this.buttonCloseViewUtilities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCloseViewUtilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCloseViewUtilities.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCloseViewUtilities.Location = new System.Drawing.Point(14, 15);
-            this.buttonCloseViewUtilities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCloseViewUtilities.Location = new System.Drawing.Point(12, 12);
             this.buttonCloseViewUtilities.Name = "buttonCloseViewUtilities";
-            this.buttonCloseViewUtilities.Size = new System.Drawing.Size(40, 45);
+            this.buttonCloseViewUtilities.Size = new System.Drawing.Size(36, 36);
             this.buttonCloseViewUtilities.TabIndex = 3;
             this.buttonCloseViewUtilities.Text = "X";
             this.buttonCloseViewUtilities.UseVisualStyleBackColor = false;
@@ -54,44 +53,47 @@
             // 
             this.ViewUtilitiesDataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ViewUtilitiesDataGrid.BackgroundColor = System.Drawing.Color.LavenderBlush;
             this.ViewUtilitiesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ViewUtilitiesDataGrid.Location = new System.Drawing.Point(62, 76);
+            this.ViewUtilitiesDataGrid.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ViewUtilitiesDataGrid.Location = new System.Drawing.Point(43, 69);
             this.ViewUtilitiesDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ViewUtilitiesDataGrid.Name = "ViewUtilitiesDataGrid";
             this.ViewUtilitiesDataGrid.RowHeadersWidth = 62;
             this.ViewUtilitiesDataGrid.RowTemplate.Height = 28;
-            this.ViewUtilitiesDataGrid.Size = new System.Drawing.Size(591, 362);
+            this.ViewUtilitiesDataGrid.Size = new System.Drawing.Size(525, 290);
             this.ViewUtilitiesDataGrid.TabIndex = 10;
+            this.ViewUtilitiesDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ViewUtilitiesDataGrid_CellContentClick);
             // 
             // buttonviewUtilities
             // 
-            this.buttonviewUtilities.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.buttonviewUtilities.BackColor = System.Drawing.Color.MediumVioletRed;
             this.buttonviewUtilities.FlatAppearance.BorderSize = 0;
             this.buttonviewUtilities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonviewUtilities.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonviewUtilities.ForeColor = System.Drawing.Color.MintCream;
-            this.buttonviewUtilities.Location = new System.Drawing.Point(384, 455);
-            this.buttonviewUtilities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonviewUtilities.Location = new System.Drawing.Point(439, 388);
             this.buttonviewUtilities.Name = "buttonviewUtilities";
-            this.buttonviewUtilities.Size = new System.Drawing.Size(145, 61);
+            this.buttonviewUtilities.Size = new System.Drawing.Size(129, 49);
             this.buttonviewUtilities.TabIndex = 11;
             this.buttonviewUtilities.Text = "View";
             this.buttonviewUtilities.UseVisualStyleBackColor = false;
+            this.buttonviewUtilities.Click += new System.EventHandler(this.buttonviewUtilities_Click);
             // 
             // ViewUtilities
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(836, 800);
+            this.BackColor = System.Drawing.Color.FloralWhite;
+            this.ClientSize = new System.Drawing.Size(743, 640);
             this.Controls.Add(this.buttonviewUtilities);
             this.Controls.Add(this.ViewUtilitiesDataGrid);
             this.Controls.Add(this.buttonCloseViewUtilities);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(836, 800);
+            this.MinimumSize = new System.Drawing.Size(743, 640);
             this.Name = "ViewUtilities";
             this.Text = "ViewUtilities";
+            this.Load += new System.EventHandler(this.ViewUtilities_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ViewUtilitiesDataGrid)).EndInit();
             this.ResumeLayout(false);
 

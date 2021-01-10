@@ -278,5 +278,158 @@ namespace Zootopia
             return dbMan.ExecuteReader(query);
         }
         #endregion
+
+        #region Petshop
+        public DataTable SelectUtilityCategory()
+        {
+            string query = "Select DISTINCT UCategory from UTILITIES; ";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int InsertUtility(string Uname, int Price, string UCategory)
+        {
+            string query = "Insert Into UTILITIES Values('" + Uname + "', " + Price + ", '" + UCategory + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable ViewListOfUtilities(string Username)
+        {
+            string query = "Select DISTINCT Quantity, ArrivalDate,UName, UPrice,UCategory FRom UTILITIES, EXIST, PETSHOP where EXIST.Pshop_ID=PETSHOP.Pshop_ID and UTILITIES.Utilities_ID=EXIST.Utilities_ID and PETSHOP.Username='PT-" + Username + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectUtilityName(string username)
+        {
+            string query = "Select DISTINCT UName FRom UTILITIES, EXIST, PETSHOP where EXIST.Pshop_ID = PETSHOP.Pshop_ID and UTILITIES.Utilities_ID = EXIST.Utilities_ID and PETSHOP.Username = 'PT-" + username + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectAllUtilityName()
+        {
+            string query = "Select DISTINCT UName FRom UTILITIES;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int DeleteUtility(string uname, string username)
+        {
+            string query = "Delete from EXIST where Utilities_ID In(Select EXIST.Utilities_ID FRom UTILITIES, EXIST, PETSHOP where EXIST.Pshop_ID = PETSHOP.Pshop_ID and UTILITIES.Utilities_ID = EXIST.Utilities_ID and PETSHOP.Username = 'PT-" + username + "' and UTILITIES.UName = '" + uname + "') and Pshop_ID IN(Select EXIST.Pshop_ID FRom UTILITIES, EXIST, PETSHOP where EXIST.Pshop_ID = PETSHOP.Pshop_ID and UTILITIES.Utilities_ID = EXIST.Utilities_ID and PETSHOP.Username = 'PT-" + username + "' and UTILITIES.UName = '" + uname + "');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int SelectPetShopID_FromUsername(string username)
+        {
+            string query = "Select Pshop_ID From PETSHOP where Username = 'PT-" + username + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int UpdateUtility(string ToChange, string change, string name)
+        {
+            string query = " update UTILITIES set " + ToChange + " = '" + change + "' where UName = '" + name + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int InsertUtilityToShop(int qty, string date, int shopId, int Uid)
+        {
+            string query = "Insert into EXIST values (" + qty + ", '" + date + "', " + shopId + " , " + Uid + " );";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int GetUtilityId(string name)
+        {
+            string query = " Select Utilities_ID from UTILITIES where UName = '" + name + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        #endregion
+
+        #region MatingPet
+        public DataTable SelectPetType()
+        {
+            string query = " select DISTINCT PType From PET;";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public DataTable SelectPetBreed()
+        {
+            string query = " select DISTINCT PBreed From PET;";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public DataTable SearchForPetToMateWithoutLocation(string type, string username)     //OwnerId from username
+        {
+            string query = " Select OPhoneNum, FName+' '+ LName AS Name, PAge, PName, PGender, PType, PBreed, Location_Name from OWNER, PET, LOCATION where OWNER.Owner_ID=PET.Owner_ID and OWNER.Location_ID=LOCATION.Location_ID  and PType='" + type + "'  except Select OPhoneNum, FName+' '+ LName AS Name, PAge, PName, PGender, PType, PBreed, Location_Name from OWNER, PET, LOCATION where OWNER.Owner_ID=PET.Owner_ID and OWNER.Location_ID=LOCATION.Location_ID and OWNER.Username='OW-" + username + "' ; ";
+            return dbMan.ExecuteReader(query);
+
+        }
+
+        public DataTable SearchForPetToMateWithLocation(string type, string location, string username)    //OwnerId from username
+        {
+            string query = "  Select OPhoneNum, FName+' '+ LName AS Name, PAge, PName, PGender, PType, PBreed, Location_Name from OWNER, PET, LOCATION where OWNER.Owner_ID=PET.Owner_ID and OWNER.Location_ID=LOCATION.Location_ID  and PType='" + type + "' and Location_Name='" + location + "'  except  Select OPhoneNum, FName+' '+ LName AS Name, PAge, PName, PGender, PType, PBreed, Location_Name from OWNER, PET, LOCATION where OWNER.Owner_ID=PET.Owner_ID and OWNER.Location_ID=LOCATION.Location_ID and OWNER.Username='OW-" + username + "' ;";
+
+            return dbMan.ExecuteReader(query);
+
+        }
+        #endregion
+
+        #region PetDetails
+        public int SelectOwnerId_FromUsername(string username)
+        {
+            string query = "Select Owner_ID from OWNER where Username = 'OW-" + username + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int InserPet(string name, string gender, int age, string type, string breed, int id)
+
+        {
+            string query = "Insert Into Pet Values('" + name + "', '" + gender + "', " + 7 + ", '" + type + "', ' " + breed + "', " + id + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int UpdatePet(string ToChange, string change, string Pname, int id)
+        {
+            string query = " update Pet set " + ToChange + " ='" + change + "' where Owner_ID=" + id + " and PName= '" + Pname + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int DeletePet(string pname, int id)
+        {
+            string query = "delete from pet where PName = '" + pname + "' and Owner_ID = " + id + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        #endregion
+
+        #region buyUtility
+        public DataTable ViewAvilableUtility (string Uname, int qty)
+        {
+            string query = " Select DISTINCT  UPrice,Location_Name ,Pshop_Name FRom UTILITIES, EXIST, PETSHOP, LOCATION where EXIST.Pshop_ID = PETSHOP.Pshop_ID and UTILITIES.Utilities_ID = EXIST.Utilities_ID and PETSHOP.Location_ID = LOCATION.Location_ID and UName = '"+Uname+"' and Quantity >= "+qty+";";
+            return dbMan.ExecuteReader(query);
+
+        }
+
+        public DataTable UtilityShopName  (string Uname, int qty)
+        {
+            string query = "    Select DISTINCT  Pshop_Name  FRom UTILITIES, EXIST, PETSHOP, LOCATION where EXIST.Pshop_ID=PETSHOP.Pshop_ID and UTILITIES.Utilities_ID=EXIST.Utilities_ID and PETSHOP.Location_ID=LOCATION.Location_ID and UName='"+Uname+"' and Quantity >= "+qty+";";
+            return dbMan.ExecuteReader(query);
+
+        }
+
+        public int BuyUtility(int shopId, int UId, int qty)
+        {
+            string query = "Update Exist Set Quantity = Quantity - "+qty+" where Pshop_ID = "+shopId+" and Utilities_ID = "+UId+";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int GetUtilityId_FromUname(string Uname)
+        {
+            string query = "select Utilities_ID From UTILITIES where UName='"+Uname+"';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int GetPetShopId_FromShopName (string shopname)
+        {
+            string query = "Select Pshop_Id from PETSHOP where Pshop_Name = '"+shopname+"';";
+            return (int)dbMan.ExecuteScalar(query);
+
+        }
+
+        #endregion
     }
 }

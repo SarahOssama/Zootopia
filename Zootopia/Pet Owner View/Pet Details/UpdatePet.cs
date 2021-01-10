@@ -12,9 +12,16 @@ namespace Zootopia
 {
     public partial class UpdatePet : Form
     {
+        Controller ControllerObj;
+        public string username = "John";
         public UpdatePet()
         {
             InitializeComponent();
+            ControllerObj = new Controller();
+            DataTable dt = ControllerObj.SelectPetName(username);
+            comboBox2.DataSource = dt;
+            comboBox2.DisplayMember = "PName";
+
         }
 
         private void buttonCloseUpdate_Click(object sender, EventArgs e)
@@ -23,6 +30,37 @@ namespace Zootopia
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(username);
+            int result = ControllerObj.UpdatePet(comboBox1.Text, textBox1.Text, comboBox2.Text, owner_Id);
+            if (result == 0)
+            {
+                MessageBox.Show("Update process Failed");
+            }
+            else
+            {
+                MessageBox.Show("The Pet is Updated!");
+            }
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UpdatePet_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

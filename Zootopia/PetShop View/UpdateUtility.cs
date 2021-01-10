@@ -12,14 +12,37 @@ namespace Zootopia
 {
     public partial class UpdateUtility : Form
     {
+        Controller ControllerObj;
+        public string username = "Lollipop";
+
         public UpdateUtility()
         {
             InitializeComponent();
+            ControllerObj = new Controller();
+            DataTable dt = ControllerObj.SelectUtilityName(username);
+            comboBoxUname.DataSource = dt;
+            comboBoxUname.DisplayMember = "UName";
         }
 
         private void buttonCloseUpdate_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void buttonUpdate_Click(object sender, EventArgs e)
+        {
+            int result = ControllerObj.UpdateUtility(comboBox1.Text, textBox1.Text, comboBoxUname.Text);
+            if (result == 0)
+            {
+                MessageBox.Show("Update process Failed");
+            }
+            else
+            {
+                MessageBox.Show("The Utility is Updated!");
+            }
+
+
+
         }
     }
 }

@@ -98,6 +98,12 @@
     <Compile Include="Admin View\ViewVetsRates.Designer.cs">
       <DependentUpon>ViewVetsRates.cs</DependentUpon>
     </Compile>
+    <Compile Include="PetShop View\AddUtilityToShop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PetShop View\AddUtilityToShop.designer.cs">
+      <DependentUpon>AddUtilityToShop.cs</DependentUpon>
+    </Compile>
     <Compile Include="PetShop View\DeleteUtility.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -343,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin View\ViewVetsRates.resx">
       <DependentUpon>ViewVetsRates.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PetShop View\AddUtilityToShop.resx">
+      <DependentUpon>AddUtilityToShop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PetShop View\DeleteUtility.resx">
       <DependentUpon>DeleteUtility.cs</DependentUpon>

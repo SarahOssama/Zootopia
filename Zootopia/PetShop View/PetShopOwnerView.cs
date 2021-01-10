@@ -59,5 +59,15 @@ namespace Zootopia
         {
             OpenChildForm(new UpdateUtility());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new AddUtilityToShop());
+        }
+
+        private void panelChildForm_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

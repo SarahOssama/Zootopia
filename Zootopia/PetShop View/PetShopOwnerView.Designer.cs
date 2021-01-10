@@ -29,20 +29,22 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.buttonDeleteUtility = new System.Windows.Forms.Button();
             this.buttonViewUtilities = new System.Windows.Forms.Button();
             this.buttonAddUtility = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(173)))), ((int)(((byte)(162)))));
+            this.panel1.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.buttonDeleteUtility);
             this.panel1.Controls.Add(this.buttonViewUtilities);
@@ -55,13 +57,47 @@
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button2
+            // 
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 345);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(212, 81);
+            this.button2.TabIndex = 6;
+            this.button2.Text = "Add Utility To My Shop";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(0, 287);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(212, 58);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Update Utility";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // buttonDeleteUtility
             // 
             this.buttonDeleteUtility.Dock = System.Windows.Forms.DockStyle.Top;
             this.buttonDeleteUtility.FlatAppearance.BorderSize = 0;
             this.buttonDeleteUtility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeleteUtility.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDeleteUtility.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonDeleteUtility.ForeColor = System.Drawing.Color.White;
             this.buttonDeleteUtility.Location = new System.Drawing.Point(0, 229);
             this.buttonDeleteUtility.Name = "buttonDeleteUtility";
             this.buttonDeleteUtility.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -78,7 +114,7 @@
             this.buttonViewUtilities.FlatAppearance.BorderSize = 0;
             this.buttonViewUtilities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonViewUtilities.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonViewUtilities.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonViewUtilities.ForeColor = System.Drawing.Color.White;
             this.buttonViewUtilities.Location = new System.Drawing.Point(0, 139);
             this.buttonViewUtilities.Name = "buttonViewUtilities";
             this.buttonViewUtilities.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -95,7 +131,7 @@
             this.buttonAddUtility.FlatAppearance.BorderSize = 0;
             this.buttonAddUtility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonAddUtility.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddUtility.ForeColor = System.Drawing.Color.DimGray;
+            this.buttonAddUtility.ForeColor = System.Drawing.Color.White;
             this.buttonAddUtility.Location = new System.Drawing.Point(0, 81);
             this.buttonAddUtility.Name = "buttonAddUtility";
             this.buttonAddUtility.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
@@ -129,29 +165,13 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.BackColor = System.Drawing.Color.LightGray;
+            this.panelChildForm.BackColor = System.Drawing.Color.FloralWhite;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(212, 0);
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(588, 545);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.DimGray;
-            this.button1.Location = new System.Drawing.Point(0, 287);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(212, 58);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Update Utility";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.panelChildForm.Paint += new System.Windows.Forms.PaintEventHandler(this.panelChildForm_Paint);
             // 
             // PetShopOwnerView
             // 
@@ -180,5 +200,6 @@
         private System.Windows.Forms.Button buttonAddUtility;
         private System.Windows.Forms.Panel panelChildForm;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
