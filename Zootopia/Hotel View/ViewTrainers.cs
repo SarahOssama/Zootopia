@@ -13,6 +13,7 @@ namespace Zootopia
     public partial class ViewTrainers : Form
     {
         Controller controllerObj;
+        public string HotelUsername = "Makan";
         public ViewTrainers()
         {
             InitializeComponent();
@@ -21,7 +22,7 @@ namespace Zootopia
 
         private void ButtonViewTrainer_Click(object sender, EventArgs e)
         {
-            DataTable dt = controllerObj.SelectAllTrainers();
+            DataTable dt = controllerObj.SelectAllTrainersInHotel(HotelUsername);
             ViewTrainersDataGrid.DataSource = dt;
             ViewTrainersDataGrid.Refresh();
         }

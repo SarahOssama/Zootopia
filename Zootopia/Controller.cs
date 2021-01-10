@@ -222,6 +222,47 @@ namespace Zootopia
         #endregion
 
 
+        #region Hotel View
+
+        #region Add Trainer
+        public int AddNewTrainer(string FName, string LName, int Tnum, int TPrice, int HotelID)
+        {
+            string query = "Insert into TRAINER (FName,LName,TNum,TPrice,Hotel_ID) values('" + FName + "','" + LName + "'," + Tnum + "," + TPrice + "," + HotelID + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int SelectHotelIDWithUserName(string HUsername)
+        {
+            string query = "Select Hotel_ID from HOTEL where Username='HT-" + HUsername + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+        public DataTable SelectAllTNumInHotel(string HUsername)
+        {
+            string query = "Select Tnum from trainer,Hotel where HOTEL.Hotel_ID=TRAINER.Hotel_ID and Username='HT-" + HUsername + "';";
+            return dbMan.ExecuteReader(query);
+        }
+        #endregion
+
+        public DataTable SelectAllTrainersInHotel(string HotelUsername)
+        {
+            string query = "Select FName+' '+LName As Name ,TNum,TPrice,T_TotalRate from trainer,Hotel where HOTEL.Hotel_ID=TRAINER.Hotel_ID and Username='HT-" + HotelUsername + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int DeleteTrainer(string TName, string HotelUsername)
+        {
+            string query = "delete from TRAINER where FName='" + TName + "' and Hotel_ID IN(Select Hotel_ID from HOTEL where Username='HT-" + HotelUsername + "');";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public DataTable SelectTrainerNameWithUserName(string HUsername)
+        {
+            string query = "Select FName from trainer,Hotel where HOTEL.Hotel_ID=TRAINER.Hotel_ID and Username='HT-" + HUsername + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        #endregion
+
+
         #region OwnerSearch
         public DataTable SearchHotel(string HLocation, int HPriceUp, int HPriceDown, int HRateUp, int HRateDown)
         {
