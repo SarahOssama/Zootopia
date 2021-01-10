@@ -13,14 +13,16 @@ namespace Zootopia
     public partial class ReserveTrainer : Form
     {
         Controller controllerObj;
-
+        public string OwnerUsername= "Habiba";
         public ReserveTrainer()
         {
             InitializeComponent();
             controllerObj = new Controller();
-            DataTable dt = controllerObj.SelectAllHotelName();
-            ReserveTrainerHotelNameComboBox.DataSource = dt;
+
+            DataTable dt1 = controllerObj.SelectAllHotelName();
+            ReserveTrainerHotelNameComboBox.DataSource = dt1;
             ReserveTrainerHotelNameComboBox.DisplayMember = "HName";
+
         }
 
         private void buttonCloseUpdate_Click(object sender, EventArgs e)
@@ -107,6 +109,15 @@ namespace Zootopia
                         break;
                 }
                 DataTable dt = controllerObj.SelectTrainerInHotel(ReserveTrainerHotelNameComboBox.Text, TPriceUp, TPriceDown, TRateUp, TRateDown);
+                
+                DataTable dt2 = controllerObj.SelectTrainerName(ReserveTrainerHotelNameComboBox.Text);
+                TNameComboBox.DataSource = dt2;
+                TNameComboBox.DisplayMember = "FName";
+
+                DataTable dt3 = controllerObj.SelectPetNametoTrain(OwnerUsername);
+                PNameComboBox.DataSource = dt3;
+                PNameComboBox.DisplayMember = "PName";
+
                 if (dt == null)
                 {
                     MessageBox.Show("No Hotels available with these filters");
@@ -116,6 +127,8 @@ namespace Zootopia
 
                     dataGridView1.DataSource = dt;
                     dataGridView1.Refresh();
+
+                    
                 }
             }
         }
@@ -167,6 +180,31 @@ namespace Zootopia
             else
             {
                 //labelPriceRange.Show();
+            }
+        }
+
+        private void TrainerOHireButton_Click(object sender, EventArgs e)
+        {
+            if (ReserveTrainerHotelNameComboBox.Text == "" || TNameComboBox.Text == "" || PNameComboBox.Text == "")
+            {
+                MessageBox.Show("There some missing inputs");
+            }
+            else
+            {
+                int Tnum, HotelID, PetID;
+                Tnum = controllerObj.SelectTrainerNumberToHire(ReserveTrainerHotelNameComboBox.Text, TNameComboBox.Text);
+                HotelID = controllerObj.SelectHotelIDToHire(ReserveTrainerHotelNameComboBox.Text);
+                PetID = controllerObj.SelectPetIDToHire(OwnerUsername, PNameComboBox.Text);
+
+                int result = controllerObj.HireTrainer(Tnum,HotelID,PetID);
+                if (result == 0)
+                {
+                    MessageBox.Show("Congratulations! You Hired Captain "+ TNameComboBox.Text );
+                }
+                else
+                {
+                    MessageBox.Show("Unfortunately Trainer" + TNameComboBox.Text + "Was not Hired !");
+                }
             }
         }
     }

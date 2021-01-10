@@ -75,8 +75,8 @@ namespace Zootopia
         private Form activeForm  = null;
         private void OpenChildForm(Form childForm)
         {
-            panelSubChildUP.Visible = false;
-            panelSubChildDown.Visible = false;
+            //.Visible = false;
+            //panelSubChildDown.Visible = false;
             if (activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
@@ -88,38 +88,7 @@ namespace Zootopia
             childForm.Show();
 
         }
-        private Form activeSubForm = null;
-        private void OpenSubChildForm(Form childForm)
-        {
-            panelSubChildUP.Visible = true;
-            panelSubChildDown.Visible = true;
-            if (activeSubForm != null)
-                activeSubForm.Close();
-            activeSubForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelSubChildUP.Controls.Add(childForm);
-            panelSubChildUP.Tag = childForm;
-            childForm.Show();
-
-        }
-
-        private Form activeSubFormDown = null;
-        private void OpenSubChildFormDown(Form childForm)
-        {
-            panelSubChildUP.Visible = true;
-            panelSubChildDown.Visible = true;
-            if (activeSubFormDown != null)
-                activeSubFormDown.Close();
-            activeSubFormDown = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            panelSubChildDown.Controls.Add(childForm);
-            panelSubChildDown.Tag = childForm;
-            childForm.Show();
-        }
+      
 
 
             #region SearchSubMenu
@@ -144,7 +113,7 @@ namespace Zootopia
 
         private void ButtonVetSearch_Click(object sender, EventArgs e)
         {
-           // OpenChildForm(new VetSearch());
+            OpenChildForm(new VetSearch());
             //code
             hideSubMenu();
         }
@@ -159,16 +128,16 @@ namespace Zootopia
 
         private void ButtonTrainer_Click(object sender, EventArgs e)
         {
-            OpenSubChildForm(new ReserveTrainer());
+            OpenChildForm(new ReserveTrainer());
             //code
-           // hideSubMenu();
+            hideSubMenu();
         }
 
         private void ButtonReserve_Click(object sender, EventArgs e)
         {
-            OpenSubChildFormDown(new ReserveRoom());
+            OpenChildForm(new ReserveRoom());
             //code
-           // hideSubMenu();
+            hideSubMenu();
         }
         #endregion
 

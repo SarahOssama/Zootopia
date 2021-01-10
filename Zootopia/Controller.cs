@@ -84,6 +84,7 @@ namespace Zootopia
             string query = "SELECT Username FROM LOGIN where Username like '___"+username+"';";
             return dbMan.ExecuteReader(query);
         }
+
         public DataTable SelectPasswordByUsername(string username)
         {
             string query = "SELECT Password FROM LOGIN where Username ='"+ username + "';";
@@ -144,6 +145,47 @@ namespace Zootopia
             return dbMan.ExecuteReader(query);
         }
 
+
+        #region HireTrainer
+
+        public int HireTrainer(int Tnum, int HotelID, int PetID)
+        {
+            string query = "insert into Trained (Tnum,Hotel_ID,Pet_ID) " +
+                            "Values (" + Tnum + "," + HotelID + ",'" + PetID + ");";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable SelectTrainerName(string HotelName)
+        {
+            string query = "Select FName,LName from trainer,Hotel where HOTEL.Hotel_ID=TRAINER.Hotel_ID and HOTEL.HName='" + HotelName + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectPetNametoTrain(string OwnerUsername)
+        {
+            string query = "Select PName from OWNER,PET where Owner.Owner_ID = PET.Owner_ID and Owner.Username='OW-" + OwnerUsername + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int SelectTrainerNumberToHire(string HotelName, string TName)
+        {
+            string query = "Select Tnum from trainer,Hotel where HOTEL.Hotel_ID=TRAINER.Hotel_ID and HOTEL.HName='" + HotelName + "'and FName='" + TName + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int SelectHotelIDToHire(string HotelName)
+        {
+            string query = "Select Hotel_ID from HOTEL where HName='" + HotelName + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int SelectPetIDToHire(string OwnerUsername, string PName)
+        {
+            string query = "Select Pet_ID from OWNER,PET where Owner.Owner_ID = PET.Owner_ID and Owner.Username=OW-'" + OwnerUsername + "' and PName='" + PName + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+
         public DataTable SelectTrainerInHotel(string HName, int TPriceUp, int TPriceDown, int TRateUp, int TRateDown)
         {
             string query = "Select FName ,LName, T_TotalRate , TPrice from TRAINER, HOTEL  "
@@ -151,6 +193,8 @@ namespace Zootopia
 
             return dbMan.ExecuteReader(query);
         }
+        #endregion
+
 
         #region OwnerSearch
         public DataTable SearchHotel(string HLocation, int HPriceUp, int HPriceDown, int HRateUp, int HRateDown)
