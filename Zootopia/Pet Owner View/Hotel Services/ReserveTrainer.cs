@@ -22,7 +22,8 @@ namespace Zootopia
             DataTable dt1 = controllerObj.SelectAllHotelName();
             ReserveTrainerHotelNameComboBox.DataSource = dt1;
             ReserveTrainerHotelNameComboBox.DisplayMember = "HName";
-
+            labelTrainerName.Visible = false;
+            LabelPetName.Visible = false;
         }
 
         private void buttonCloseUpdate_Click(object sender, EventArgs e)
@@ -114,7 +115,7 @@ namespace Zootopia
                 TNameComboBox.DataSource = dt2;
                 TNameComboBox.DisplayMember = "FName";
 
-                DataTable dt3 = controllerObj.SelectPetNametoTrain(OwnerUsername);
+                DataTable dt3 = controllerObj.SelectPetName(OwnerUsername);
                 PNameComboBox.DataSource = dt3;
                 PNameComboBox.DisplayMember = "PName";
 
@@ -199,11 +200,11 @@ namespace Zootopia
                 int result = controllerObj.HireTrainer(Tnum,HotelID,PetID);
                 if (result == 0)
                 {
-                    MessageBox.Show("Congratulations! You Hired Captain "+ TNameComboBox.Text );
+                    MessageBox.Show("Unfortunately Trainer" + TNameComboBox.Text + "Was not Hired !");
                 }
                 else
                 {
-                    MessageBox.Show("Unfortunately Trainer" + TNameComboBox.Text + "Was not Hired !");
+                    MessageBox.Show("Congratulations! You Hired Captain " + TNameComboBox.Text);
                 }
             }
         }

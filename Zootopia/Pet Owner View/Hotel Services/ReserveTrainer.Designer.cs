@@ -44,10 +44,10 @@ namespace Zootopia
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.labelRateRange = new System.Windows.Forms.Label();
+            this.labelTrainerName = new System.Windows.Forms.Label();
             this.TNameComboBox = new System.Windows.Forms.ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.LabelPetName = new System.Windows.Forms.Label();
             this.PNameComboBox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -256,7 +256,7 @@ namespace Zootopia
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.labelRateRange);
+            this.panel1.Controls.Add(this.labelTrainerName);
             this.panel1.Controls.Add(this.TNameComboBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(466, 3);
@@ -264,17 +264,17 @@ namespace Zootopia
             this.panel1.Size = new System.Drawing.Size(457, 68);
             this.panel1.TabIndex = 21;
             // 
-            // labelRateRange
+            // labelTrainerName
             // 
-            this.labelRateRange.AutoSize = true;
-            this.labelRateRange.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelRateRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRateRange.ForeColor = System.Drawing.Color.Red;
-            this.labelRateRange.Location = new System.Drawing.Point(0, 28);
-            this.labelRateRange.Name = "labelRateRange";
-            this.labelRateRange.Size = new System.Drawing.Size(197, 19);
-            this.labelRateRange.TabIndex = 53;
-            this.labelRateRange.Text = "Please choose a Trainer Name";
+            this.labelTrainerName.AutoSize = true;
+            this.labelTrainerName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelTrainerName.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelTrainerName.ForeColor = System.Drawing.Color.Red;
+            this.labelTrainerName.Location = new System.Drawing.Point(0, 28);
+            this.labelTrainerName.Name = "labelTrainerName";
+            this.labelTrainerName.Size = new System.Drawing.Size(197, 19);
+            this.labelTrainerName.TabIndex = 53;
+            this.labelTrainerName.Text = "Please choose a Trainer Name";
             // 
             // TNameComboBox
             // 
@@ -288,7 +288,7 @@ namespace Zootopia
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.LabelPetName);
             this.panel2.Controls.Add(this.PNameComboBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(466, 77);
@@ -296,17 +296,17 @@ namespace Zootopia
             this.panel2.Size = new System.Drawing.Size(457, 68);
             this.panel2.TabIndex = 22;
             // 
-            // label5
+            // LabelPetName
             // 
-            this.label5.AutoSize = true;
-            this.label5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label5.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Red;
-            this.label5.Location = new System.Drawing.Point(0, 28);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(170, 19);
-            this.label5.TabIndex = 54;
-            this.label5.Text = "Please choose a Pet Name";
+            this.LabelPetName.AutoSize = true;
+            this.LabelPetName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LabelPetName.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPetName.ForeColor = System.Drawing.Color.Red;
+            this.LabelPetName.Location = new System.Drawing.Point(0, 28);
+            this.LabelPetName.Name = "LabelPetName";
+            this.LabelPetName.Size = new System.Drawing.Size(170, 19);
+            this.LabelPetName.TabIndex = 54;
+            this.LabelPetName.Text = "Please choose a Pet Name";
             // 
             // PNameComboBox
             // 
@@ -365,9 +365,9 @@ namespace Zootopia
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox TNameComboBox;
-        private System.Windows.Forms.Label labelRateRange;
+        private System.Windows.Forms.Label labelTrainerName;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label LabelPetName;
         private System.Windows.Forms.ComboBox PNameComboBox;
     }
 }

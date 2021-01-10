@@ -146,6 +146,32 @@ namespace Zootopia
         }
 
 
+        #region ReserveRoom
+
+        public int InsertToVisitor(string DepTime,string ArrTime,int PetID,int HotelID)
+        {
+            string query = "insert into VISITOR (Departure_Time,Arrival_Time,Pet_ID,Hotel_ID) " +
+                "Values('" + DepTime + "','" + ArrTime + "'," + PetID + "," + HotelID + ");";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable SelectHotelPrice(string HName)
+        {
+            string query = "Select HPrice from HOTEL where HName='" + HName + "';";
+
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int DecNumOFRoomsinHotel(string HName)
+        {
+            string query = "Update HOTEL Set Num_Rooms = Num_Rooms - 1 Where HName = '" + HName + "' ; ";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+        #endregion
+
         #region HireTrainer
 
         public int HireTrainer(int Tnum, int HotelID, int PetID)
@@ -161,7 +187,7 @@ namespace Zootopia
             return dbMan.ExecuteReader(query);
         }
 
-        public DataTable SelectPetNametoTrain(string OwnerUsername)
+        public DataTable SelectPetName(string OwnerUsername)
         {
             string query = "Select PName from OWNER,PET where Owner.Owner_ID = PET.Owner_ID and Owner.Username='OW-" + OwnerUsername + "';";
             return dbMan.ExecuteReader(query);
@@ -181,7 +207,7 @@ namespace Zootopia
 
         public int SelectPetIDToHire(string OwnerUsername, string PName)
         {
-            string query = "Select Pet_ID from OWNER,PET where Owner.Owner_ID = PET.Owner_ID and Owner.Username=OW-'" + OwnerUsername + "' and PName='" + PName + "';";
+            string query = "Select Pet_ID from OWNER,PET where Owner.Owner_ID = PET.Owner_ID and Owner.Username='OW-" + OwnerUsername + "' and PName='" + PName + "';";
             return (int)dbMan.ExecuteScalar(query);
         }
 
