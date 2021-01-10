@@ -252,14 +252,14 @@
     <Compile Include="Pet Owner View\PetShop Services\Utilities.Designer.cs">
       <DependentUpon>Utilities.cs</DependentUpon>
     </Compile>
-    <Compile Include="StoredProcedures.cs" />
-    <Compile Include="ValidationClass.cs" />
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SignUp.Designer.cs">
+    <Compile Include="SignUp.designer.cs">
       <DependentUpon>SignUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="StoredProcedures.cs" />
+    <Compile Include="ValidationClass.cs" />
     <Compile Include="PetShop View\ViewUtilities.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -307,6 +307,12 @@
     </Compile>
     <Compile Include="Vet View\UpdateVetPhone.Designer.cs">
       <DependentUpon>UpdateVetPhone.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetUsername.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vet View\UpdateVetUsername.designer.cs">
+      <DependentUpon>UpdateVetUsername.cs</DependentUpon>
     </Compile>
     <Compile Include="Vet View\VetView.cs">
       <SubType>Form</SubType>
@@ -431,9 +437,6 @@
     <EmbeddedResource Include="Pet Owner View\Pet Details\UpdatePet.resx">
       <DependentUpon>UpdatePet.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SignUp.resx">
-      <DependentUpon>SignUp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pet Owner View\PetShop Services\Utilities.resx">
       <DependentUpon>Utilities.cs</DependentUpon>
     </EmbeddedResource>
@@ -448,6 +451,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hotel View\ViewRooms.resx">
       <DependentUpon>ViewRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUp.resx">
+      <DependentUpon>SignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\UpdateVetUsername.resx">
+      <DependentUpon>UpdateVetUsername.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>

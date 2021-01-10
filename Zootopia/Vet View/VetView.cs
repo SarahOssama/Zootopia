@@ -12,13 +12,17 @@ namespace Zootopia
 {
     public partial class VetView : Form
     {
-        public VetView()
+        public string myname;
+        
+        public VetView( string name)
         {
             InitializeComponent();
             panel2.Visible = false;
-
+            
+            myname = name;
 
         }
+        
         private Form activeForm = null;
         private void OpenChildForm(Form childForm)
         {
@@ -33,15 +37,20 @@ namespace Zootopia
             childForm.Show();
 
         }
-        
 
-        
+        private void VetView_Load(object sender, EventArgs e)
+        {
+            
+        }
+
 
 
 
         private void buttonSettings_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new ViewPetList());
+           
+            OpenChildForm(new ViewPetList(myname));
+                       
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;
@@ -50,7 +59,7 @@ namespace Zootopia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ViewVaccinationAlert());
+            OpenChildForm(new ViewVaccinationAlert(myname));
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;
@@ -71,7 +80,7 @@ namespace Zootopia
 
         private void buttonHotel_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new UpdateVetName());
+            OpenChildForm(new UpdateVetName(myname));
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;
@@ -80,7 +89,7 @@ namespace Zootopia
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new UpdateVetPhone());
+            OpenChildForm(new UpdateVetPhone(myname));
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;
@@ -89,7 +98,7 @@ namespace Zootopia
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new UpdateVetLocation());
+            OpenChildForm(new UpdateVetLocation(myname));
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;
@@ -98,7 +107,21 @@ namespace Zootopia
 
         private void button4_Click_1(object sender, EventArgs e)
         {
-            OpenChildForm(new UpdateVetPassword());
+            OpenChildForm(new UpdateVetPassword(myname));
+            if (panel2.Visible == true)
+            {
+                panel2.Visible = false;
+            }
+        }
+
+        private void VetView_LocationChanged(object sender, EventArgs e)
+        {
+            //this.Location = new Point(150, 100);
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new UpdateVetUsername(myname));
             if (panel2.Visible == true)
             {
                 panel2.Visible = false;

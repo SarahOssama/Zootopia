@@ -75,7 +75,7 @@ namespace Zootopia
                         }
                         if (usern.StartsWith("VT-"))
                         {
-                            VetView vet = new VetView();
+                            VetView vet = new VetView(username_textbox.Text);
                             vet.Show();
                         }
                         this.Close();
