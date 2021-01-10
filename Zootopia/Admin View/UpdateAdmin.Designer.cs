@@ -40,35 +40,37 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(74, 159);
+            this.label3.Location = new System.Drawing.Point(66, 127);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 29);
+            this.label3.Size = new System.Drawing.Size(140, 26);
             this.label3.TabIndex = 17;
             this.label3.Text = "Choose Admin:";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(318, 163);
+            this.comboBox1.Location = new System.Drawing.Point(283, 130);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 28);
+            this.comboBox1.Size = new System.Drawing.Size(125, 24);
             this.comboBox1.TabIndex = 18;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 238);
+            this.label1.Location = new System.Drawing.Point(67, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(166, 29);
+            this.label1.Size = new System.Drawing.Size(141, 26);
             this.label1.TabIndex = 19;
             this.label1.Text = "New Password:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(318, 241);
+            this.textBox1.Location = new System.Drawing.Point(283, 193);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 26);
+            this.textBox1.Size = new System.Drawing.Size(125, 22);
             this.textBox1.TabIndex = 20;
             // 
             // button1
@@ -79,12 +81,14 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(485, 320);
+            this.button1.Location = new System.Drawing.Point(431, 256);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 40);
+            this.button1.Size = new System.Drawing.Size(124, 32);
             this.button1.TabIndex = 21;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonCloseViewUtilities
             // 
@@ -94,10 +98,9 @@
             this.buttonCloseViewUtilities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCloseViewUtilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCloseViewUtilities.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCloseViewUtilities.Location = new System.Drawing.Point(28, 28);
-            this.buttonCloseViewUtilities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCloseViewUtilities.Location = new System.Drawing.Point(25, 22);
             this.buttonCloseViewUtilities.Name = "buttonCloseViewUtilities";
-            this.buttonCloseViewUtilities.Size = new System.Drawing.Size(40, 45);
+            this.buttonCloseViewUtilities.Size = new System.Drawing.Size(36, 36);
             this.buttonCloseViewUtilities.TabIndex = 22;
             this.buttonCloseViewUtilities.Text = "X";
             this.buttonCloseViewUtilities.UseVisualStyleBackColor = false;
@@ -105,10 +108,10 @@
             // 
             // UpdateAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(684, 546);
+            this.ClientSize = new System.Drawing.Size(608, 437);
             this.Controls.Add(this.buttonCloseViewUtilities);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -116,6 +119,7 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UpdateAdmin";
             this.Text = "UpdateAdmin";
             this.ResumeLayout(false);

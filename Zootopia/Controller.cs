@@ -35,10 +35,63 @@ namespace Zootopia
                             "Values ('" + Pname + "'," + pnumber + ",'" + Plocation + "'," + Dnum + ");";
             return dbMan.ExecuteNonQuery(query);
         }
+        public int InsertHotel(string hotelname,int phonenum, int num_room, float price, string username,int locID )
+        {
+            string query = "INSERT INTO HOTEL (HName, HPrice, Num_Rooms, HotelPhoneNum, Username, Location_ID)" +
+                "Values ('" + hotelname + ",'" + price + ",'" + num_room + ",'" + phonenum + ",'" + username + ",'" + locID + "');";
 
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int InsertPetShop(string Pshop_Name,int PShopPhoneNum,string Username,int Location_ID)
+        {
+            string query = "INSERT INTO PETSHOP (Pshop_Name, PShopPhoneNum, Username, Location_ID)"+
+                "Values ('"+ Pshop_Name+ ",'" + PShopPhoneNum+ ",'" + Username + ",'" + Location_ID + "');";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+        public int InsertVet(string Vet_Name,float Vet_Price,int VetPhonenum, string Username, int Location_ID)
+        {
+            string query = "INSERT INTO VET (Vet_Name, Vet_Price, VetPhonenum, Username, Location_ID)"+
+                "Values ('"+ Vet_Name + ",'" + Vet_Price + ",'" + VetPhonenum + ",'" + Username + ",'" + Location_ID +"');";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int InsertPetOwner(int OPhoneNum, string Fname, string Lname, string Username, int Location_ID)
+        {
+            string query = "INSERT INTO OWNER(OPhoneNum, Fname, Lname, Username, Location_ID)"+
+                "Values ('" + OPhoneNum + ",'" + Fname + ",'" + Lname + ",'" + Username + ",'" + Location_ID+"');";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+        public int InsertLocation(string locname)
+        {
+            string query = "INSERT INTO LOCATION (Location_Name)" +
+                "Values ('" + locname + "');";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int SelectLocID(string locname)
+        {
+            string query = "SELECT location_ID FROM LOCATION where Location_Name = '" + locname + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public DataTable SelectUsername(string username)
+        {
+            string query = "SELECT Username FROM LOGIN where Username like '___"+username+"';";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable SelectPasswordByUsername(string username)
+        {
+            string query = "SELECT Password FROM LOGIN where Username ='"+ username + "';";
+            return dbMan.ExecuteReader(query);
+        }
         public DataTable SelectLocations()
         {
-            string query= "Select Location_Name From LOCATION;";
+            string query= "Select Location_ID ,Location_Name From LOCATION;";
             return dbMan.ExecuteReader(query);
         }
         public DataTable SelectAllHotelName()
@@ -46,7 +99,43 @@ namespace Zootopia
             string query = "Select HName from HOTEL;";
             return dbMan.ExecuteReader(query);
         }
+        public DataTable SelectAdminPass(string admp)
+        {
+            string query = "Select Pass_Admin FROM ADMINPASS where Pass_Admin ='"+admp+"';";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable SelectAllAdmins()
+        {
+            string query = "Select Pass_Admin FROM ADMINPASS ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable SelectHotelRates()
+        {
+            string query = "Select Hotel_ID, H_TotalRate, HName FROM HOTEL;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int InsertAdminPass(string admp)
+        {
+            string query = "INSERT INTO ADMINPASS (Pass_Admin)" +
+                "Values ('" + admp + "');";
 
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int UpdateAdminPass(string admp,string newpass)
+        {
+            string query = "UPDATE ADMINPASS Set Pass_Admin ='"+newpass+"'where Pass_Admin='"+admp+"';";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+       
+
+        public int DeleteAdminPass(string admp)
+        {
+            string query = "DELETE FROM ADMINPASS where Pass_Admin ='"+admp +"';";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
         public DataTable SelectProject(string location)
         {
             string query = "SELECT Pname,Dname FROM Department D, Project P, Dept_Locations L"

@@ -34,8 +34,8 @@
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.textBoxNbOfRooms = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.phonenum_textbox = new System.Windows.Forms.TextBox();
+            this.name_textbox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBoxNewLocation = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -124,23 +124,23 @@
             this.textBoxNbOfRooms.Size = new System.Drawing.Size(152, 22);
             this.textBoxNbOfRooms.TabIndex = 61;
             // 
-            // textBox2
+            // phonenum_textbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(282, 75);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox2.MaxLength = 11;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(152, 22);
-            this.textBox2.TabIndex = 60;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.phonenum_textbox.Location = new System.Drawing.Point(282, 75);
+            this.phonenum_textbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.phonenum_textbox.MaxLength = 11;
+            this.phonenum_textbox.Name = "phonenum_textbox";
+            this.phonenum_textbox.Size = new System.Drawing.Size(152, 22);
+            this.phonenum_textbox.TabIndex = 60;
+            this.phonenum_textbox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // textBox1
+            // name_textbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(282, 29);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 22);
-            this.textBox1.TabIndex = 59;
+            this.name_textbox.Location = new System.Drawing.Point(282, 29);
+            this.name_textbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.name_textbox.Name = "name_textbox";
+            this.name_textbox.Size = new System.Drawing.Size(152, 22);
+            this.name_textbox.TabIndex = 59;
             // 
             // label7
             // 
@@ -286,8 +286,8 @@
             this.Controls.Add(this.textBoxPassword);
             this.Controls.Add(this.textBoxUserName);
             this.Controls.Add(this.textBoxNbOfRooms);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.phonenum_textbox);
+            this.Controls.Add(this.name_textbox);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBoxNewLocation);
             this.Controls.Add(this.radioButton1);
@@ -316,8 +316,8 @@
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.TextBox textBoxNbOfRooms;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox phonenum_textbox;
+        private System.Windows.Forms.TextBox name_textbox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxNewLocation;
         private System.Windows.Forms.RadioButton radioButton1;

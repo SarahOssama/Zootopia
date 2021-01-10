@@ -12,8 +12,10 @@ namespace Zootopia
 {
     public partial class SignUp : Form
     {
+        Controller controllerObj;
         public SignUp()
         {
+            controllerObj = new Controller();
             InitializeComponent();
         }
 
@@ -34,28 +36,58 @@ namespace Zootopia
 
         private void LogInButton_Click(object sender, EventArgs e)
         {
-            this.Close();
-            if (radioButtonPetOwner.Checked == true)
+            if (username_textbox.Text == "" || password_textbox.Text == "")
             {
-                PetOwnerView V = new PetOwnerView();
-                V.Show();
+                MessageBox.Show("Please enter username and password");
             }
-            if (radioButtonPetShopOwner.Checked==true)
+            else
             {
-                PetShopOwnerView V = new PetShopOwnerView();
-                V.Show();
+
+                DataTable us = controllerObj.SelectUsername(username_textbox.Text);
+                if (us == null)
+                {
+                    MessageBox.Show("Invalid username");
+
+                }
+                else
+                {
+                    string usern = us.Rows[0][0].ToString();
+
+                    DataTable pass = controllerObj.SelectPasswordByUsername(usern);
+                    string passString = pass.Rows[0][0].ToString();
+                    if (passString == password_textbox.Text)
+                    {
+
+                        if (usern.StartsWith("OW-"))
+                        {
+                            PetOwnerView V = new PetOwnerView();
+                            V.Show();
+                        }
+                        if (usern.StartsWith("PT-"))
+                        {
+                            PetShopOwnerView V = new PetShopOwnerView();
+                            V.Show();
+                        }
+                        if (usern.StartsWith("HT-"))
+                        {
+                            HotelOwnerView V = new HotelOwnerView();
+                            V.Show();
+                        }
+                        if (usern.StartsWith("VT-"))
+                        {
+                            VetView vet = new VetView();
+                            vet.Show();
+                        }
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid password");
+                    }
+                   
+                }
+
             }
-            if (radioButtonHotelOwner.Checked == true)
-            {
-                HotelOwnerView V = new HotelOwnerView ();
-                V.Show();
-            }
-            if(VetRadioButton.Checked==true)
-            {
-                VetView vet = new VetView();
-                vet.Show();
-            }
-            
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)

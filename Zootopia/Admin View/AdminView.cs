@@ -13,9 +13,12 @@ namespace Zootopia
     
     public partial class AdminView : Form
     {
-        public int adminPass = 1234;
+        //public int adminPass = 1234;
+        Controller controllerObj;
+        
         public AdminView()
         {
+            controllerObj = new Controller();
             InitializeComponent();
         }
 
@@ -27,23 +30,28 @@ namespace Zootopia
             }
             else
             {
-                StringBuilder err = new StringBuilder();
-                Object pass = ValidationClass.isPositiveInteger(textBox1.Text, err);
-                if(pass==null)
-                {
-                    MessageBox.Show("The Password is incorrect:  " + err.ToString());
-                }
+                //StringBuilder err = new StringBuilder();
+                //Object pass = ValidationClass.isPositiveInteger(textBox1.Text, err);
+                //if(pass==null)
+                //{
+                //    MessageBox.Show("The Password is incorrect:  " + err.ToString());
+                //}
 
-                else if (int.Parse(textBox1.Text) == adminPass)
-                {
-                    AdminControls ad = new AdminControls();
-                    ad.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Incorrect Password");
-                }
+                //else 
+                //{
+                    DataTable adp = controllerObj.SelectAdminPass(textBox1.Text);
+                    if (adp == null)
+                    {
+                        MessageBox.Show("Enter correct password");
+                    }
+                    else
+                    {
+                        AdminControls ad = new AdminControls();
+                        ad.Show();
+                        this.Close();
+                    }
+                //}
+               
             }
         }
 

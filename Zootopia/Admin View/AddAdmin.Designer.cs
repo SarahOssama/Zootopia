@@ -38,17 +38,18 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(64, 215);
+            this.label3.Location = new System.Drawing.Point(57, 172);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(166, 29);
+            this.label3.Size = new System.Drawing.Size(141, 26);
             this.label3.TabIndex = 16;
             this.label3.Text = "New Password:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 218);
+            this.textBox1.Location = new System.Drawing.Point(244, 174);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(140, 26);
+            this.textBox1.Size = new System.Drawing.Size(125, 22);
             this.textBox1.TabIndex = 17;
             // 
             // button1
@@ -59,12 +60,14 @@
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(478, 219);
+            this.button1.Location = new System.Drawing.Point(425, 175);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 40);
+            this.button1.Size = new System.Drawing.Size(124, 32);
             this.button1.TabIndex = 18;
             this.button1.Text = "Add Admin";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonCloseViewUtilities
             // 
@@ -74,10 +77,9 @@
             this.buttonCloseViewUtilities.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCloseViewUtilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCloseViewUtilities.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCloseViewUtilities.Location = new System.Drawing.Point(39, 29);
-            this.buttonCloseViewUtilities.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCloseViewUtilities.Location = new System.Drawing.Point(35, 23);
             this.buttonCloseViewUtilities.Name = "buttonCloseViewUtilities";
-            this.buttonCloseViewUtilities.Size = new System.Drawing.Size(40, 45);
+            this.buttonCloseViewUtilities.Size = new System.Drawing.Size(36, 36);
             this.buttonCloseViewUtilities.TabIndex = 19;
             this.buttonCloseViewUtilities.Text = "X";
             this.buttonCloseViewUtilities.UseVisualStyleBackColor = false;
@@ -85,15 +87,16 @@
             // 
             // AddAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(684, 546);
+            this.ClientSize = new System.Drawing.Size(608, 437);
             this.Controls.Add(this.buttonCloseViewUtilities);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddAdmin";
             this.Text = "AddAdmin";
             this.ResumeLayout(false);

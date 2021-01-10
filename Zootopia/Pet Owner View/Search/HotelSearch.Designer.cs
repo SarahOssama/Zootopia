@@ -59,10 +59,9 @@ namespace Zootopia
             this.buttonCloseUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCloseUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonCloseUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.buttonCloseUpdate.Location = new System.Drawing.Point(12, 13);
-            this.buttonCloseUpdate.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonCloseUpdate.Location = new System.Drawing.Point(11, 10);
             this.buttonCloseUpdate.Name = "buttonCloseUpdate";
-            this.buttonCloseUpdate.Size = new System.Drawing.Size(40, 42);
+            this.buttonCloseUpdate.Size = new System.Drawing.Size(36, 34);
             this.buttonCloseUpdate.TabIndex = 2;
             this.buttonCloseUpdate.Text = "X";
             this.buttonCloseUpdate.UseVisualStyleBackColor = false;
@@ -74,9 +73,9 @@ namespace Zootopia
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(58, 73);
+            this.label5.Location = new System.Drawing.Point(52, 58);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 32);
+            this.label5.Size = new System.Drawing.Size(60, 27);
             this.label5.TabIndex = 6;
             this.label5.Text = "Filter";
             // 
@@ -86,9 +85,9 @@ namespace Zootopia
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(58, 397);
+            this.label1.Location = new System.Drawing.Point(52, 318);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 32);
+            this.label1.Size = new System.Drawing.Size(69, 27);
             this.label1.TabIndex = 7;
             this.label1.Text = "Result";
             // 
@@ -101,10 +100,9 @@ namespace Zootopia
             this.buttonSearchForHotel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSearchForHotel.Font = new System.Drawing.Font("Mongolian Baiti", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSearchForHotel.ForeColor = System.Drawing.Color.MintCream;
-            this.buttonSearchForHotel.Location = new System.Drawing.Point(581, 383);
-            this.buttonSearchForHotel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.buttonSearchForHotel.Location = new System.Drawing.Point(516, 306);
             this.buttonSearchForHotel.Name = "buttonSearchForHotel";
-            this.buttonSearchForHotel.Size = new System.Drawing.Size(198, 61);
+            this.buttonSearchForHotel.Size = new System.Drawing.Size(176, 49);
             this.buttonSearchForHotel.TabIndex = 8;
             this.buttonSearchForHotel.Text = "Search";
             this.buttonSearchForHotel.UseVisualStyleBackColor = false;
@@ -125,12 +123,13 @@ namespace Zootopia
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.HotelSearchDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.HotelSearchDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.HotelSearchDataGrid.Location = new System.Drawing.Point(75, 466);
+            this.HotelSearchDataGrid.Location = new System.Drawing.Point(67, 373);
+            this.HotelSearchDataGrid.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HotelSearchDataGrid.Name = "HotelSearchDataGrid";
             this.HotelSearchDataGrid.ReadOnly = true;
             this.HotelSearchDataGrid.RowHeadersWidth = 62;
             this.HotelSearchDataGrid.RowTemplate.Height = 28;
-            this.HotelSearchDataGrid.Size = new System.Drawing.Size(654, 220);
+            this.HotelSearchDataGrid.Size = new System.Drawing.Size(581, 176);
             this.HotelSearchDataGrid.TabIndex = 9;
             // 
             // tableLayoutPanel1
@@ -146,14 +145,15 @@ namespace Zootopia
             this.tableLayoutPanel1.Controls.Add(this.HLocationSearchComboBox, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(75, 127);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(67, 102);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(704, 231);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 16F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(626, 185);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // label4
@@ -161,9 +161,9 @@ namespace Zootopia
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(3, 154);
+            this.label4.Location = new System.Drawing.Point(3, 122);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 32);
+            this.label4.Size = new System.Drawing.Size(52, 27);
             this.label4.TabIndex = 3;
             this.label4.Text = "Rate";
             // 
@@ -174,7 +174,7 @@ namespace Zootopia
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 32);
+            this.label2.Size = new System.Drawing.Size(90, 27);
             this.label2.TabIndex = 1;
             this.label2.Text = "Location";
             // 
@@ -183,9 +183,9 @@ namespace Zootopia
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(3, 77);
+            this.label3.Location = new System.Drawing.Point(3, 61);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(140, 32);
+            this.label3.Size = new System.Drawing.Size(118, 27);
             this.label3.TabIndex = 2;
             this.label3.Text = "Price Range";
             // 
@@ -194,9 +194,10 @@ namespace Zootopia
             this.HLocationSearchComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.HLocationSearchComboBox.FormattingEnabled = true;
-            this.HLocationSearchComboBox.Location = new System.Drawing.Point(355, 3);
+            this.HLocationSearchComboBox.Location = new System.Drawing.Point(316, 2);
+            this.HLocationSearchComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HLocationSearchComboBox.Name = "HLocationSearchComboBox";
-            this.HLocationSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.HLocationSearchComboBox.Size = new System.Drawing.Size(307, 24);
             this.HLocationSearchComboBox.TabIndex = 4;
             // 
             // panel1
@@ -204,9 +205,10 @@ namespace Zootopia
             this.panel1.Controls.Add(this.labelPriceRange);
             this.panel1.Controls.Add(this.HPriceSearchComboBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(355, 80);
+            this.panel1.Location = new System.Drawing.Point(316, 63);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 71);
+            this.panel1.Size = new System.Drawing.Size(307, 57);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -216,9 +218,9 @@ namespace Zootopia
             this.labelPriceRange.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelPriceRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPriceRange.ForeColor = System.Drawing.Color.Red;
-            this.labelPriceRange.Location = new System.Drawing.Point(0, 28);
+            this.labelPriceRange.Location = new System.Drawing.Point(0, 24);
             this.labelPriceRange.Name = "labelPriceRange";
-            this.labelPriceRange.Size = new System.Drawing.Size(179, 19);
+            this.labelPriceRange.Size = new System.Drawing.Size(165, 17);
             this.labelPriceRange.TabIndex = 50;
             this.labelPriceRange.Text = "Please choose a price range";
             // 
@@ -232,8 +234,9 @@ namespace Zootopia
             "1500-2000",
             "2000-2500"});
             this.HPriceSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.HPriceSearchComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HPriceSearchComboBox.Name = "HPriceSearchComboBox";
-            this.HPriceSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.HPriceSearchComboBox.Size = new System.Drawing.Size(307, 24);
             this.HPriceSearchComboBox.TabIndex = 5;
             this.HPriceSearchComboBox.TextChanged += new System.EventHandler(this.HPriceSearchComboBox_TextChange);
             // 
@@ -242,9 +245,10 @@ namespace Zootopia
             this.panel2.Controls.Add(this.labelRateRange);
             this.panel2.Controls.Add(this.HRateSearchComboBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(355, 157);
+            this.panel2.Location = new System.Drawing.Point(316, 124);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(346, 71);
+            this.panel2.Size = new System.Drawing.Size(307, 59);
             this.panel2.TabIndex = 8;
             // 
             // labelRateRange
@@ -253,9 +257,9 @@ namespace Zootopia
             this.labelRateRange.Dock = System.Windows.Forms.DockStyle.Top;
             this.labelRateRange.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelRateRange.ForeColor = System.Drawing.Color.Red;
-            this.labelRateRange.Location = new System.Drawing.Point(0, 28);
+            this.labelRateRange.Location = new System.Drawing.Point(0, 24);
             this.labelRateRange.Name = "labelRateRange";
-            this.labelRateRange.Size = new System.Drawing.Size(173, 19);
+            this.labelRateRange.Size = new System.Drawing.Size(160, 17);
             this.labelRateRange.TabIndex = 51;
             this.labelRateRange.Text = "Please choose a rate range";
             // 
@@ -269,18 +273,19 @@ namespace Zootopia
             "3-4",
             "4-5"});
             this.HRateSearchComboBox.Location = new System.Drawing.Point(0, 0);
+            this.HRateSearchComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.HRateSearchComboBox.Name = "HRateSearchComboBox";
-            this.HRateSearchComboBox.Size = new System.Drawing.Size(346, 28);
+            this.HRateSearchComboBox.Size = new System.Drawing.Size(307, 24);
             this.HRateSearchComboBox.TabIndex = 6;
             this.HRateSearchComboBox.TextChanged += new System.EventHandler(this.HRateSearchComboBox_TextChanged);
             this.HRateSearchComboBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.RateRangeComboBox_Click);
             // 
             // HotelSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(836, 800);
+            this.ClientSize = new System.Drawing.Size(743, 640);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.HotelSearchDataGrid);
             this.Controls.Add(this.buttonSearchForHotel);
@@ -288,7 +293,8 @@ namespace Zootopia
             this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonCloseUpdate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(836, 800);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MinimumSize = new System.Drawing.Size(743, 640);
             this.Name = "HotelSearch";
             this.Text = "HotelSearch";
             ((System.ComponentModel.ISupportInitialize)(this.HotelSearchDataGrid)).EndInit();

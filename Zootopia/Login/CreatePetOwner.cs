@@ -12,8 +12,10 @@ namespace Zootopia
 {
     public partial class CreatePetOwner : Form
     {
+        Controller controllerObj; 
         public CreatePetOwner()
         {
+            controllerObj = new Controller();
             InitializeComponent();
             textBoxNewLocation.Visible = false;
             label7.Visible = false;
@@ -34,25 +36,69 @@ namespace Zootopia
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBox1.Text==""|| textBox2.Text==""|| textBox3.Text==""|| textBoxPassword.Text==""|| textBoxUserName.Text=="")
+            if(fname_textbox.Text==""|| lname_textbox.Text==""|| phonenum_textbox.Text==""|| textBoxPassword.Text==""|| textBoxUserName.Text=="")
             {
                 MessageBox.Show("There some missing inputs");
             }
             else
             {
                 StringBuilder err = new StringBuilder();
-                Object phone = ValidationClass.isPositiveInteger(textBox3.Text, err);
+                Object phone = ValidationClass.isPositiveInteger(phonenum_textbox.Text, err);
                 if (phone == null)
                 {
                     MessageBox.Show("Invalid phone number:  " + err.ToString());
                 }
                 else
                 {  //el controller el mafroud yenafez order el insert hena
+                    if (textBoxNewLocation.Text == "")
+                    {
+                        if (comboBox1.Text == "")
+                        {
+                            MessageBox.Show("There some missing inputs");
 
-                    MessageBox.Show("Your Username is: " + textBoxUserName.Text + " Your Password is: " + textBoxPassword.Text);
-                    this.Close();
-                    SignUp s = new SignUp();
-                    s.Show();
+                        }
+                        else
+                        {
+
+                            int r = controllerObj.InsertPetOwner(int.Parse(phonenum_textbox.Text), fname_textbox.Text,lname_textbox.Text,  textBoxUserName.Text, int.Parse(comboBox1.SelectedValue.ToString()));
+
+                            if (r == 0)
+                            {
+                                MessageBox.Show("An error has occured , please repeat");
+                            }
+                            else
+                            {
+                                MessageBox.Show("Your Username is: " + textBoxUserName.Text + " Your Password is: " + textBoxPassword.Text);
+                                this.Close();
+                                SignUp s = new SignUp();
+                                s.Show();
+                                
+                            }
+
+                        }
+                    }
+                    else
+                    {
+                        int r = controllerObj.InsertLocation(textBoxNewLocation.Text);
+                        if (r == 0)
+                        {
+                            MessageBox.Show("An error has occured , please repeat");
+                        }
+
+                        int Lid = controllerObj.SelectLocID(textBoxNewLocation.Text);
+                        int r_l = controllerObj.InsertPetOwner(int.Parse(phonenum_textbox.Text), fname_textbox.Text, lname_textbox.Text, textBoxUserName.Text, Lid);
+                        if (r_l == 0)
+                        {
+                            MessageBox.Show("An error has occured , please repeat");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Your Username is: " + textBoxUserName.Text + " Your Password is: " + textBoxPassword.Text);
+                            this.Close();
+                            SignUp s = new SignUp();
+                            s.Show();
+                        }
+                    }
                 }
             }
             
@@ -82,11 +128,11 @@ namespace Zootopia
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            if (textBox3.TextLength < 11)
+            if (phonenum_textbox.TextLength < 11)
             {
                 label8.Show();
             }
-            else if (textBox3.TextLength == 11)
+            else if (phonenum_textbox.TextLength == 11)
             {
                 label8.Visible = false;
             }

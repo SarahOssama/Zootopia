@@ -10,10 +10,14 @@ using System.Windows.Forms;
 
 namespace Zootopia
 {
+
+   
     public partial class AddAdmin : Form
     {
+        Controller controllerObj;
         public AddAdmin()
         {
+            controllerObj = new Controller();
             InitializeComponent();
         }
 
@@ -21,5 +25,27 @@ namespace Zootopia
         {
             this.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(textBox1.Text=="")
+            {
+                MessageBox.Show("Please insert Admin password");
+            }
+            else
+            {
+                int r = controllerObj.InsertAdminPass(textBox1.Text);
+                if(r==0)
+                {
+                    MessageBox.Show("Something went wrong");
+                }
+                else 
+                {
+                    MessageBox.Show("New admin is added");
+                }
+            }
+        }
     }
+
+  
 }

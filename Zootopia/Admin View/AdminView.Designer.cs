@@ -38,17 +38,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(75, 86);
+            this.label1.Location = new System.Drawing.Point(67, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 32);
+            this.label1.Size = new System.Drawing.Size(102, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Password:";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(241, 92);
+            this.textBox1.Location = new System.Drawing.Point(214, 74);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBox1.MaxLength = 10;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 26);
+            this.textBox1.PasswordChar = '*';
+            this.textBox1.Size = new System.Drawing.Size(155, 22);
             this.textBox1.TabIndex = 1;
             // 
             // button1
@@ -61,9 +64,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(464, 185);
+            this.button1.Location = new System.Drawing.Point(412, 148);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 40);
+            this.button1.Size = new System.Drawing.Size(124, 32);
             this.button1.TabIndex = 2;
             this.button1.Text = "Continue";
             this.button1.UseVisualStyleBackColor = false;
@@ -77,9 +81,10 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Thistle;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(43, 186);
+            this.button2.Location = new System.Drawing.Point(38, 149);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(140, 40);
+            this.button2.Size = new System.Drawing.Size(124, 32);
             this.button2.TabIndex = 22;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
@@ -87,14 +92,15 @@
             // 
             // AdminView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FloralWhite;
-            this.ClientSize = new System.Drawing.Size(636, 266);
+            this.ClientSize = new System.Drawing.Size(565, 213);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AdminView";
             this.Text = "AdminView";
             this.ResumeLayout(false);

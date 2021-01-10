@@ -61,7 +61,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 546);
+            this.panel1.Size = new System.Drawing.Size(222, 437);
             this.panel1.TabIndex = 0;
             // 
             // RatesSubMenuPanel
@@ -71,10 +71,10 @@
             this.RatesSubMenuPanel.Controls.Add(this.buttonHotel);
             this.RatesSubMenuPanel.Controls.Add(this.buttonPS);
             this.RatesSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.RatesSubMenuPanel.Location = new System.Drawing.Point(0, 318);
+            this.RatesSubMenuPanel.Location = new System.Drawing.Point(0, 254);
             this.RatesSubMenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RatesSubMenuPanel.Name = "RatesSubMenuPanel";
-            this.RatesSubMenuPanel.Size = new System.Drawing.Size(250, 128);
+            this.RatesSubMenuPanel.Size = new System.Drawing.Size(222, 102);
             this.RatesSubMenuPanel.TabIndex = 7;
             // 
             // buttonVet
@@ -85,10 +85,10 @@
             this.buttonVet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.buttonVet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonVet.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonVet.Location = new System.Drawing.Point(-3, 81);
+            this.buttonVet.Location = new System.Drawing.Point(-3, 65);
             this.buttonVet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonVet.Name = "buttonVet";
-            this.buttonVet.Size = new System.Drawing.Size(253, 44);
+            this.buttonVet.Size = new System.Drawing.Size(225, 35);
             this.buttonVet.TabIndex = 4;
             this.buttonVet.Text = "Vets Rates";
             this.buttonVet.UseVisualStyleBackColor = false;
@@ -106,7 +106,7 @@
             this.buttonHotel.Location = new System.Drawing.Point(0, 0);
             this.buttonHotel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonHotel.Name = "buttonHotel";
-            this.buttonHotel.Size = new System.Drawing.Size(250, 45);
+            this.buttonHotel.Size = new System.Drawing.Size(222, 36);
             this.buttonHotel.TabIndex = 2;
             this.buttonHotel.Text = "Hotel Rates";
             this.buttonHotel.UseVisualStyleBackColor = false;
@@ -120,12 +120,12 @@
             this.buttonPS.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.buttonPS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPS.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonPS.Location = new System.Drawing.Point(0, 40);
+            this.buttonPS.Location = new System.Drawing.Point(0, 32);
             this.buttonPS.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonPS.Name = "buttonPS";
-            this.buttonPS.Size = new System.Drawing.Size(250, 45);
+            this.buttonPS.Size = new System.Drawing.Size(222, 36);
             this.buttonPS.TabIndex = 3;
-            this.buttonPS.Text = "Petshops Rates";
+            this.buttonPS.Text = "Petshops Reports";
             this.buttonPS.UseVisualStyleBackColor = false;
             this.buttonPS.Click += new System.EventHandler(this.buttonPS_Click);
             // 
@@ -138,11 +138,11 @@
             this.buttonRates.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
             this.buttonRates.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRates.Font = new System.Drawing.Font("Palatino Linotype", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRates.Location = new System.Drawing.Point(0, 273);
+            this.buttonRates.Location = new System.Drawing.Point(0, 218);
             this.buttonRates.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRates.Name = "buttonRates";
-            this.buttonRates.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonRates.Size = new System.Drawing.Size(250, 45);
+            this.buttonRates.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonRates.Size = new System.Drawing.Size(222, 36);
             this.buttonRates.TabIndex = 8;
             this.buttonRates.Text = "Check Rates";
             this.buttonRates.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -156,10 +156,10 @@
             this.SettingsSubMenuPanel.Controls.Add(this.buttonAdd);
             this.SettingsSubMenuPanel.Controls.Add(this.buttonRemove);
             this.SettingsSubMenuPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SettingsSubMenuPanel.Location = new System.Drawing.Point(0, 145);
+            this.SettingsSubMenuPanel.Location = new System.Drawing.Point(0, 116);
             this.SettingsSubMenuPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SettingsSubMenuPanel.Name = "SettingsSubMenuPanel";
-            this.SettingsSubMenuPanel.Size = new System.Drawing.Size(250, 128);
+            this.SettingsSubMenuPanel.Size = new System.Drawing.Size(222, 102);
             this.SettingsSubMenuPanel.TabIndex = 7;
             // 
             // button2
@@ -170,10 +170,10 @@
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(0, 80);
+            this.button2.Location = new System.Drawing.Point(0, 64);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(250, 48);
+            this.button2.Size = new System.Drawing.Size(222, 38);
             this.button2.TabIndex = 4;
             this.button2.Text = "Update Password";
             this.button2.UseVisualStyleBackColor = false;
@@ -190,7 +190,7 @@
             this.buttonAdd.Location = new System.Drawing.Point(-3, 0);
             this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(253, 45);
+            this.buttonAdd.Size = new System.Drawing.Size(225, 36);
             this.buttonAdd.TabIndex = 2;
             this.buttonAdd.Text = "Add New Admin";
             this.buttonAdd.UseVisualStyleBackColor = false;
@@ -204,10 +204,10 @@
             this.buttonRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.LavenderBlush;
             this.buttonRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonRemove.Font = new System.Drawing.Font("Palatino Linotype", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRemove.Location = new System.Drawing.Point(0, 40);
+            this.buttonRemove.Location = new System.Drawing.Point(0, 32);
             this.buttonRemove.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(250, 45);
+            this.buttonRemove.Size = new System.Drawing.Size(222, 36);
             this.buttonRemove.TabIndex = 3;
             this.buttonRemove.Text = "Remove Admin";
             this.buttonRemove.UseVisualStyleBackColor = false;
@@ -222,11 +222,11 @@
             this.buttonSettings.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkMagenta;
             this.buttonSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonSettings.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSettings.Location = new System.Drawing.Point(0, 100);
+            this.buttonSettings.Location = new System.Drawing.Point(0, 80);
             this.buttonSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonSettings.Size = new System.Drawing.Size(250, 45);
+            this.buttonSettings.Padding = new System.Windows.Forms.Padding(9, 0, 0, 0);
+            this.buttonSettings.Size = new System.Drawing.Size(222, 36);
             this.buttonSettings.TabIndex = 3;
             this.buttonSettings.Text = "Admin Settings";
             this.buttonSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -241,16 +241,16 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(250, 100);
+            this.panel2.Size = new System.Drawing.Size(222, 80);
             this.panel2.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Old English Text MT", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 18);
+            this.label1.Location = new System.Drawing.Point(11, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 66);
+            this.label1.Size = new System.Drawing.Size(184, 56);
             this.label1.TabIndex = 1;
             this.label1.Text = "Zootopia";
             // 
@@ -258,17 +258,18 @@
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FloralWhite;
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
+            this.panelChildForm.Location = new System.Drawing.Point(222, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(684, 546);
+            this.panelChildForm.Size = new System.Drawing.Size(608, 437);
             this.panelChildForm.TabIndex = 9;
             // 
             // AdminControls
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(934, 546);
+            this.ClientSize = new System.Drawing.Size(830, 437);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
