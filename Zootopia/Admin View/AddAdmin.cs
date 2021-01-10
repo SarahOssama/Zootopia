@@ -34,16 +34,31 @@ namespace Zootopia
             }
             else
             {
-                int r = controllerObj.InsertAdminPass(textBox1.Text);
-                if(r==0)
+                //DataTable us = controllerObj.SelectUsername(username_textbox.Text);
+                //if (us == null)
+                //{
+                //    MessageBox.Show("Invalid username");
+
+                //}
+                DataTable adp = controllerObj.SelectAdminPass(textBox1.Text);
+                if (adp == null)
                 {
+                    int r = controllerObj.InsertAdminPass(textBox1.Text);
+                    if(r==0)
+                    {
                     MessageBox.Show("Something went wrong");
-                }
-                else 
-                {
+                    }
+                    else 
+                    {
                     MessageBox.Show("New admin is added");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("This password already exists");
                 }
             }
+
         }
     }
 

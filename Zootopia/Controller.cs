@@ -35,36 +35,55 @@ namespace Zootopia
                             "Values ('" + Pname + "'," + pnumber + ",'" + Plocation + "'," + Dnum + ");";
             return dbMan.ExecuteNonQuery(query);
         }
-        public int InsertHotel(string hotelname,int phonenum, int num_room, float price, string username,int locID )
+        public int InsertHotel(string hotelname, int phonenum, int num_room, float price, string username, int locID)
         {
             string query = "INSERT INTO HOTEL (HName, HPrice, Num_Rooms, HotelPhoneNum, Username, Location_ID)" +
-                "Values ('" + hotelname + ",'" + price + ",'" + num_room + ",'" + phonenum + ",'" + username + ",'" + locID + "');";
+                "Values ('" + hotelname + "'," + price + "," + num_room + "," + phonenum + ",'" + username + "'," + locID + ");";
 
             return dbMan.ExecuteNonQuery(query);
         }
 
-        public int InsertPetShop(string Pshop_Name,int PShopPhoneNum,string Username,int Location_ID)
+        public int InsertLogin(string Username, string Password)
         {
-            string query = "INSERT INTO PETSHOP (Pshop_Name, PShopPhoneNum, Username, Location_ID)"+
-                "Values ('"+ Pshop_Name+ ",'" + PShopPhoneNum+ ",'" + Username + ",'" + Location_ID + "');";
+            string query = "INSERT INTO LOGIN (Username, Password)" +
+                "Values ('" + Username + "','" + Password + "');";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int InsertPetShop(string Pshop_Name, int PShopPhoneNum, string Username, int Location_ID)
+        {
+            string query = "INSERT INTO PETSHOP (Pshop_Name, PShopPhoneNum, Username, Location_ID)" +
+                "Values ('" + Pshop_Name + "'," + PShopPhoneNum + ",'" + Username + "'," + Location_ID + ");";
             return dbMan.ExecuteNonQuery(query);
 
         }
-        public int InsertVet(string Vet_Name,float Vet_Price,int VetPhonenum, string Username, int Location_ID)
+        public int InsertVet(string Vet_Name, float Vet_Price, int VetPhonenum, string Username, int Location_ID)
         {
-            string query = "INSERT INTO VET (Vet_Name, Vet_Price, VetPhonenum, Username, Location_ID)"+
-                "Values ('"+ Vet_Name + ",'" + Vet_Price + ",'" + VetPhonenum + ",'" + Username + ",'" + Location_ID +"');";
+            string query = "INSERT INTO VET (Vet_Name, Vet_Price, VetPhonenum, Username, Location_ID)" +
+                "Values ('" + Vet_Name + "'," + Vet_Price + "," + VetPhonenum + ",'" + Username + "'," + Location_ID + ");";
             return dbMan.ExecuteNonQuery(query);
         }
 
         public int InsertPetOwner(int OPhoneNum, string Fname, string Lname, string Username, int Location_ID)
         {
-            string query = "INSERT INTO OWNER(OPhoneNum, Fname, Lname, Username, Location_ID)"+
-                "Values ('" + OPhoneNum + ",'" + Fname + ",'" + Lname + ",'" + Username + ",'" + Location_ID+"');";
+            string query = "INSERT INTO OWNER(OPhoneNum, Fname, Lname, Username, Location_ID)" +
+                "Values (" + OPhoneNum + ",'" + Fname + "','" + Lname + "','" + Username + "'," + Location_ID + ");";
 
             return dbMan.ExecuteNonQuery(query);
         }
 
+        public DataTable SelectPetID_VacID()
+        {
+            string query = "SELECT Pet_ID , Vac_ID FROM PET , VACCINATION WHERE PType = Vac_Ptype ;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int InsertPet_Vacc(int Pet_ID, int Vac_ID)
+        {
+            string query = "INSERT INTO PET_VACC (Pet_ID,Vac_ID)" +
+                            "Values ('" + Pet_ID + "," + Vac_ID + "');";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
 
         public int InsertLocation(string locname)
         {
@@ -73,10 +92,10 @@ namespace Zootopia
 
             return dbMan.ExecuteNonQuery(query);
         }
-        public int SelectLocID(string locname)
+        public DataTable SelectLocID(string locname)
         {
             string query = "SELECT location_ID FROM LOCATION where Location_Name = '" + locname + "';";
-            return (int)dbMan.ExecuteScalar(query);
+            return dbMan.ExecuteReader(query);
         }
 
         public DataTable SelectUsername(string username)
@@ -110,11 +129,7 @@ namespace Zootopia
             string query = "Select Pass_Admin FROM ADMINPASS ;";
             return dbMan.ExecuteReader(query);
         }
-        public DataTable SelectHotelRates()
-        {
-            string query = "Select Hotel_ID, H_TotalRate, HName FROM HOTEL;";
-            return dbMan.ExecuteReader(query);
-        }
+        
         public int InsertAdminPass(string admp)
         {
             string query = "INSERT INTO ADMINPASS (Pass_Admin)" +
@@ -472,5 +487,107 @@ namespace Zootopia
         }
 
         #endregion
+
+        //----------------------------------Code Habiba------------------------------------------
+        public DataTable SelectHotelRates()
+        {
+            string query = "Select HName,H_TotalRate from HOTEL;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int DeleteHotel(string name)
+        {
+            string query = "DELETE FROM HOTEL WHERE HName='" + name + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable SelectVetsRates()
+        {
+            string query = "Select Vet_Name,V_TotalRate from VET;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int DeleteVet(string name)
+        {
+            string query = "DELETE FROM VET WHERE Vet_Name='" + name + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable SelectPetShopNames()
+        {
+            string query = "select Pshop_Name from PETSHOP;";
+            return dbMan.ExecuteReader(query);
+        }
+        public int DeletePetShop(string name)
+        {
+            string query = "DELETE FROM PETSHOP WHERE PShop_Name='" + name + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable ViewPetList(string username)
+        {
+            string query = "Select PName, PGender, PAge, PType, PBreed from PET p , OWNER o, VET v ,GOESTO g WHERE o.Owner_ID = g.Owner_ID AND v.Vet_ID = g.Vet_ID AND p.Owner_ID = o.Owner_ID AND v.Username like '___" + username + "'; ";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable ViewVaccinationAlert(string user)
+        {
+            string query1 = "UPDATE PET_VACC  SET Should=1 WHERE Pet_ID IN( SELECT P.Pet_ID FROM PET P, VACCINATION V , PET_VACC WHERE  Alerted = 0 AND P.PAge=V.Vac_Age or P.PAge > V.Vac_Age ) ";
+            dbMan.ExecuteNonQuery(query1);
+
+            //string query2=" UPDATE PET_VACC  SET Should = 0 WHERE Pet_ID IN(SELECT P.Pet_ID FROM PET P, VACCINATION V WHERE P.PAge < V.Vac_Age)";
+            //dbMan.ExecuteNonQuery(query2);
+
+            string query = "SELECT P.PName,P.Pet_ID,P.PAge,V.Should,C.VName FROM PET P, PET_VACC V, VACCINATION C, OWNER O, VET T, GOESTO G "
+             + "WHERE P.Pet_ID = V.Pet_ID AND C.Vac_ID = V.Vac_ID AND O.Owner_ID = G.Owner_ID AND T.Vet_ID = G.Vet_ID AND P.Owner_ID = O.Owner_ID AND T.Username like '___" + user + "' AND V.should = 1 ; ";
+            return dbMan.ExecuteReader(query);
+        }
+
+
+        public DataTable SelectPetID(string user)
+        {
+            string query = "SELECT Pet_ID FROM PET P, OWNER O ,VET V, GOESTO G WHERE O.Owner_ID=G.Owner_ID AND P.Owner_ID=O.Owner_ID AND V.Vet_ID=G.Vet_ID AND V.Username like '___" + user + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+
+        public int UpdateVetName(string newName, string user)
+        {
+            string query = "UPDATE VET SET Vet_Name ='" + newName + "' WHERE Username like '___" + user + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int UpdateVetUsername(string newName, string user)
+        {
+            string query = "UPDATE LOGIN SET Username ='" + newName + "' WHERE Username like '___" + user + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+        public int UpdateVetPhone(int newPhone, string user)
+        {
+            string query = " UPDATE VET SET VetPhonenum = " + newPhone + " WHERE Username like '___" + user + "';";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public DataTable selectUsernames(string name)
+        {
+            string query = "SELECT Username FROM LOGIN WHERE Username like '___" + name + "';";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int UpdateVetPassword(string newPass, string user)
+        {
+            string query = "UPDATE LOGIN SET Password='" + newPass + "' WHERE Username like'___" + user + "';";
+
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+
+        public int UpdateVetLocation(int newLoc, string user)
+        {
+            string query = "UPDATE VET SET Location_ID=" + newLoc + " WHERE Username like '___" + user + "';";
+            return dbMan.ExecuteNonQuery(query);
+        }
     }
 }

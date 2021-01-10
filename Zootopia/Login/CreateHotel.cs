@@ -58,6 +58,7 @@ namespace Zootopia
                 else
                 {  //el controller el mafroud yenafez order el insert hena
 
+                    string usern = "HT-" + textBoxUserName.Text;
                     if(textBoxNewLocation.Text=="")
                     {
                         if(comboBox1.Text=="")
@@ -67,8 +68,8 @@ namespace Zootopia
                         }
                         else
                         {
-                           
-                        int r=controllerObj.InsertHotel(name_textbox.Text,int.Parse(phonenum_textbox.Text),int.Parse(textBoxNbOfRooms.Text),float.Parse(textBoxPrice.Text),textBoxUserName.Text,int.Parse(comboBox1.SelectedValue.ToString()));
+                            int l = controllerObj.InsertLogin(usern, textBoxPassword.Text);
+                        int r=controllerObj.InsertHotel(name_textbox.Text,int.Parse(phonenum_textbox.Text),int.Parse(textBoxNbOfRooms.Text),float.Parse(textBoxPrice.Text),usern,int.Parse(comboBox1.SelectedValue.ToString()));
                        
                         if (r==0)
                             {
@@ -86,14 +87,20 @@ namespace Zootopia
                     }
                     else 
                     {
-                        int r=controllerObj.InsertLocation(textBoxNewLocation.Text);
-                        if (r == 0)
+                        DataTable locid = controllerObj.SelectLocID(textBoxNewLocation.Text);
+                        if (locid == null)   //not already an existant location
                         {
-                            MessageBox.Show("An error has occured , please repeat");
+                            
+                            int r = controllerObj.InsertLocation(textBoxNewLocation.Text);
+                            if (r == 0)
+                            {
+                                MessageBox.Show("An error has occured , please repeat");
+                            }
                         }
-           
-                      int Lid =controllerObj.SelectLocID(textBoxNewLocation.Text);
-                       int r_l= controllerObj.InsertHotel(name_textbox.Text, int.Parse(phonenum_textbox.Text), int.Parse(textBoxNbOfRooms.Text), float.Parse(textBoxPrice.Text), textBoxUserName.Text, Lid);
+                        int l = controllerObj.InsertLogin(usern, textBoxPassword.Text);
+                        DataTable Lidt = controllerObj.SelectLocID(textBoxNewLocation.Text);
+                        int lid = int.Parse(Lidt.Rows[0][0].ToString());
+                        int r_l= controllerObj.InsertHotel(name_textbox.Text, int.Parse(phonenum_textbox.Text), int.Parse(textBoxNbOfRooms.Text), float.Parse(textBoxPrice.Text), usern, lid);
                         if(r_l==0)
                         {
                             MessageBox.Show("An error has occured , please repeat");

@@ -36,18 +36,28 @@ namespace Zootopia
             }
             else
             {
-                int r = controllerObj.UpdateAdminPass(comboBox1.SelectedValue.ToString(),textBox1.Text);
-                if(r==0)
+                DataTable adp = controllerObj.SelectAdminPass(textBox1.Text);
+                if (adp == null)
                 {
-                    MessageBox.Show("Something went wrong");
+
+
+                    int r = controllerObj.UpdateAdminPass(comboBox1.SelectedValue.ToString(), textBox1.Text);
+                    if (r == 0)
+                    {
+                        MessageBox.Show("Something went wrong");
+                    }
+                    else
+                    {
+                        DataTable dt = controllerObj.SelectAllAdmins();
+                        comboBox1.DataSource = dt;
+                        comboBox1.DisplayMember = "Pass_Admin";
+                        comboBox1.ValueMember = "Pass_Admin";
+                        MessageBox.Show("Password is updated");
+                    }
                 }
                 else
                 {
-                    DataTable dt = controllerObj.SelectAllAdmins();
-                    comboBox1.DataSource = dt;
-                    comboBox1.DisplayMember = "Pass_Admin";
-                    comboBox1.ValueMember = "Pass_Admin";
-                    MessageBox.Show("Password is updated");
+                    MessageBox.Show("This password already exists");
                 }
             }
         }
