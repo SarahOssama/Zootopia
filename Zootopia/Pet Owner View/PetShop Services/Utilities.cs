@@ -55,9 +55,9 @@ namespace Zootopia
         {
             int Pshop_Id = ControllerObj.GetPetShopId_FromShopName(comboBox1.Text);
             int Utility_Id = ControllerObj.GetUtilityId_FromUname(comboBox2.Text);
-
+            int result1 = ControllerObj.UpdateSold((int)numericUpDown1.Value, Pshop_Id, Utility_Id);
             int result  = ControllerObj.BuyUtility(Pshop_Id, Utility_Id, (int)numericUpDown1.Value);
-            if (result == 0)
+            if (result == 0 && result1 ==0)
             {
                 MessageBox.Show("The process of buying failed");
             }

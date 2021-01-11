@@ -462,6 +462,12 @@ namespace Zootopia
         #endregion
 
         #region buyUtility
+        public int UpdateSold(int qty, int pshopId, int UID)
+        {
+            string query = "Update SOLD Set QuantitySold = QuantitySold + "+qty+" where Pshop_ID = "+pshopId+" and Utilities_ID = "+UID+";";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
         public DataTable ViewAvilableUtility (string Uname, int qty)
         {
             string query = " Select DISTINCT  UPrice,Location_Name ,Pshop_Name FRom UTILITIES, EXIST, PETSHOP, LOCATION where EXIST.Pshop_ID = PETSHOP.Pshop_ID and UTILITIES.Utilities_ID = EXIST.Utilities_ID and PETSHOP.Location_ID = LOCATION.Location_ID and UName = '"+Uname+"' and Quantity >= "+qty+";";
@@ -492,6 +498,126 @@ namespace Zootopia
         {
             string query = "Select Pshop_Id from PETSHOP where Pshop_Name = '"+shopname+"';";
             return (int)dbMan.ExecuteScalar(query);
+
+        }
+
+        #endregion
+
+        #region Rate
+        public DataTable SelectPnameFromVisit(string username)
+        {
+            string query = "Select  Distinct  PName from VISITOR, PET, OWNER where VISITOR.Pet_ID = PET.Pet_ID and Owner.Owner_ID = PET.Owner_ID and OWNER.Username = 'OW-" + username + "'; ";
+            return dbMan.ExecuteReader(query);
+
+        }
+
+        public DataTable SelectHNameFromVisit(string username, string pname)
+        {
+            string query = "Select  Distinct HName from VISITOR, PET, OWNER, HOTEL where VISITOR.Pet_ID= PET.Pet_ID and Owner.Owner_ID= PET.Owner_ID and HOTEL.Hotel_ID= VISITOR.Hotel_ID and OWNER.Username= 'OW-" + username + "' and PName = '" + pname + "'; ";
+            return dbMan.ExecuteReader(query);
+
+        }
+
+        public int SelectPetId_FromPetName(string pname)
+        {
+            string query = "Select Pet_Id From PET where PName = '" + pname + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public int SelectHotelId_FromHotelName(string Hname)
+        {
+            string query = "select HOTEL_ID from HOTEL where HName = '" + Hname + "';";
+            return (int)dbMan.ExecuteScalar(query);
+
+        }
+
+        public int RateHotel(int petId, int HotelId, double rate)
+        {
+            string query = "Update VISITOR Set HRateGiven = " + rate + " where Pet_ID = " + petId + " and Hotel_ID = " + HotelId + ";";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+
+
+        public int UpdateHotelRate(string HName)
+        {
+
+            string query = "Select AVG(HRateGiven) From VISITOR,HOTEL where HOTEL.Hotel_ID=VISITOR.Hotel_ID and HName='" + HName + "';";
+            double Rate = (double)dbMan.ExecuteScalar(query);
+
+
+            string query2 = "Update HOTEL set H_TotalRate= " + Rate + " where HName='" + HName + "';";
+            return dbMan.ExecuteNonQuery(query2);
+
+        }
+
+        public int VetRate(double rate, int id)
+        {
+            string query = "Update GOESTO Set VRateGiven = " + rate + " where Owner_ID = " + id + ";";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+
+        public int UpdateVetRate(int VetID)
+        {
+
+            string query = "Select AVG(VRateGiven) From VET,GOESTO where VET.Vet_ID=GOESTO.Vet_ID and VET.Vet_ID=" + VetID + ";";
+            double Rate = (double)dbMan.ExecuteScalar(query);
+
+
+            string query2 = "Update  VET set V_TotalRate= " + Rate + " where Vet_ID=" + VetID + ";";
+            return dbMan.ExecuteNonQuery(query2);
+
+        }
+
+        public int SelectVetIDFromUserName(string OUsername)
+        {
+            string query = "Select Vet_ID from OWNER,GOESTO where OWNER.Owner_ID=GOESTO.Owner_ID and OWNER.Username='OW-" + OUsername + "';";
+            return (int)dbMan.ExecuteScalar(query);
+        }
+
+        public DataTable SelectPName_FromTrained(string Username)
+        {
+            string query = " Select  Distinct PName from TRAINED, PET, OWNER, HOTEL, TRAINER where TRAINED.Pet_ID = PET.Pet_ID and Owner.Owner_ID = PET.Owner_ID and HOTEL.Hotel_ID = TRAINED.Hotel_ID and OWNER.Username = 'OW-" + Username + "';";
+            return dbMan.ExecuteReader(query);
+
+        }
+
+        public DataTable SelectHotelName_FromTrained(string username, string pname)
+        {
+            string query = "Select  Distinct HOTEL.HName from TRAINED, PET, OWNER, HOTEL, TRAINER where TRAINED.Pet_ID = PET.Pet_ID and Owner.Owner_ID = PET.Owner_ID and HOTEL.Hotel_ID = TRAINED.Hotel_ID and OWNER.Username = 'OW-" + username + "' and PName = '" + pname + "'; ";
+            return dbMan.ExecuteReader(query);
+
+        }
+
+        public DataTable SelectTrainerName_FromTrained(string username, string pname)
+        {
+            string query = "Select  Distinct Trainer.FName from TRAINED, PET, OWNER, HOTEL, TRAINER where TRAINED.Tnum = TRAINER.Tnum and TRAINED.Pet_ID = PET.Pet_ID and Owner.Owner_ID = PET.Owner_ID and HOTEL.Hotel_ID = TRAINED.Hotel_ID and OWNER.Username = 'OW-" + username + "' and PName = '" + pname + "'; ";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int RateTrainer(double rate, int TID, int hotelId, int petId)
+        {
+            string query = "Update TRAINED set TRateGiven = " + rate + " where Tnum = " + TID + " and Hotel_ID = " + hotelId + " and Pet_ID = " + petId + ";";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+
+        public int SelectTnum_FRomTName(string name)
+        {
+            string query = " Select Tnum from TRAINER where FName = '" + name + "';";
+            return (int)dbMan.ExecuteScalar(query);
+
+        }
+        public int UpdateTrainerRate(int TNum, int HotelID)
+        {
+
+            string query = "Select AVG(TRateGiven) From TRAINER,TRAINED where TRAINER.Tnum=TRAINED.Tnum and TRAINER.Hotel_ID=TRAINED.Hotel_ID and TRAINED.Tnum=" + TNum + " and  TRAINED.Hotel_ID=" + HotelID + ";";
+            double Rate = (double)dbMan.ExecuteScalar(query);
+
+
+            string query2 = "Update TRAINER set T_TotalRate= " + Rate + " where Tnum=" + TNum + " and Hotel_ID=" + HotelID + ";";
+            return dbMan.ExecuteNonQuery(query2);
 
         }
 

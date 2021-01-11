@@ -39,6 +39,11 @@ namespace Zootopia
 
             if (panelHotelServicesSubMenu.Visible == true)
                 panelHotelServicesSubMenu.Visible = false;
+
+            if (panelRatesubPanel.Visible==true)
+                panelRatesubPanel.Visible = false;
+
+            
         }
 
         private void ShowSubMenu(Panel SubMenu )
@@ -220,22 +225,25 @@ namespace Zootopia
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            ShowSubMenu(panelRatesubPanel);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+           OpenChildForm(new RateVet());
+            hideSubMenu();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-           // OpenChildForm(new RateHotel());
+            OpenChildForm(new RateHotel());
+            hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            OpenChildForm(new RateTrainer());
+            hideSubMenu();
         }
 
         private void panel3_Paint(object sender, PaintEventArgs e)

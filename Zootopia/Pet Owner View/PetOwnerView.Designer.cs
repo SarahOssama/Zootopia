@@ -56,11 +56,11 @@
             this.buttonInsertPet = new System.Windows.Forms.Button();
             this.buttonPetDetail = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
+            this.button7 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSubChildDown = new System.Windows.Forms.Panel();
             this.panelSubChildUP = new System.Windows.Forms.Panel();
-            this.button7 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelLeft.SuspendLayout();
             this.panelRatesubPanel.SuspendLayout();
@@ -121,9 +121,9 @@
             this.button6.Location = new System.Drawing.Point(0, 68);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(210, 27);
+            this.button6.Size = new System.Drawing.Size(210, 39);
             this.button6.TabIndex = 3;
-            this.button6.Text = "Buy utilities";
+            this.button6.Text = "Rate Trainer";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -182,7 +182,7 @@
             // 
             // panelPetShopServices
             // 
-            this.panelPetShopServices.BackColor = System.Drawing.Color.White;
+            this.panelPetShopServices.BackColor = System.Drawing.Color.FloralWhite;
             this.panelPetShopServices.Controls.Add(this.button3);
             this.panelPetShopServices.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPetShopServices.Location = new System.Drawing.Point(0, 656);
@@ -202,7 +202,7 @@
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(210, 40);
+            this.button3.Size = new System.Drawing.Size(210, 43);
             this.button3.TabIndex = 0;
             this.button3.Text = "Buy utilities";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -505,6 +505,18 @@
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(184, 30);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(23, 23);
+            this.button7.TabIndex = 0;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -553,18 +565,6 @@
             this.panelSubChildUP.Size = new System.Drawing.Size(842, 339);
             this.panelSubChildUP.TabIndex = 0;
             this.panelSubChildUP.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubChildUP_Paint);
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(184, 30);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(23, 23);
-            this.button7.TabIndex = 0;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // textBox1
             // 

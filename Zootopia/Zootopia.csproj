@@ -252,6 +252,24 @@
     <Compile Include="Pet Owner View\PetShop Services\Utilities.Designer.cs">
       <DependentUpon>Utilities.cs</DependentUpon>
     </Compile>
+    <Compile Include="RateHotel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateHotel.Designer.cs">
+      <DependentUpon>RateHotel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RateTrainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateTrainer.Designer.cs">
+      <DependentUpon>RateTrainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RateVet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RateVet.Designer.cs">
+      <DependentUpon>RateVet.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -451,6 +469,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Hotel View\ViewRooms.resx">
       <DependentUpon>ViewRooms.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RateHotel.resx">
+      <DependentUpon>RateHotel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RateTrainer.resx">
+      <DependentUpon>RateTrainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RateVet.resx">
+      <DependentUpon>RateVet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
