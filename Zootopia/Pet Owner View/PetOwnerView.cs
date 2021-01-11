@@ -218,7 +218,7 @@ namespace Zootopia
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new RateHotel());
+           // OpenChildForm(new RateHotel());
         }
 
         private void button6_Click(object sender, EventArgs e)
