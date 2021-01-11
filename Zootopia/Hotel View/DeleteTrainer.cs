@@ -13,11 +13,14 @@ namespace Zootopia
     public partial class DeleteTrainer : Form
     {
         Controller controllerObj;
-        public string HotelUsername = "Makan";
+        public string HotelUsername = "";
 
-        public DeleteTrainer()
+        public DeleteTrainer(string Username)
         {
             InitializeComponent();
+
+            HotelUsername = Username;
+
             controllerObj = new Controller();
             DataTable dt2 = controllerObj.SelectTrainerNameWithUserName(HotelUsername);
             DeleteTrainerNameComboBox.DataSource = dt2;

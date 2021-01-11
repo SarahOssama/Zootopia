@@ -12,9 +12,12 @@ namespace Zootopia
 {
     public partial class HotelOwnerView : Form
     {
-        public HotelOwnerView()
+        public string HUsername="";
+
+        public HotelOwnerView(string Username)
         {
             InitializeComponent();
+            HUsername = Username;
         }
 
         private Form activeForm = null;
@@ -38,22 +41,22 @@ namespace Zootopia
 
         private void AddTrainerButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddTrainer());
+            OpenChildForm(new AddTrainer(HUsername));
         }
 
         private void ViewTrainerButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ViewTrainers());
+            OpenChildForm(new ViewTrainers(HUsername));
         }
 
         private void DeleteTrainerButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DeleteTrainer());
+            OpenChildForm(new DeleteTrainer(HUsername));
         }
 
         private void ViewRoomButton_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ViewRooms());
+            OpenChildForm(new ViewRooms(HUsername));
         }
     }
 }

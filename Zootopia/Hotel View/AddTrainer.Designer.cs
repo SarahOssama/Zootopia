@@ -37,17 +37,17 @@ namespace Zootopia
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.labelLName = new System.Windows.Forms.Label();
             this.TrainerLNameTextBox = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.labelFname = new System.Windows.Forms.Label();
             this.TrainerFNameTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.TrainerPriceTextBox = new System.Windows.Forms.TextBox();
-            this.TrainerNumTextBox = new System.Windows.Forms.TextBox();
-            this.labelFname = new System.Windows.Forms.Label();
-            this.labelLName = new System.Windows.Forms.Label();
-            this.labelPrice = new System.Windows.Forms.Label();
             this.labelNumber = new System.Windows.Forms.Label();
+            this.TrainerNumTextBox = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.labelPrice = new System.Windows.Forms.Label();
+            this.TrainerPriceTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -164,6 +164,18 @@ namespace Zootopia
             this.panel5.Size = new System.Drawing.Size(252, 72);
             this.panel5.TabIndex = 1;
             // 
+            // labelLName
+            // 
+            this.labelLName.AutoSize = true;
+            this.labelLName.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelLName.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLName.ForeColor = System.Drawing.Color.Red;
+            this.labelLName.Location = new System.Drawing.Point(0, 26);
+            this.labelLName.Name = "labelLName";
+            this.labelLName.Size = new System.Drawing.Size(157, 19);
+            this.labelLName.TabIndex = 41;
+            this.labelLName.Text = "Please add a Last Name";
+            // 
             // TrainerLNameTextBox
             // 
             this.TrainerLNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
@@ -185,6 +197,18 @@ namespace Zootopia
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(265, 72);
             this.panel4.TabIndex = 0;
+            // 
+            // labelFname
+            // 
+            this.labelFname.AutoSize = true;
+            this.labelFname.Dock = System.Windows.Forms.DockStyle.Top;
+            this.labelFname.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelFname.ForeColor = System.Drawing.Color.Red;
+            this.labelFname.Location = new System.Drawing.Point(0, 26);
+            this.labelFname.Name = "labelFname";
+            this.labelFname.Size = new System.Drawing.Size(153, 19);
+            this.labelFname.TabIndex = 41;
+            this.labelFname.Text = "Please add a first name";
             // 
             // TrainerFNameTextBox
             // 
@@ -208,24 +232,16 @@ namespace Zootopia
             this.panel2.Size = new System.Drawing.Size(596, 73);
             this.panel2.TabIndex = 8;
             // 
-            // panel3
+            // labelNumber
             // 
-            this.panel3.Controls.Add(this.labelPrice);
-            this.panel3.Controls.Add(this.TrainerPriceTextBox);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(238, 81);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(596, 72);
-            this.panel3.TabIndex = 9;
-            // 
-            // TrainerPriceTextBox
-            // 
-            this.TrainerPriceTextBox.Dock = System.Windows.Forms.DockStyle.Left;
-            this.TrainerPriceTextBox.Location = new System.Drawing.Point(0, 0);
-            this.TrainerPriceTextBox.Name = "TrainerPriceTextBox";
-            this.TrainerPriceTextBox.Size = new System.Drawing.Size(265, 26);
-            this.TrainerPriceTextBox.TabIndex = 0;
-            this.TrainerPriceTextBox.Leave += new System.EventHandler(this.TrainerPriceTextBox_Leave);
+            this.labelNumber.AutoSize = true;
+            this.labelNumber.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNumber.ForeColor = System.Drawing.Color.Red;
+            this.labelNumber.Location = new System.Drawing.Point(340, 10);
+            this.labelNumber.Name = "labelNumber";
+            this.labelNumber.Size = new System.Drawing.Size(142, 19);
+            this.labelNumber.TabIndex = 41;
+            this.labelNumber.Text = "Please add a Number";
             // 
             // TrainerNumTextBox
             // 
@@ -236,29 +252,15 @@ namespace Zootopia
             this.TrainerNumTextBox.TabIndex = 0;
             this.TrainerNumTextBox.Leave += new System.EventHandler(this.TrainerNumTextBox_Leave);
             // 
-            // labelFname
+            // panel3
             // 
-            this.labelFname.AutoSize = true;
-            this.labelFname.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelFname.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFname.ForeColor = System.Drawing.Color.Red;
-            this.labelFname.Location = new System.Drawing.Point(0, 26);
-            this.labelFname.Name = "labelFname";
-            this.labelFname.Size = new System.Drawing.Size(153, 19);
-            this.labelFname.TabIndex = 41;
-            this.labelFname.Text = "Please add a first name";
-            // 
-            // labelLName
-            // 
-            this.labelLName.AutoSize = true;
-            this.labelLName.Dock = System.Windows.Forms.DockStyle.Top;
-            this.labelLName.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLName.ForeColor = System.Drawing.Color.Red;
-            this.labelLName.Location = new System.Drawing.Point(0, 26);
-            this.labelLName.Name = "labelLName";
-            this.labelLName.Size = new System.Drawing.Size(157, 19);
-            this.labelLName.TabIndex = 41;
-            this.labelLName.Text = "Please add a Last Name";
+            this.panel3.Controls.Add(this.labelPrice);
+            this.panel3.Controls.Add(this.TrainerPriceTextBox);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(238, 81);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(596, 72);
+            this.panel3.TabIndex = 9;
             // 
             // labelPrice
             // 
@@ -271,16 +273,14 @@ namespace Zootopia
             this.labelPrice.TabIndex = 41;
             this.labelPrice.Text = "Please add a price";
             // 
-            // labelNumber
+            // TrainerPriceTextBox
             // 
-            this.labelNumber.AutoSize = true;
-            this.labelNumber.Font = new System.Drawing.Font("Palatino Linotype", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNumber.ForeColor = System.Drawing.Color.Red;
-            this.labelNumber.Location = new System.Drawing.Point(340, 10);
-            this.labelNumber.Name = "labelNumber";
-            this.labelNumber.Size = new System.Drawing.Size(142, 19);
-            this.labelNumber.TabIndex = 41;
-            this.labelNumber.Text = "Please add a Number";
+            this.TrainerPriceTextBox.Dock = System.Windows.Forms.DockStyle.Left;
+            this.TrainerPriceTextBox.Location = new System.Drawing.Point(0, 0);
+            this.TrainerPriceTextBox.Name = "TrainerPriceTextBox";
+            this.TrainerPriceTextBox.Size = new System.Drawing.Size(265, 26);
+            this.TrainerPriceTextBox.TabIndex = 0;
+            this.TrainerPriceTextBox.Leave += new System.EventHandler(this.TrainerPriceTextBox_Leave);
             // 
             // AddTrainer
             // 

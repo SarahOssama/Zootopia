@@ -236,7 +236,6 @@ namespace Zootopia
         }
         #endregion
 
-
         #region Hotel View
 
         #region Add Trainer
@@ -275,8 +274,18 @@ namespace Zootopia
             return dbMan.ExecuteReader(query);
         }
 
-        #endregion
+        public DataTable SelectNumberOfRoomsinHotel(string HUsername)
+        {
+            string query = "Select Num_Rooms From Hotel where  Username='HT-" + HUsername + "';";
+            return dbMan.ExecuteReader(query);
+        }
 
+        public DataTable SelectHotelPriceInHotel(string HUsername)
+        {
+            string query = "Select HPrice From Hotel where  Username='HT-" + HUsername + "';";
+            return dbMan.ExecuteReader(query);
+        }
+        #endregion
 
         #region OwnerSearch
         public DataTable SearchHotel(string HLocation, int HPriceUp, int HPriceDown, int HRateUp, int HRateDown)

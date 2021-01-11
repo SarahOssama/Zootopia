@@ -14,13 +14,13 @@ namespace Zootopia
     public partial class AddTrainer : Form
     {
         Controller controllerObj;
-        public string HotelUsername = "Makan";
+        public string HotelUsername = "";
 
-        public AddTrainer()
+        public AddTrainer(string Username)
         {
             InitializeComponent();
             controllerObj = new Controller();
-
+            HotelUsername = Username;
 
             labelNumber.Visible = false;
             labelPrice.Visible = false;

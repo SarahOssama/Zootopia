@@ -33,17 +33,17 @@ namespace Zootopia
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.ReserveRoomHotelNameComboBox = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ArrdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DepdateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.ArrdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.ViewRoomPriceTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.ReserveRoomPetNameComboBox = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -121,17 +121,6 @@ namespace Zootopia
             this.label6.TabIndex = 17;
             this.label6.Text = "Hotel Name";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(3, 208);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 32);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Price";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -154,22 +143,6 @@ namespace Zootopia
             this.label9.TabIndex = 2;
             this.label9.Text = "Arrival Date";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.button1.Location = new System.Drawing.Point(12, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 44);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ArrdateTimePicker);
@@ -178,6 +151,19 @@ namespace Zootopia
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(433, 46);
             this.panel1.TabIndex = 19;
+            // 
+            // ArrdateTimePicker
+            // 
+            this.ArrdateTimePicker.CustomFormat = "yyyy-MM-dd";
+            this.ArrdateTimePicker.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ArrdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.ArrdateTimePicker.Location = new System.Drawing.Point(0, 0);
+            this.ArrdateTimePicker.MinDate = new System.DateTime(2021, 1, 10, 0, 0, 0, 0);
+            this.ArrdateTimePicker.Name = "ArrdateTimePicker";
+            this.ArrdateTimePicker.Size = new System.Drawing.Size(433, 26);
+            this.ArrdateTimePicker.TabIndex = 0;
+            this.ArrdateTimePicker.Value = new System.DateTime(2021, 1, 10, 17, 51, 38, 0);
+            this.ArrdateTimePicker.CloseUp += new System.EventHandler(this.ArrdateTimePicker_CloseUp);
             // 
             // panel2
             // 
@@ -199,19 +185,6 @@ namespace Zootopia
             this.DepdateTimePicker.TabIndex = 0;
             this.DepdateTimePicker.CloseUp += new System.EventHandler(this.DepdateTimePicker_CloseUp);
             this.DepdateTimePicker.Enter += new System.EventHandler(this.DepdateTimePicker_Enter);
-            // 
-            // ArrdateTimePicker
-            // 
-            this.ArrdateTimePicker.CustomFormat = "yyyy-MM-dd";
-            this.ArrdateTimePicker.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ArrdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.ArrdateTimePicker.Location = new System.Drawing.Point(0, 0);
-            this.ArrdateTimePicker.MinDate = new System.DateTime(2021, 1, 10, 0, 0, 0, 0);
-            this.ArrdateTimePicker.Name = "ArrdateTimePicker";
-            this.ArrdateTimePicker.Size = new System.Drawing.Size(433, 26);
-            this.ArrdateTimePicker.TabIndex = 0;
-            this.ArrdateTimePicker.Value = new System.DateTime(2021, 1, 10, 17, 51, 38, 0);
-            this.ArrdateTimePicker.CloseUp += new System.EventHandler(this.ArrdateTimePicker_CloseUp);
             // 
             // label1
             // 
@@ -235,6 +208,17 @@ namespace Zootopia
             this.ViewRoomPriceTextBox.Size = new System.Drawing.Size(433, 30);
             this.ViewRoomPriceTextBox.TabIndex = 22;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label7.Location = new System.Drawing.Point(3, 208);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 32);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Price";
+            // 
             // ReserveRoomPetNameComboBox
             // 
             this.ReserveRoomPetNameComboBox.Dock = System.Windows.Forms.DockStyle.Top;
@@ -243,6 +227,22 @@ namespace Zootopia
             this.ReserveRoomPetNameComboBox.Name = "ReserveRoomPetNameComboBox";
             this.ReserveRoomPetNameComboBox.Size = new System.Drawing.Size(433, 28);
             this.ReserveRoomPetNameComboBox.TabIndex = 23;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Maroon;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.button1.Location = new System.Drawing.Point(12, 10);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(40, 44);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "X";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ReserveRoom
             // 

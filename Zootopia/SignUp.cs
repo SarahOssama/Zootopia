@@ -70,7 +70,7 @@ namespace Zootopia
                         }
                         if (usern.StartsWith("HT-"))
                         {
-                            HotelOwnerView V = new HotelOwnerView();
+                            HotelOwnerView V = new HotelOwnerView(username_textbox.Text);
                             V.Show();
                         }
                         if (usern.StartsWith("VT-"))
