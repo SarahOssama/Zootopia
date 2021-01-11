@@ -12,9 +12,12 @@ namespace Zootopia
 {
     public partial class PetShopOwnerView : Form
     {
-        public PetShopOwnerView()
+        public string PSUsername = "";
+
+        public PetShopOwnerView(string Username)
         {
             InitializeComponent();
+            PSUsername = Username;
         }
         private Form activeForm = null;
         private void OpenChildForm(Form childForm)
@@ -42,27 +45,27 @@ namespace Zootopia
 
         private void buttonAddUtility_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddUtility());
+            OpenChildForm(new AddUtility(PSUsername));
         }
 
         private void buttonView_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new ViewUtilities());
+            OpenChildForm(new ViewUtilities(PSUsername));
         }
 
         private void buttonDeleteUtility_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DeleteUtility());
+            OpenChildForm(new DeleteUtility(PSUsername));
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UpdateUtility());
+            OpenChildForm(new UpdateUtility(PSUsername));
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new AddUtilityToShop());
+            OpenChildForm(new AddUtilityToShop(PSUsername));
         }
 
         private void panelChildForm_Paint(object sender, PaintEventArgs e)

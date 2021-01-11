@@ -13,10 +13,12 @@ namespace Zootopia
     public partial class RateVet : Form
     {
         Controller ControllerObj ;
-        public string username = "Sandy";
-        public RateVet()
+        public string OUsername = "";
+        public RateVet(string Username)
         {
             InitializeComponent();
+            OUsername = Username;
+
             ControllerObj = new Controller();
 
         }
@@ -28,8 +30,8 @@ namespace Zootopia
 
         private void buttonRate_Click(object sender, EventArgs e)
         {
-            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(username);
-            int VID = ControllerObj.SelectVetIDFromUserName(username);
+            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(OUsername);
+            int VID = ControllerObj.SelectVetIDFromUserName(OUsername);
             int result = ControllerObj.UpdateVetRate(VID);
             int result1  = ControllerObj.VetRate((double)numericUpDown1.Value, owner_Id);
             if (result == 0 && result1==0)

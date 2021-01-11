@@ -94,8 +94,9 @@
             this.panelLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelLeft.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panelLeft.Location = new System.Drawing.Point(0, 0);
+            this.panelLeft.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLeft.Name = "panelLeft";
-            this.panelLeft.Size = new System.Drawing.Size(231, 684);
+            this.panelLeft.Size = new System.Drawing.Size(260, 948);
             this.panelLeft.TabIndex = 0;
             // 
             // panelRatesubPanel
@@ -105,10 +106,12 @@
             this.panelRatesubPanel.Controls.Add(this.button5);
             this.panelRatesubPanel.Controls.Add(this.button4);
             this.panelRatesubPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRatesubPanel.Location = new System.Drawing.Point(0, 744);
+            this.panelRatesubPanel.Location = new System.Drawing.Point(0, 928);
+            this.panelRatesubPanel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelRatesubPanel.Name = "panelRatesubPanel";
-            this.panelRatesubPanel.Size = new System.Drawing.Size(210, 107);
+            this.panelRatesubPanel.Size = new System.Drawing.Size(234, 134);
             this.panelRatesubPanel.TabIndex = 2;
+            this.panelRatesubPanel.Visible = false;
             this.panelRatesubPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // button6
@@ -118,10 +121,11 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.DimGray;
-            this.button6.Location = new System.Drawing.Point(0, 68);
+            this.button6.Location = new System.Drawing.Point(0, 84);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(210, 39);
+            this.button6.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(234, 46);
             this.button6.TabIndex = 3;
             this.button6.Text = "Rate Trainer";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,10 +139,11 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.DimGray;
-            this.button5.Location = new System.Drawing.Point(0, 34);
+            this.button5.Location = new System.Drawing.Point(0, 42);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(210, 34);
+            this.button5.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(234, 42);
             this.button5.TabIndex = 2;
             this.button5.Text = "Rate Vet";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,9 +158,10 @@
             this.button4.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.DimGray;
             this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(210, 34);
+            this.button4.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(234, 42);
             this.button4.TabIndex = 1;
             this.button4.Text = "Rate Hotel";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -170,10 +176,11 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 699);
+            this.button2.Location = new System.Drawing.Point(0, 872);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(210, 45);
+            this.button2.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(234, 56);
             this.button2.TabIndex = 10;
             this.button2.Text = "Rate";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,9 +192,10 @@
             this.panelPetShopServices.BackColor = System.Drawing.Color.FloralWhite;
             this.panelPetShopServices.Controls.Add(this.button3);
             this.panelPetShopServices.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPetShopServices.Location = new System.Drawing.Point(0, 656);
+            this.panelPetShopServices.Location = new System.Drawing.Point(0, 818);
+            this.panelPetShopServices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelPetShopServices.Name = "panelPetShopServices";
-            this.panelPetShopServices.Size = new System.Drawing.Size(210, 43);
+            this.panelPetShopServices.Size = new System.Drawing.Size(234, 54);
             this.panelPetShopServices.TabIndex = 9;
             this.panelPetShopServices.Visible = false;
             this.panelPetShopServices.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPetShopServices_Paint);
@@ -200,9 +208,10 @@
             this.button3.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.DimGray;
             this.button3.Location = new System.Drawing.Point(0, 0);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(210, 43);
+            this.button3.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(234, 54);
             this.button3.TabIndex = 0;
             this.button3.Text = "Buy utilities";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -217,10 +226,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 611);
+            this.button1.Location = new System.Drawing.Point(0, 762);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(210, 45);
+            this.button1.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(234, 56);
             this.button1.TabIndex = 8;
             this.button1.Text = "Pet Shop Services";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -235,10 +245,11 @@
             this.buttonMating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonMating.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonMating.ForeColor = System.Drawing.Color.White;
-            this.buttonMating.Location = new System.Drawing.Point(0, 572);
+            this.buttonMating.Location = new System.Drawing.Point(0, 713);
+            this.buttonMating.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonMating.Name = "buttonMating";
-            this.buttonMating.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonMating.Size = new System.Drawing.Size(210, 39);
+            this.buttonMating.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.buttonMating.Size = new System.Drawing.Size(234, 49);
             this.buttonMating.TabIndex = 7;
             this.buttonMating.Text = "Mating";
             this.buttonMating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -251,9 +262,10 @@
             this.panelHotelServicesSubMenu.Controls.Add(this.ButtonReserve);
             this.panelHotelServicesSubMenu.Controls.Add(this.ButtonTrainer);
             this.panelHotelServicesSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelHotelServicesSubMenu.Location = new System.Drawing.Point(0, 482);
+            this.panelHotelServicesSubMenu.Location = new System.Drawing.Point(0, 601);
+            this.panelHotelServicesSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelHotelServicesSubMenu.Name = "panelHotelServicesSubMenu";
-            this.panelHotelServicesSubMenu.Size = new System.Drawing.Size(210, 90);
+            this.panelHotelServicesSubMenu.Size = new System.Drawing.Size(234, 112);
             this.panelHotelServicesSubMenu.TabIndex = 5;
             this.panelHotelServicesSubMenu.Visible = false;
             // 
@@ -264,10 +276,11 @@
             this.ButtonReserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonReserve.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonReserve.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonReserve.Location = new System.Drawing.Point(0, 40);
+            this.ButtonReserve.Location = new System.Drawing.Point(0, 50);
+            this.ButtonReserve.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonReserve.Name = "ButtonReserve";
-            this.ButtonReserve.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonReserve.Size = new System.Drawing.Size(210, 40);
+            this.ButtonReserve.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.ButtonReserve.Size = new System.Drawing.Size(234, 50);
             this.ButtonReserve.TabIndex = 1;
             this.ButtonReserve.Text = "Reserve";
             this.ButtonReserve.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,9 +295,10 @@
             this.ButtonTrainer.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonTrainer.ForeColor = System.Drawing.Color.DimGray;
             this.ButtonTrainer.Location = new System.Drawing.Point(0, 0);
+            this.ButtonTrainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonTrainer.Name = "ButtonTrainer";
-            this.ButtonTrainer.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonTrainer.Size = new System.Drawing.Size(210, 40);
+            this.ButtonTrainer.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.ButtonTrainer.Size = new System.Drawing.Size(234, 50);
             this.ButtonTrainer.TabIndex = 0;
             this.ButtonTrainer.Text = "Trainers";
             this.ButtonTrainer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,10 +309,10 @@
             // 
             this.panel2.Controls.Add(this.ButtonHotelServices);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 437);
+            this.panel2.Location = new System.Drawing.Point(0, 545);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(210, 45);
+            this.panel2.Size = new System.Drawing.Size(234, 56);
             this.panel2.TabIndex = 4;
             // 
             // ButtonHotelServices
@@ -310,9 +324,10 @@
             this.ButtonHotelServices.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonHotelServices.ForeColor = System.Drawing.Color.White;
             this.ButtonHotelServices.Location = new System.Drawing.Point(0, 0);
+            this.ButtonHotelServices.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonHotelServices.Name = "ButtonHotelServices";
-            this.ButtonHotelServices.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ButtonHotelServices.Size = new System.Drawing.Size(210, 45);
+            this.ButtonHotelServices.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.ButtonHotelServices.Size = new System.Drawing.Size(234, 56);
             this.ButtonHotelServices.TabIndex = 2;
             this.ButtonHotelServices.Text = "Hotel Services";
             this.ButtonHotelServices.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -326,9 +341,10 @@
             this.panelSearchSubMenu.Controls.Add(this.ButtonPetShopSearch);
             this.panelSearchSubMenu.Controls.Add(this.ButtonHotelSearch);
             this.panelSearchSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSearchSubMenu.Location = new System.Drawing.Point(0, 300);
+            this.panelSearchSubMenu.Location = new System.Drawing.Point(0, 374);
+            this.panelSearchSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelSearchSubMenu.Name = "panelSearchSubMenu";
-            this.panelSearchSubMenu.Size = new System.Drawing.Size(210, 137);
+            this.panelSearchSubMenu.Size = new System.Drawing.Size(234, 171);
             this.panelSearchSubMenu.TabIndex = 3;
             this.panelSearchSubMenu.Visible = false;
             // 
@@ -339,10 +355,11 @@
             this.ButtonVetSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonVetSearch.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonVetSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonVetSearch.Location = new System.Drawing.Point(0, 80);
+            this.ButtonVetSearch.Location = new System.Drawing.Point(0, 100);
+            this.ButtonVetSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonVetSearch.Name = "ButtonVetSearch";
-            this.ButtonVetSearch.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonVetSearch.Size = new System.Drawing.Size(210, 40);
+            this.ButtonVetSearch.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.ButtonVetSearch.Size = new System.Drawing.Size(234, 50);
             this.ButtonVetSearch.TabIndex = 2;
             this.ButtonVetSearch.Text = "Vets";
             this.ButtonVetSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -356,10 +373,11 @@
             this.ButtonPetShopSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonPetShopSearch.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonPetShopSearch.ForeColor = System.Drawing.Color.DimGray;
-            this.ButtonPetShopSearch.Location = new System.Drawing.Point(0, 40);
+            this.ButtonPetShopSearch.Location = new System.Drawing.Point(0, 50);
+            this.ButtonPetShopSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonPetShopSearch.Name = "ButtonPetShopSearch";
-            this.ButtonPetShopSearch.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonPetShopSearch.Size = new System.Drawing.Size(210, 40);
+            this.ButtonPetShopSearch.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.ButtonPetShopSearch.Size = new System.Drawing.Size(234, 50);
             this.ButtonPetShopSearch.TabIndex = 1;
             this.ButtonPetShopSearch.Text = "Pet Shops";
             this.ButtonPetShopSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -374,9 +392,10 @@
             this.ButtonHotelSearch.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonHotelSearch.ForeColor = System.Drawing.Color.DimGray;
             this.ButtonHotelSearch.Location = new System.Drawing.Point(0, 0);
+            this.ButtonHotelSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonHotelSearch.Name = "ButtonHotelSearch";
-            this.ButtonHotelSearch.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.ButtonHotelSearch.Size = new System.Drawing.Size(210, 40);
+            this.ButtonHotelSearch.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.ButtonHotelSearch.Size = new System.Drawing.Size(234, 50);
             this.ButtonHotelSearch.TabIndex = 0;
             this.ButtonHotelSearch.Text = "Hotels";
             this.ButtonHotelSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -387,10 +406,10 @@
             // 
             this.panel1.Controls.Add(this.ButtonSearch);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 255);
+            this.panel1.Location = new System.Drawing.Point(0, 318);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 45);
+            this.panel1.Size = new System.Drawing.Size(234, 56);
             this.panel1.TabIndex = 0;
             // 
             // ButtonSearch
@@ -402,9 +421,10 @@
             this.ButtonSearch.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSearch.ForeColor = System.Drawing.Color.White;
             this.ButtonSearch.Location = new System.Drawing.Point(0, 0);
+            this.ButtonSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ButtonSearch.Name = "ButtonSearch";
-            this.ButtonSearch.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.ButtonSearch.Size = new System.Drawing.Size(210, 45);
+            this.ButtonSearch.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.ButtonSearch.Size = new System.Drawing.Size(234, 56);
             this.ButtonSearch.TabIndex = 2;
             this.ButtonSearch.Text = "Search";
             this.ButtonSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -418,9 +438,10 @@
             this.panelPetDetailsSubMenu.Controls.Add(this.buttonUpdatePet);
             this.panelPetDetailsSubMenu.Controls.Add(this.buttonInsertPet);
             this.panelPetDetailsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPetDetailsSubMenu.Location = new System.Drawing.Point(0, 118);
+            this.panelPetDetailsSubMenu.Location = new System.Drawing.Point(0, 147);
+            this.panelPetDetailsSubMenu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelPetDetailsSubMenu.Name = "panelPetDetailsSubMenu";
-            this.panelPetDetailsSubMenu.Size = new System.Drawing.Size(210, 137);
+            this.panelPetDetailsSubMenu.Size = new System.Drawing.Size(234, 171);
             this.panelPetDetailsSubMenu.TabIndex = 2;
             this.panelPetDetailsSubMenu.Visible = false;
             // 
@@ -431,10 +452,11 @@
             this.buttonDeletePet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonDeletePet.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDeletePet.ForeColor = System.Drawing.Color.DimGray;
-            this.buttonDeletePet.Location = new System.Drawing.Point(0, 80);
+            this.buttonDeletePet.Location = new System.Drawing.Point(0, 100);
+            this.buttonDeletePet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonDeletePet.Name = "buttonDeletePet";
-            this.buttonDeletePet.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonDeletePet.Size = new System.Drawing.Size(210, 40);
+            this.buttonDeletePet.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.buttonDeletePet.Size = new System.Drawing.Size(234, 50);
             this.buttonDeletePet.TabIndex = 2;
             this.buttonDeletePet.Text = "Delete Pet";
             this.buttonDeletePet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -448,10 +470,11 @@
             this.buttonUpdatePet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonUpdatePet.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdatePet.ForeColor = System.Drawing.Color.DimGray;
-            this.buttonUpdatePet.Location = new System.Drawing.Point(0, 40);
+            this.buttonUpdatePet.Location = new System.Drawing.Point(0, 50);
+            this.buttonUpdatePet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonUpdatePet.Name = "buttonUpdatePet";
-            this.buttonUpdatePet.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonUpdatePet.Size = new System.Drawing.Size(210, 40);
+            this.buttonUpdatePet.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.buttonUpdatePet.Size = new System.Drawing.Size(234, 50);
             this.buttonUpdatePet.TabIndex = 1;
             this.buttonUpdatePet.Text = "Update Pet";
             this.buttonUpdatePet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -466,9 +489,10 @@
             this.buttonInsertPet.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsertPet.ForeColor = System.Drawing.Color.DimGray;
             this.buttonInsertPet.Location = new System.Drawing.Point(0, 0);
+            this.buttonInsertPet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonInsertPet.Name = "buttonInsertPet";
-            this.buttonInsertPet.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.buttonInsertPet.Size = new System.Drawing.Size(210, 40);
+            this.buttonInsertPet.Padding = new System.Windows.Forms.Padding(34, 0, 0, 0);
+            this.buttonInsertPet.Size = new System.Drawing.Size(234, 50);
             this.buttonInsertPet.TabIndex = 0;
             this.buttonInsertPet.Text = "Insert Pet";
             this.buttonInsertPet.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -483,10 +507,11 @@
             this.buttonPetDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonPetDetail.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonPetDetail.ForeColor = System.Drawing.Color.White;
-            this.buttonPetDetail.Location = new System.Drawing.Point(0, 73);
+            this.buttonPetDetail.Location = new System.Drawing.Point(0, 91);
+            this.buttonPetDetail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.buttonPetDetail.Name = "buttonPetDetail";
-            this.buttonPetDetail.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.buttonPetDetail.Size = new System.Drawing.Size(210, 45);
+            this.buttonPetDetail.Padding = new System.Windows.Forms.Padding(11, 0, 0, 0);
+            this.buttonPetDetail.Size = new System.Drawing.Size(234, 56);
             this.buttonPetDetail.TabIndex = 1;
             this.buttonPetDetail.Text = "Pet Details";
             this.buttonPetDetail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -500,8 +525,9 @@
             this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
+            this.panelLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(210, 73);
+            this.panelLogo.Size = new System.Drawing.Size(234, 91);
             this.panelLogo.TabIndex = 0;
             this.panelLogo.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogo_Paint);
             // 
@@ -510,9 +536,10 @@
             this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Location = new System.Drawing.Point(184, 30);
+            this.button7.Location = new System.Drawing.Point(207, 38);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(23, 23);
+            this.button7.Size = new System.Drawing.Size(26, 29);
             this.button7.TabIndex = 0;
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
@@ -522,9 +549,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Old English Text MT", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(3, 9);
+            this.label1.Location = new System.Drawing.Point(3, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(193, 57);
+            this.label1.Size = new System.Drawing.Size(226, 67);
             this.label1.TabIndex = 0;
             this.label1.Text = "Zootopia";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -536,10 +563,11 @@
             this.panelChildForm.Controls.Add(this.panelSubChildDown);
             this.panelChildForm.Controls.Add(this.panelSubChildUP);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(231, 0);
-            this.panelChildForm.MinimumSize = new System.Drawing.Size(743, 641);
+            this.panelChildForm.Location = new System.Drawing.Point(260, 0);
+            this.panelChildForm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panelChildForm.MinimumSize = new System.Drawing.Size(836, 801);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(842, 684);
+            this.panelChildForm.Size = new System.Drawing.Size(955, 948);
             this.panelChildForm.TabIndex = 1;
             // 
             // panelSubChildDown
@@ -548,10 +576,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSubChildDown.BackColor = System.Drawing.Color.FloralWhite;
-            this.panelSubChildDown.Location = new System.Drawing.Point(0, 339);
+            this.panelSubChildDown.Location = new System.Drawing.Point(0, 463);
             this.panelSubChildDown.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSubChildDown.Name = "panelSubChildDown";
-            this.panelSubChildDown.Size = new System.Drawing.Size(842, 345);
+            this.panelSubChildDown.Size = new System.Drawing.Size(955, 485);
             this.panelSubChildDown.TabIndex = 1;
             // 
             // panelSubChildUP
@@ -562,26 +590,27 @@
             this.panelSubChildUP.Location = new System.Drawing.Point(0, 0);
             this.panelSubChildUP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelSubChildUP.Name = "panelSubChildUP";
-            this.panelSubChildUP.Size = new System.Drawing.Size(842, 339);
+            this.panelSubChildUP.Size = new System.Drawing.Size(955, 459);
             this.panelSubChildUP.TabIndex = 0;
             this.panelSubChildUP.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubChildUP_Paint);
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(0, 31);
+            this.textBox1.Location = new System.Drawing.Point(0, 39);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(401, 22);
+            this.textBox1.Size = new System.Drawing.Size(451, 26);
             this.textBox1.TabIndex = 0;
             // 
             // PetOwnerView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1073, 684);
+            this.ClientSize = new System.Drawing.Size(1215, 948);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.panelLeft);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MinimumSize = new System.Drawing.Size(996, 695);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PetOwnerView";
             this.Text = "PetOwnerView";
             this.panelLeft.ResumeLayout(false);

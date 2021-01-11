@@ -14,7 +14,7 @@ namespace Zootopia
     {
         Controller ControllerObj;
         public string username = "Habiba";
-        public MatingPet()
+        public MatingPet(string Username)
         {
             InitializeComponent();
            

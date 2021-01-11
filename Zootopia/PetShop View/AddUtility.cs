@@ -13,10 +13,13 @@ namespace Zootopia
     public partial class AddUtility : Form
     {
         Controller ControllerObj;
+        public string PSUsername = "";
 
-        public AddUtility()
+        public AddUtility(string Username)
         {
             InitializeComponent();
+            PSUsername = Username;
+
             textBoxUtilityCategory.Visible = false;
             ControllerObj = new Controller();
             DataTable dt = ControllerObj.SelectUtilityCategory();

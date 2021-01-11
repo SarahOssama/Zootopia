@@ -74,6 +74,8 @@ namespace Zootopia
             // 
             // TrainerOHireButton
             // 
+            this.TrainerOHireButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TrainerOHireButton.BackColor = System.Drawing.Color.MediumVioletRed;
             this.TrainerOHireButton.FlatAppearance.BorderSize = 0;
             this.TrainerOHireButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -101,6 +103,8 @@ namespace Zootopia
             // 
             // TrainerOSearchButton
             // 
+            this.TrainerOSearchButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TrainerOSearchButton.BackColor = System.Drawing.Color.MediumVioletRed;
             this.TrainerOSearchButton.FlatAppearance.BorderSize = 0;
             this.TrainerOSearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -331,7 +335,6 @@ namespace Zootopia
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.buttonCloseUpdate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MinimumSize = new System.Drawing.Size(836, 400);
             this.Name = "ReserveTrainer";
             this.Text = "ReserveTrainer";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

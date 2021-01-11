@@ -13,10 +13,11 @@ namespace Zootopia
     public partial class ViewUtilities : Form
     {
         Controller ControllerObj;
-        public string Username = "Lollipop";
-        public ViewUtilities()
+        public string PSUsername = "";
+        public ViewUtilities(string Username)
         {
             InitializeComponent();
+            PSUsername = Username;
             ControllerObj = new Controller();
         }
 
@@ -29,7 +30,7 @@ namespace Zootopia
         {
             
 
-            DataTable dt = ControllerObj.ViewListOfUtilities(Username);
+            DataTable dt = ControllerObj.ViewListOfUtilities(PSUsername);
             ViewUtilitiesDataGrid.DataSource = dt;
             ViewUtilitiesDataGrid.Refresh();
 

@@ -13,12 +13,14 @@ namespace Zootopia
     public partial class UpdatePet : Form
     {
         Controller ControllerObj;
-        public string username = "John";
-        public UpdatePet()
+        public string OUsername = "John";
+        public UpdatePet(string Username)
         {
             InitializeComponent();
+            OUsername = Username;
+
             ControllerObj = new Controller();
-            DataTable dt = ControllerObj.SelectPetName(username);
+            DataTable dt = ControllerObj.SelectPetName(OUsername);
             comboBox2.DataSource = dt;
             comboBox2.DisplayMember = "PName";
 
@@ -31,7 +33,7 @@ namespace Zootopia
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(username);
+            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(OUsername);
             int result = ControllerObj.UpdatePet(comboBox1.Text, textBox1.Text, comboBox2.Text, owner_Id);
             if (result == 0)
             {

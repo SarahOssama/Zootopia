@@ -14,7 +14,7 @@ namespace Zootopia
     {
         Controller ControllerObj;
 
-        public Utilities()
+        public Utilities(string Username)
         {
             InitializeComponent();
             ControllerObj = new Controller();

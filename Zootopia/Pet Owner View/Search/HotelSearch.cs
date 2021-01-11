@@ -13,9 +13,11 @@ namespace Zootopia
     public partial class HotelSearch : Form
     {
         Controller controllerObj;
-        public HotelSearch()
+        public string OUsername = "";
+        public HotelSearch(string Username)
         {
             InitializeComponent();
+            OUsername = Username;
 
             labelPriceRange.Visible = false;
             labelRateRange.Visible = false;

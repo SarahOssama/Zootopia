@@ -13,12 +13,13 @@ namespace Zootopia
     public partial class DeleteUtility : Form
     {
         Controller ControllerObj;
-        public string username= "Lollipop";
-        public DeleteUtility()
+        public string PSUsername= "";
+        public DeleteUtility(string Username)
         {
             InitializeComponent();
+            PSUsername = Username;
             ControllerObj = new Controller();
-            DataTable dt = ControllerObj.SelectUtilityName(username);
+            DataTable dt = ControllerObj.SelectUtilityName(PSUsername);
             comboBox2.DataSource = dt;
             comboBox2.DisplayMember = "UName";
 
@@ -32,7 +33,7 @@ namespace Zootopia
         private void buttonDeleteUtility_Click(object sender, EventArgs e)
         {
            
-           int result= ControllerObj.DeleteUtility(comboBox2.Text, username );
+           int result= ControllerObj.DeleteUtility(comboBox2.Text, PSUsername );
 
             if (result == 0)
             {

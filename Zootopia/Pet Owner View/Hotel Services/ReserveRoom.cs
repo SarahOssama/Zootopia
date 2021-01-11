@@ -13,10 +13,12 @@ namespace Zootopia
     public partial class ReserveRoom : Form
     {
         Controller controllerObj;
-        public string OwnerUsername= "Habiba";
-        public ReserveRoom()
+        public string OwnerUsername= "";
+        public ReserveRoom(string Username)
         {
             InitializeComponent();
+            OwnerUsername = Username;
+
             controllerObj = new Controller();
             DateTime ResetDate = DateTime.Now;            
             ArrdateTimePicker.MinDate = ResetDate;

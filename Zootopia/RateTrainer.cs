@@ -13,12 +13,14 @@ namespace Zootopia
     public partial class RateTrainer : Form
     {
         Controller ControllerObj;
-        public string username = "Habiba";
-        public RateTrainer()
+        public string OUsername = "";
+        public RateTrainer(string Username)
         {
             InitializeComponent();
+            OUsername = Username;
+
             ControllerObj = new Controller();
-            DataTable dt = ControllerObj.SelectPName_FromTrained(username);
+            DataTable dt = ControllerObj.SelectPName_FromTrained(OUsername);
             comboBox3.DataSource = dt;
             comboBox3.DisplayMember = "PName";
 
@@ -50,11 +52,11 @@ namespace Zootopia
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            DataTable dt1 = ControllerObj.SelectHotelName_FromTrained(username, comboBox3.Text);
+            DataTable dt1 = ControllerObj.SelectHotelName_FromTrained(OUsername, comboBox3.Text);
             comboBox2.DataSource = dt1;
             comboBox2.DisplayMember = "HName";
 
-            DataTable dt2 = ControllerObj.SelectTrainerName_FromTrained(username, comboBox3.Text);
+            DataTable dt2 = ControllerObj.SelectTrainerName_FromTrained(OUsername, comboBox3.Text);
             comboBox1.DataSource = dt2;
             comboBox1.DisplayMember = "FName";
         }

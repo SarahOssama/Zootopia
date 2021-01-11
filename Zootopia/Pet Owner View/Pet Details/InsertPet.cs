@@ -13,11 +13,12 @@ namespace Zootopia
     public partial class InsertPet : Form
     {
         Controller ControllerObj;
-        public string username = "John";
+        public string OUsername = "";
 
-        public InsertPet()
+        public InsertPet(string Username)
         {
             InitializeComponent();
+            OUsername = Username;
             ControllerObj = new Controller();
         }
 
@@ -28,7 +29,7 @@ namespace Zootopia
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(username);
+            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(OUsername);
 
             int result = ControllerObj.InserPet(textBoxName.Text, comboBoxGender.Text, Int32.Parse(textBoxAge.Text), textBoxType.Text, textBoxBreed.Text, owner_Id);
             if (result == 0)

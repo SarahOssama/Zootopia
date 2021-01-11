@@ -14,7 +14,7 @@ namespace Zootopia
     {
         Controller controllerObj;
         public string CurrentUser;
-        public string Name;
+        public string Name="";
         public ViewPetList(string username)
         {
             controllerObj = new Controller();

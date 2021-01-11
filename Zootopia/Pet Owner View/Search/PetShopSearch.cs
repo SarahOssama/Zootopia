@@ -13,10 +13,12 @@ namespace Zootopia
     public partial class PetShopSearch : Form
     {
         Controller controllerObj;
-
-        public PetShopSearch()
+        public string OUsername = "";
+        public PetShopSearch(string Username)
         {
             InitializeComponent();
+            OUsername = Username;
+
             labelPriceRange.Visible = false;
             labelRateRange.Visible = false;
 

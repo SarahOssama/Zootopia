@@ -13,13 +13,15 @@ namespace Zootopia
     public partial class UpdateUtility : Form
     {
         Controller ControllerObj;
-        public string username = "Lollipop";
+        public string PSUsername = "";
 
-        public UpdateUtility()
+        public UpdateUtility(string Username)
         {
             InitializeComponent();
+            PSUsername = Username;
+
             ControllerObj = new Controller();
-            DataTable dt = ControllerObj.SelectUtilityName(username);
+            DataTable dt = ControllerObj.SelectUtilityName(PSUsername);
             comboBoxUname.DataSource = dt;
             comboBoxUname.DisplayMember = "UName";
         }

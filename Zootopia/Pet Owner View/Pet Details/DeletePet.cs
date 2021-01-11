@@ -13,12 +13,14 @@ namespace Zootopia
     public partial class DeletePet : Form
     {
         Controller ControllerObj;
-        public string username= "John";
-        public DeletePet()
+        public string OUsername= "";
+        public DeletePet(string Username)
         {
             InitializeComponent();
+            OUsername = Username;
+
             ControllerObj = new Controller();
-            DataTable dt = ControllerObj.SelectPetName(username);
+            DataTable dt = ControllerObj.SelectPetName(OUsername);
             comboBox1.DataSource = dt;
             comboBox1.DisplayMember = "PName";
         }
@@ -33,7 +35,7 @@ namespace Zootopia
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(username);
+            int owner_Id = ControllerObj.SelectOwnerId_FromUsername(OUsername);
 
             int result = ControllerObj.DeletePet(comboBox1.Text, owner_Id);
             if (result == 0)

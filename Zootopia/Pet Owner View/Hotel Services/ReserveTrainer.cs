@@ -13,10 +13,12 @@ namespace Zootopia
     public partial class ReserveTrainer : Form
     {
         Controller controllerObj;
-        public string OwnerUsername= "Habiba";
-        public ReserveTrainer()
+        public string OwnerUsername= "";
+        public ReserveTrainer(string Username)
         {
             InitializeComponent();
+            OwnerUsername = Username;
+
             controllerObj = new Controller();
 
             DataTable dt1 = controllerObj.SelectAllHotelName();

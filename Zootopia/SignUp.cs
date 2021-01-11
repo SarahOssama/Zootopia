@@ -66,7 +66,7 @@ namespace Zootopia
                         }
                         if (usern.StartsWith("PT-"))
                         {
-                            PetShopOwnerView V = new PetShopOwnerView();
+                            PetShopOwnerView V = new PetShopOwnerView(username_textbox.Text);
                             V.Show();
                         }
                         if (usern.StartsWith("HT-"))

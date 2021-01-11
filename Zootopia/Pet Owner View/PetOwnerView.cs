@@ -14,19 +14,20 @@ namespace Zootopia
     public partial class PetOwnerView : Form
     {
         Controller controllerObj;
-        public string username;
-        public PetOwnerView(string name)
+        public string OUsername;
+        public PetOwnerView(string Username)
         {
             controllerObj = new Controller();
             InitializeComponent();
             button7.Visible = false;
             textBox1.Visible = false;
-            username = name;
-            DataTable dt = controllerObj.Selectmessage(username);
+            OUsername = Username;
+            DataTable dt = controllerObj.Selectmessage(OUsername);
             if (dt != null)
             {
                 button7.Visible = true;
             }
+
         }
 
         private void hideSubMenu()
@@ -70,21 +71,21 @@ namespace Zootopia
 
         private void buttonInsertPet_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new InsertPet());
+            OpenChildForm(new InsertPet(OUsername));
             //code
             hideSubMenu();
         }
 
         private void buttonUpdatePet_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new UpdatePet());
+            OpenChildForm(new UpdatePet(OUsername));
             //code
             hideSubMenu();
         }
 
         private void buttonDeletePet_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new DeletePet());
+            OpenChildForm(new DeletePet(OUsername));
             //code
             hideSubMenu();
         }
@@ -147,21 +148,21 @@ namespace Zootopia
 
         private void ButtonHotelSearch_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new HotelSearch());
+            OpenChildForm(new HotelSearch(OUsername));
             //code
             hideSubMenu();
         }
 
         private void ButtonPetShopSearch_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new PetShopSearch());
+            OpenChildForm(new PetShopSearch(OUsername));
             //code
             hideSubMenu();
         }
 
         private void ButtonVetSearch_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new VetSearch());
+            OpenChildForm(new VetSearch(OUsername));
             //code
             hideSubMenu();
         }
@@ -176,22 +177,22 @@ namespace Zootopia
 
         private void ButtonTrainer_Click(object sender, EventArgs e)
         {
-            OpenSubChildForm(new ReserveTrainer());
+            OpenChildForm(new ReserveTrainer(OUsername));
             //code
-           // hideSubMenu();
+           hideSubMenu();
         }
 
         private void ButtonReserve_Click(object sender, EventArgs e)
         {
-            OpenSubChildFormDown(new ReserveRoom());
+            OpenChildForm(new ReserveRoom(OUsername));
             //code
-           // hideSubMenu();
+           hideSubMenu();
         }
         #endregion
 
         private void buttonMatting_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new MatingPet());
+            OpenChildForm(new MatingPet(OUsername));
             //code
             hideSubMenu();
         }
@@ -203,7 +204,7 @@ namespace Zootopia
 
         private void button3_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Utilities ());
+            OpenChildForm(new Utilities (OUsername));
             //code
             hideSubMenu();
         }
@@ -230,19 +231,19 @@ namespace Zootopia
 
         private void button5_Click(object sender, EventArgs e)
         {
-           OpenChildForm(new RateVet());
+           OpenChildForm(new RateVet(OUsername));
             hideSubMenu();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new RateHotel());
+            OpenChildForm(new RateHotel(OUsername));
             hideSubMenu();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new RateTrainer());
+            OpenChildForm(new RateTrainer(OUsername));
             hideSubMenu();
         }
 
@@ -255,11 +256,11 @@ namespace Zootopia
         {
             if (textBox1.Visible == false)
             {
-                DataTable md = controllerObj.Selectmessage(username);
+                DataTable md = controllerObj.Selectmessage(OUsername);
                 string message = md.Rows[0][0].ToString();
                 textBox1.Visible = true;
                 textBox1.Text = message;
-                int r = controllerObj.UpdateNotified(username);
+                int r = controllerObj.UpdateNotified(OUsername);
             }
             else
             {
