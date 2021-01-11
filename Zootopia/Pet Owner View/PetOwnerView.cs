@@ -10,11 +10,23 @@ using System.Windows.Forms;
 
 namespace Zootopia
 {
+    
     public partial class PetOwnerView : Form
     {
-        public PetOwnerView()
+        Controller controllerObj;
+        public string username;
+        public PetOwnerView(string name)
         {
+            controllerObj = new Controller();
             InitializeComponent();
+            button7.Visible = false;
+            textBox1.Visible = false;
+            username = name;
+            DataTable dt = controllerObj.Selectmessage(username);
+            if (dt != null)
+            {
+                button7.Visible = true;
+            }
         }
 
         private void hideSubMenu()
@@ -228,6 +240,24 @@ namespace Zootopia
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Visible == false)
+            {
+                DataTable md = controllerObj.Selectmessage(username);
+                string message = md.Rows[0][0].ToString();
+                textBox1.Visible = true;
+                textBox1.Text = message;
+                int r = controllerObj.UpdateNotified(username);
+            }
+            else
+            {
+                button7.Visible = false;
+                textBox1.Visible = false;
+            }
 
         }
     }

@@ -30,6 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PetOwnerView));
             this.panelLeft = new System.Windows.Forms.Panel();
+            this.panelRatesubPanel = new System.Windows.Forms.Panel();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panelPetShopServices = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -55,12 +60,10 @@
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.panelSubChildDown = new System.Windows.Forms.Panel();
             this.panelSubChildUP = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.panelRatesubPanel = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panelLeft.SuspendLayout();
+            this.panelRatesubPanel.SuspendLayout();
             this.panelPetShopServices.SuspendLayout();
             this.panelHotelServicesSubMenu.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -69,7 +72,7 @@
             this.panelPetDetailsSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelChildForm.SuspendLayout();
-            this.panelRatesubPanel.SuspendLayout();
+            this.panelSubChildUP.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelLeft
@@ -94,6 +97,88 @@
             this.panelLeft.Name = "panelLeft";
             this.panelLeft.Size = new System.Drawing.Size(231, 684);
             this.panelLeft.TabIndex = 0;
+            // 
+            // panelRatesubPanel
+            // 
+            this.panelRatesubPanel.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelRatesubPanel.Controls.Add(this.button6);
+            this.panelRatesubPanel.Controls.Add(this.button5);
+            this.panelRatesubPanel.Controls.Add(this.button4);
+            this.panelRatesubPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelRatesubPanel.Location = new System.Drawing.Point(0, 744);
+            this.panelRatesubPanel.Name = "panelRatesubPanel";
+            this.panelRatesubPanel.Size = new System.Drawing.Size(210, 107);
+            this.panelRatesubPanel.TabIndex = 2;
+            this.panelRatesubPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // button6
+            // 
+            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.DimGray;
+            this.button6.Location = new System.Drawing.Point(0, 68);
+            this.button6.Name = "button6";
+            this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button6.Size = new System.Drawing.Size(210, 27);
+            this.button6.TabIndex = 3;
+            this.button6.Text = "Buy utilities";
+            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.DimGray;
+            this.button5.Location = new System.Drawing.Point(0, 34);
+            this.button5.Name = "button5";
+            this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button5.Size = new System.Drawing.Size(210, 34);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "Rate Vet";
+            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button4
+            // 
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.DimGray;
+            this.button4.Location = new System.Drawing.Point(0, 0);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(210, 34);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Rate Hotel";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(0, 699);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(210, 45);
+            this.button2.TabIndex = 10;
+            this.button2.Text = "Rate";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panelPetShopServices
             // 
@@ -411,6 +496,7 @@
             // panelLogo
             // 
             this.panelLogo.BackColor = System.Drawing.Color.MediumVioletRed;
+            this.panelLogo.Controls.Add(this.button7);
             this.panelLogo.Controls.Add(this.label1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
@@ -459,6 +545,7 @@
             // panelSubChildUP
             // 
             this.panelSubChildUP.BackColor = System.Drawing.Color.FloralWhite;
+            this.panelSubChildUP.Controls.Add(this.textBox1);
             this.panelSubChildUP.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubChildUP.Location = new System.Drawing.Point(0, 0);
             this.panelSubChildUP.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -467,87 +554,24 @@
             this.panelSubChildUP.TabIndex = 0;
             this.panelSubChildUP.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSubChildUP_Paint);
             // 
-            // button2
+            // button7
             // 
-            this.button2.BackColor = System.Drawing.Color.MediumVioletRed;
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 699);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(210, 45);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Rate";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Location = new System.Drawing.Point(184, 30);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(23, 23);
+            this.button7.TabIndex = 0;
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // panelRatesubPanel
+            // textBox1
             // 
-            this.panelRatesubPanel.BackColor = System.Drawing.Color.FloralWhite;
-            this.panelRatesubPanel.Controls.Add(this.button6);
-            this.panelRatesubPanel.Controls.Add(this.button5);
-            this.panelRatesubPanel.Controls.Add(this.button4);
-            this.panelRatesubPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelRatesubPanel.Location = new System.Drawing.Point(0, 744);
-            this.panelRatesubPanel.Name = "panelRatesubPanel";
-            this.panelRatesubPanel.Size = new System.Drawing.Size(210, 107);
-            this.panelRatesubPanel.TabIndex = 2;
-            this.panelRatesubPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
-            // 
-            // button4
-            // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.DimGray;
-            this.button4.Location = new System.Drawing.Point(0, 0);
-            this.button4.Name = "button4";
-            this.button4.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(210, 34);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Rate Hotel";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.DimGray;
-            this.button5.Location = new System.Drawing.Point(0, 34);
-            this.button5.Name = "button5";
-            this.button5.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button5.Size = new System.Drawing.Size(210, 34);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Rate Vet";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Monotype Corsiva", 16.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.DimGray;
-            this.button6.Location = new System.Drawing.Point(0, 68);
-            this.button6.Name = "button6";
-            this.button6.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(210, 27);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Buy utilities";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.textBox1.Location = new System.Drawing.Point(0, 31);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(401, 22);
+            this.textBox1.TabIndex = 0;
             // 
             // PetOwnerView
             // 
@@ -561,6 +585,7 @@
             this.Name = "PetOwnerView";
             this.Text = "PetOwnerView";
             this.panelLeft.ResumeLayout(false);
+            this.panelRatesubPanel.ResumeLayout(false);
             this.panelPetShopServices.ResumeLayout(false);
             this.panelHotelServicesSubMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -570,7 +595,8 @@
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
             this.panelChildForm.ResumeLayout(false);
-            this.panelRatesubPanel.ResumeLayout(false);
+            this.panelSubChildUP.ResumeLayout(false);
+            this.panelSubChildUP.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -608,5 +634,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

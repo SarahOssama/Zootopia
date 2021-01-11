@@ -546,10 +546,50 @@ namespace Zootopia
             //string query2=" UPDATE PET_VACC  SET Should = 0 WHERE Pet_ID IN(SELECT P.Pet_ID FROM PET P, VACCINATION V WHERE P.PAge < V.Vac_Age)";
             //dbMan.ExecuteNonQuery(query2);
 
-            string query = "SELECT P.PName,P.Pet_ID,P.PAge,V.Should,C.VName FROM PET P, PET_VACC V, VACCINATION C, OWNER O, VET T, GOESTO G "
-             + "WHERE P.Pet_ID = V.Pet_ID AND C.Vac_ID = V.Vac_ID AND O.Owner_ID = G.Owner_ID AND T.Vet_ID = G.Vet_ID AND P.Owner_ID = O.Owner_ID AND T.Username like '___" + user + "' AND V.should = 1 ; ";
+            string query = "SELECT P.PName,P.Pet_ID,P.PAge,V.Should,C.VName, C.Vac_ID FROM PET P, PET_VACC V, VACCINATION C, OWNER O, VET T, GOESTO G "
+             + "WHERE P.Pet_ID = V.Pet_ID AND C.Vac_ID = V.Vac_ID AND O.Owner_ID = G.Owner_ID AND T.Vet_ID = G.Vet_ID AND P.Owner_ID = O.Owner_ID AND T.Username like '___" + user + "' AND V.Should = 1 ;";
             return dbMan.ExecuteReader(query);
         }
+
+        public int UpdateAlert(int PID, int VID)
+        {
+            string query = "UPDATE PET_VACC SET Alerted = 1, Should =0 Where Pet_ID =" + PID + "AND Vac_ID =" + VID + ";";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public int UpdateNotification(string Pet_name,string vac_name,int PID) 
+        {
+            string query = "UPDATE OWNER SET Notified=1 ,Message =' Your Pet '+'" + Pet_name + "'+' needs to take vaccination named '+'" + vac_name + "' where Owner_ID IN (SELECT Owner_ID from PET where Pet_ID ="+PID+") ;";
+            return dbMan.ExecuteNonQuery(query);
+        }
+        public int UpdateNotified(string username)
+        {
+            string query = "UPDATE OWNER SET Notified =0, Message=NULL where Username like '___" + username + "';";
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+        public DataTable Selectmessage( string Username)
+        {
+            string query = "SELECT Message FROM OWNER Where Username like '___" + Username + "';";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable SelectPetName(int PID)
+        {
+            string query = "SELECT PName From PET where Pet_ID=" + PID + ";";
+            return dbMan.ExecuteReader(query);
+        }
+        public DataTable SelectVacName(int VID)
+        {
+            string query = "SELECT VName FROM VACCINATION where Vac_ID=" + VID + ";";
+            return dbMan.ExecuteReader(query);
+
+        }
+        public DataTable SelectVaccNameID(int PID)
+        {
+            string query = "SELECT Vac_ID FROM PET_Vacc where Pet_ID=" + PID + " AND Should= 1 ;";
+            return dbMan.ExecuteReader(query);
+        }
+
 
 
         public DataTable SelectPetID(string user)

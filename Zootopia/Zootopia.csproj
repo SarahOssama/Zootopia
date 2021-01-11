@@ -458,6 +458,9 @@
     <EmbeddedResource Include="Vet View\UpdateVetUsername.resx">
       <DependentUpon>UpdateVetUsername.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vet View\ViewVaccinationAlert.resx">
+      <DependentUpon>ViewVaccinationAlert.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Welcome.resx">
       <DependentUpon>Welcome.cs</DependentUpon>
     </EmbeddedResource>
